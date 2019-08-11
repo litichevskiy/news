@@ -1,0 +1,11 @@
+@media ( min-width: 1024px ) {
+  .countriesList{
+
+    .country{
+
+      &:hover{
+        background-color: $light-blue-color;
+      }
+    }
+  }
+}

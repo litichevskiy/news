@@ -1,0 +1,29 @@
+.tabContent{
+  /*border-top: 1px solid #eae7e7;*/
+  padding: 0 0.3rem;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background-color: #eae7e7;
+    display: inline-block;
+  }
+
+  .tabDescription{
+    margin: 0.6rem 0;
+  }
+
+  ul{
+    overflow: auto;
+    max-height: calc(100% - 45px);
+  }
+}

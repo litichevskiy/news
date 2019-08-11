@@ -1,0 +1,15 @@
+.countriesList {
+
+  .country{
+    @include flex-center( flex, center, flex-start );
+    @include border-radius( 5px );
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    margin-bottom: 0.35rem;
+    border: 1px solid $light-grey-color;
+    cursor: pointer;
+    transition: $default-transition-time ease background-color;
+    position: relative;
+    z-index: 0;
+  }
+}

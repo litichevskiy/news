@@ -1,0 +1,53 @@
+$settings-translate-x: -10rem;
+
+.settings{
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,.14),
+              3px 0 1px -2px rgba(0,0,0,.2),
+              1px 0 5px 0 rgba(0,0,0,.12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 400px;
+  z-index: 3;
+  background-color: $white-color;
+  transition: $default-transition-time ease;
+  padding: 0.3rem 0.4rem;
+
+  &.settings-animation-enter {
+    opacity: 0.3;
+    transform: translateZ(0) translateX($settings-translate-x);
+  }
+
+  &.settings-animation-enter-active {
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+
+  &.settings-animation-exit {
+    opacity: 1;
+  }
+
+  &.settings-animation-exit-active {
+    opacity: 0;
+    transform: translateZ(0) translateX($settings-translate-x);
+  }
+
+  &.settings-animation-enter-done{
+    transform: translateZ(0) translateX(0);
+  }
+
+  .wrapper{
+    /*background-color: pink;
+    display: flex;
+    justify-content: space-between;*/
+  }
+
+  .close{
+    float: right;
+    padding: 0.2rem 0.3rem;
+    margin-top: 0.4rem;
+    background-color: transparent;
+    /*border-radius: 50%;*/
+  }
+}

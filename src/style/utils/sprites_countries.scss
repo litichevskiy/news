@@ -1,0 +1,273 @@
+.flag{
+  display: inline-block;
+  position: relative;
+  margin-right: 0.8rem;
+
+  &:before{
+    @include border-radius( 50% );
+    @extend .default-shadow;
+    content: '';
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    position: absolute;
+    background-color: $light-grey-color;
+    z-index: -1;
+  }
+
+  &.bg-za {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -10px;
+  }
+
+  &.bg-ve {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -10px;
+  }
+
+  &.bg-us {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -62px;
+  }
+
+  &.bg-tw {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -62px;
+  }
+
+  &.bg-tr {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -10px;
+  }
+
+  &.bg-th {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -62px;
+  }
+
+  &.bg-sk {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -114px;
+  }
+
+  &.bg-si {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -114px;
+  }
+
+  &.bg-sg {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -114px;
+  }
+
+  &.bg-se {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -10px;
+  }
+
+  &.bg-sa {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -62px;
+  }
+
+  &.bg-rs {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -114px;
+  }
+
+  &.bg-ro {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -166px;
+  }
+
+  &.bg-pt {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -166px;
+  }
+
+  &.bg-pl {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -166px;
+  }
+
+  &.bg-ph {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -166px;
+  }
+
+  &.bg-nz {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -10px;
+  }
+
+  &.bg-no {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -62px;
+  }
+
+  &.bg-nl {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -114px;
+  }
+
+  &.bg-ng {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -166px;
+  }
+
+  &.bg-my {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -218px;
+  }
+
+  &.bg-mx {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -218px;
+  }
+
+  &.bg-ma {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -218px;
+  }
+
+  &.bg-lv {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -218px;
+  }
+
+  &.bg-lt {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -218px;
+  }
+
+  &.bg-kr {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -10px;
+  }
+
+  &.bg-jp {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -62px;
+  }
+
+  &.bg-it {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -114px;
+  }
+
+  &.bg-il {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -166px;
+  }
+
+  &.bg-ie {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -218px;
+  }
+
+  &.bg-id {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -270px;
+  }
+
+  &.bg-hu {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -270px;
+  }
+
+  &.bg-hk {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -270px;
+  }
+
+  &.bg-gr {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -270px;
+  }
+
+  &.bg-gb {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -270px;
+  }
+
+  &.bg-fr {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -270px;
+  }
+
+  &.bg-eg {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -10px;
+  }
+
+  &.bg-de {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -62px;
+  }
+
+  &.bg-cz {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -114px;
+  }
+
+  &.bg-cu {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -166px;
+  }
+
+  &.bg-co {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -218px;
+  }
+
+  &.bg-cn {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -270px;
+  }
+
+  &.bg-ch {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -10px -322px;
+  }
+
+  &.bg-ca {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -62px -322px;
+  }
+
+  &.bg-br {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -114px -322px;
+  }
+
+  &.bg-bg {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -166px -322px;
+  }
+
+  &.bg-be {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -218px -322px;
+  }
+
+  &.bg-au {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -270px -322px;
+  }
+
+  &.bg-at {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -322px -322px;
+  }
+
+  &.bg-ar {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -374px -10px;
+  }
+
+  &.bg-ae {
+    width: 32px; height: 32px;
+    background: url('../images/sprites/sprites_countries.png') -374px -62px;
+  }
+}

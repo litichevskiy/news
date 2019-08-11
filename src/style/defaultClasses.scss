@@ -1,0 +1,48 @@
+.default-shadow{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+              0 3px 1px -2px rgba(0,0,0,.2),
+              0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.icon{
+  width: 40px;
+  height: 40px;
+  fill: $black-color;
+  vertical-align: middle;
+  transition: $default-transition-time ease transform;
+
+  &.icon-close{}
+
+  &.icon-settings{}
+
+  &.icon-newspaper{}
+
+  &.icon-location{}
+
+  &.icon-logo{
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.btn{
+  @include border-radius(5px);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.3rem;
+  color: $white-color;
+  background-color: $light-grey-color;
+  cursor: pointer;
+  outline: none;
+  /*border: 1px solid transparent;*/
+
+  &.primery{
+    /*background: lightblue*/
+  }
+}
+
+@media ( min-width: 1024px ) {
+  .btn:focus{
+    background-color: #cfe2f0 !important;
+  }
+}

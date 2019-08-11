@@ -1,0 +1,8 @@
+@media ( min-width: 1024px ) {
+  .tab{
+
+    &:hover .icon{
+      transform: scale(1.2);
+    }
+  }
+}

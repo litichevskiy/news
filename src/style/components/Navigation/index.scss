@@ -1,0 +1,33 @@
+.navigation{
+  @extend .default-shadow;
+  @include flex-center( flex, center, space-between );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: $navigation-height;
+
+  background: white;
+  padding: 0.5rem;
+
+  .containerLogo{
+    @include flex-center( inline-flex, center, center );
+    color: inherit;
+  }
+
+  .btn{
+    padding: 0.2rem 0.3rem;
+    background-color: $white-color;
+  }
+
+  .logo{
+    /*width: 50px;*/
+  }
+
+  .logo-text{
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 0.75rem;
+  }
+}

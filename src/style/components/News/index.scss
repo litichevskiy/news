@@ -1,0 +1,130 @@
+.news{
+  position: relative;
+  /*display: inline-block;*/
+  width: 31%;
+  background-color: $news-bg-color;
+  padding: 1em 1em 1.5em 1em;
+  margin-top: 2.3%;
+  border-radius: 6px;
+  @extend .default-shadow;
+
+  .publishDate{
+    display: inline-block;
+    white-space: pre;
+    line-height: 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .readMoreNewsLinkForImage{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .linkReadMoreNewsContainer{
+    position: absolute;
+    left: 1em;
+    bottom: 0.1rem;
+  }
+
+  .linkReadMoreNews{
+    color: $blue-color;
+    font-size: 1.2rem;
+    padding-bottom: 0.1rem;
+    width: 7.8rem;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    &:after{
+      content: '';
+      background-image: url('../images/icon-external-reference.png');
+      background-size: contain;
+      width: 1.2rem;
+      height: 1.2rem;
+      display: inline-block;
+      position: relative;
+      left: 0.7rem;
+      top: 0.2rem;
+    }
+
+    &:before{
+      content: '';
+      width: 75%;
+      height: 0.15rem;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      background-color: $blue-color;
+      transition: $default-transition-time ease left, right;
+    }
+  }
+
+  .author{
+    margin: 0;
+
+    small{
+       margin-right: 0.45rem;
+     }
+  }
+
+  .newsTitle,
+  .description{
+    margin: 0.7rem 0;
+  }
+
+  .description{
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+
+  .containerImg{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    margin: 0.8rem 0;
+  }
+
+  .wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.30);
+    opacity: 0;
+    transition: $default-transition-time ease opacity;
+
+    &:before{
+      content: '';
+      background-image: url('../images/icon-external-reference.png');
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-size: contain;
+    }
+  }
+
+  .newsImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ($default-transition-time * 2) ease transform;
+  }
+
+  .imgNotAvailable{
+    @include flex-center;
+    height: 100%;
+    font-size: 1.7rem;
+    background-color: $light-grey-color;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+}
