@@ -14,7 +14,7 @@
     height: 0.2rem;
     width: 0;
     transition: #{$default-transition-time * 2} ease width;
-    background-color: #76C2AF;
+    background-color: $light-green-color;
   }
 
   &.active{

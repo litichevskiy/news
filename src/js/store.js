@@ -2,7 +2,7 @@ import { createStore, compose } from 'redux';
 import rootReducer from './reducers/index';
 
 const initialState = {
-  visibilitySettings: false,
+  visibilitySettings: true,
 };
 
 const composeEnhancers =

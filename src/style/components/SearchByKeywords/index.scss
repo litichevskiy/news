@@ -1,0 +1,62 @@
+.searchByKeywords{
+
+  .row{
+    @include flex-center( flex, center, flex-start );
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+    cursor: pointer;
+  }
+
+  .wrapperLabels{
+    @include flex-center( inline-flex, flex-start, flex-start );
+    flex-direction: column;
+  }
+
+  .label{
+    @include flex-center( inline-flex, center, flex-start );
+    @include border-radius(5px);
+    padding: 0.3rem 0;
+    margin: 0 0 0.5rem;
+    white-space: pre;
+    width: 11rem;
+    @extend .default-shadow;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .description{
+    margin: 0.5rem 0;
+  }
+
+  .inputSearch{
+    @include border-radius(5px);
+    font-size: inherit;
+    color: inherit;
+    padding: 0.3rem 0.4rem;
+    border: 1px solid $light-grey-color;
+    width: 100%;
+    outline: none;
+
+    &::placeholder{
+      color: #817373;
+    }
+
+    &:focus{
+      border-color: $blue-color;
+    }
+  }
+
+  .inputCheckbox{
+    margin-right: 0.5rem;
+  }
+
+  .getNews{
+    width: 11rem;
+    display: block;
+    margin: 2rem auto 0;
+    background-color: $light-green-color;
+  }
+}

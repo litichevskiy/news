@@ -1,200 +1,264 @@
 const articles = [
-
   {
-    "source": {
-    "id": "techcrunch",
-    "name": "TechCrunch"
-    },
-    "author": "Kate Clark",
-    "title": "NYSE operator’s crypto project Bakkt brings in $182M",
-    "description": "Venture capitalists remain bullish on Bitcoin and its underlying technology despite sinking crypto prices.",
-    "url": "http://techcrunch.com/2018/12/31/nyse-operators-crypto-project-bakkt-brings-in-182m/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/12/GettyImages-1064373142.jpg?w=600",
-    "publishedAt": "2018-12-31T18:56:47Z",
-    "content": "The Intercontinental Exchange’s (ICE) cryptocurrency project Bakkt celebrated New Year’s Eve with the announcement of a $182.5 million equity round from a slew of notable institutional investors. ICE, the operator of several global exchanges, including the Ne… [+3472 chars]"
-  },
-  {
-    "source": {
-    "id": "techcrunch",
-    "name": "TechCrunch"
-    },
-    "author": "Jon Russell",
-    "title": "Digital Garage teams up with Blockstream to develop blockchain financial services in Japan",
-    "description": "The global crypto market may have tanked last year, but notable names have joined forces to develop Bitcoin and blockchain financial services in Japan, which has emerged as one of the world’s most crypto-friendly markets. Blockstream, a blockchain startup fou…",
-    "url": "http://techcrunch.com/2019/01/21/digital-garage-teams-up-with-blockstream-to-develop-blockchain-financial-services-in-japan/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2017/03/bitcoin-on-gold.png?w=711",
-    "publishedAt": "2019-01-22T06:09:30Z",
-    "content": "The global crypto market may have tanked last year, but notable names have joined forces to develop Bitcoin and blockchain financial services in Japan, which has emerged as one of the world’s most crypto-friendly markets.\r\nBlockstream, a blockchain startup fo… [+1970 chars]"
-  },
-  {
-    "source": {
-      "id": "wired",
-      "name": "Wired"
-    },
-    "author": "Noam Cohen",
-    "title": "Bitcoin Exposed Silicon Valley's Ultimate Aim: Making Money",
-    "description": "Bitcoin is a prime example of how Silicon Valley touts \\\"democratization\\\" and \\\"decentralization\\\" as righteous motives when wealth is the ultimate goal.",
-    "url": "https://www.wired.com/story/bitcoin-exposed-silicon-valley-aim-making-money/",
-    "urlToImage": "https://media.wired.com/photos/5c2feca7b49dea0ea6833687/191:100/pass/Ideas_Art_Bitcoin-167577080.jpg",
-    "publishedAt": "2019-01-07T12:00:00Z",
-    "content": "Bitcoin turned 10 this month, and what a ride its beeninitial obscurity; the kind of exponential price spike last seen by Dutch tulip peddlers; the rise of imitators based on its underlying blockchain technology; and, in the past year, a steep, steady decline… [+7239 chars]"
-  },
-  {
-    "source": {
-      "id": "the-new-york-times",
-      "name": "The New York Times"
-    },
-    "author": "JEFFERY C. MAYS",
-    "title": "Attorneys, Politicians and a Bitcoin Entrepreneur: The 23 People Running for Public Advocate",
-    "description": "A whopping 23 people are running for New York City public advocate, including a bitcoin entrepreneur who is known for heckling Mayor de Blasio.",
-    "url": "https://www.nytimes.com/2019/01/21/nyregion/public-advocate-nyc-ballot.html",
-    "urlToImage": "https://static01.nyt.com/images/2019/01/22/nyregion/22advocate1/merlin_143705316_214686e4-9b83-4047-ba6d-9c8a6afe9fe2-facebookJumbo.jpg",
-    "publishedAt": "2019-01-21T17:18:59Z",
-    "content": "9. Ron Kim, People Over Corporations: Queens assemblyman\r\n10. Ydanis Rodriguez, United for Immigrants: Manhattan city councilman\r\n11. Danniel Maio, I Like Maio: mapmaker and former congressional candidate\r\n12. Gary Popkin, Liberal: libertarian and retired pro… [+593 chars]"
-  },
-  {
-    "source": {
-      "id": "mashable",
-      "name": "Mashable"
-    },
-    "author": "Nicole Cammorata",
-    "title": "Blockchain technology is so hot right now — here's how to learn it on the cheap",
-    "description": "CNBC talking head Jim Cramer echoed a popular perception of Bitcoin when he likened it to Monopoly Money on his finance show in 2017. To the unfamiliar, Bitcoin sounds like an imaginary currency used solely by techies. And when you tell people that it was cre…",
-    "url": "https://mashable.com/shopping/jan-7-blockchain-online-class-sale/",
-    "urlToImage": "https://i.amz.mshcdn.com/oT8aadtP-z3j74FvUnVTLwZHJhY=/1200x630/2019%2F01%2F07%2Fda%2F31be4462840b4f539e6608bb76d0f945.76e46.jpg",
-    "publishedAt": "2019-01-07T17:46:43Z",
-    "content": "CNBC talking head Jim Cramer echoed a popular perception of Bitcoin when he likened it to Monopoly Money on his finance show in 2017. \r\nTo the unfamiliar, Bitcoin sounds like an imaginary currency used solely by techies. And when you tell people that it was c… [+1916 chars]"
-  },
-  {
-    "source": {
-      "id": "cnn",
-      "name": "CNN"
-    },
-    "author": "Paul R. La Monica, CNN Business",
-    "title": "Bitcoin is 10 years old. What's next?",
-    "description": "Bitcoin just celebrated its tenth anniversary. Now, as the world's most famous cryptocurrency matures, its future is far from certain.",
-    "url": "https://www.cnn.com/2019/01/14/investing/bitcoin-prices/index.html",
-    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180927091832-01-bitcoin-illustration-super-tease.jpg",
-    "publishedAt": "2019-01-14T19:20:15Z",
-    "content": null
-  },
-  {
-    "source": {
-      "id": "bbc-news",
-      "name": "BBC News"
-    },
-    "author": "BBC News",
-    "title": "Bitcoin Babushkas: Cryptocurrency mining in Siberia",
-    "description": "Cryptocurrency mining is a growing industry in eastern Russia, the BBC's Sarah Rainsford discovers.",
-    "url": "https://www.bbc.co.uk/news/av/world-europe-46634596/bitcoin-babushkas-cryptocurrency-mining-in-siberia",
-    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/ABAB/production/_104974934_p06wqmf4.jpg",
-    "publishedAt": "2018-12-29T00:26:14Z",
-    "content": null
-  },
-  {
-  "source": {
-    "id": "techcrunch",
-    "name": "TechCrunch"
-  },
-    "author": "Jon Evans",
-    "title": "The YKarma experiment",
-    "description": "Blockchains are boring now. It’s been ten years since Bitcoin launched, and cryptocurrencies have almost exclusively been used to recapitulate existing monetary systems in slightly new forms. This is boring. Programmable currencies give us the ability to buil…",
-    "url": "http://techcrunch.com/2019/01/06/the-ykarma-experiment/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2019/01/karma.jpg?w=510",
-    "publishedAt": "2019-01-06T14:00:31Z",
-    "content": "Blockchains are boring now. It’s been ten years since Bitcoin launched, and cryptocurrencies have almost exclusively been used to recapitulate existing monetary systems in slightly new forms. This is boring. Programmable currencies give us the ability to buil… [+4765 chars]"
-  },
-  {
-  "source": {
-    "id": "mashable",
-    "name": "Mashable"
-  },
-    "author": "Stan Schroeder",
-    "title": "Samsung's Galaxy S10 may come with a cryptocurrency wallet",
-    "description": "Samsung might be embracing crypto in a big way. Photos posted by leaker of mobile things Ben Geskin allegedly show a Samsung Galaxy S10 feature called the \"Samsung Blockchain KeyStore,\" which allows users to import a cryptocurrency wallet or create a new one.…",
-    "url": "https://mashable.com/article/samsung-galaxy-s10-cryptocurrency-wallet/",
-    "urlToImage": "https://mondrian.mashable.com/2019%252F01%252F24%252F07%252Fd88ec3acacbf4ece9690976e46226739.929b8.jpg%252F1200x630.jpg?signature=vZHMmpaeesKIQJm_5crpQH-GlIQ=",
-    "publishedAt": "2019-01-24T08:49:14Z",
-    "content": "Samsung might be embracing crypto in a big way. \r\nPhotos posted by leaker of mobile things Ben Geskin allegedly show a Samsung Galaxy S10 feature called the \"Samsung Blockchain KeyStore,\" which allows users to import a cryptocurrency wallet or create a new on… [+1557 chars]"
-  },
-  {
-    "source": {
-      "id": "techcrunch",
-      "name": "TechCrunch"
-    },
-    "author": "Jon Russell",
-    "title": "Crypto mining giant Bitmain is reportedly getting a new CEO as its IPO plan stalls",
-    "description": "Bitmain, the Chinese crypto miner maker, looks like it has reached an interesting point in its pathway to going public. There’s been little heard since the company filed to go public in Hong Kong in September, but now it appears that a new CEO has been hired …",
-    "url": "http://techcrunch.com/2019/01/09/bitmain-is-reportedly-getting-a-new-ceo/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/09/jihan-wu-bitmain.jpg?w=600",
-    "publishedAt": "2019-01-10T05:36:35Z",
-    "content": "Bitmain, the Chinese crypto miner maker, looks like it has reached an interesting point in its pathway to going public. There’s been little heard since the company filed to go public in Hong Kong in September, but now it appears that a new CEO has been hired … [+2932 chars]"
-  },
-  {
-    "source": {
-      "id": "engadget",
-      "name": "Engadget"
-    },
-    "author": "Jon Fingas",
-    "title": "Hackers claim to have insurance data linked to 9/11 attacks",
-    "description": "The hackers who stole Orange is the New Black are back, and they've hit a new low. The group known as TheDarkOverlord claims to have stolen 18,000 documents from Hiscox Syndicates, Lloyds of London and Silverstein Properties, and threatened to release files p…",
-    "url": "https://www.engadget.com/2019/01/01/hackers-claim-to-have-9-11-insurance-data/",
-    "urlToImage": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630&quality=80&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D5849%252C3898%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C1067%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-images%252F2018-12%252Fa71f6eb0-fdf5-11e8-a7f7-1b12947d902c%26client%3Da1acac3e1b3290917d92%26signature%3D6f3e920bd3b9d31ffcffcaafac0f8d5812b9f3b7&client=amp-blogside-v2&signature=f3d64c32fd97e5e2410c3bf996850bad7a116790",
-    "publishedAt": "2019-01-01T22:15:00Z",
-    "content": "The group published a handful of minor files mentioning the the FAA, TSA and law firms as supposed proof, and claimed that it would release decryption keys for its archive in stages unless it received its ransom in bitcoin. It also threatened to blackmail peo… [+675 chars]"
-  },
-  {
-    "source": {
-      "id": null,
-      "name": "Gizmodo.com"
-    },
-    "author": "Rhett Jones",
-    "title": "Hacker Breaks Dublin Tram's Website, Demands Handsome Ransom of One Bitcoin",
-    "description": "Riders of Dublin’s tram system Luas will have to navigate their commute without the aid of the service’s website on Thursday. The site is down following a hack by someone who mostly appears to be worried about calling attention to security holes. Read more...",
-    "url": "https://gizmodo.com/hacker-breaks-dublin-trams-website-demands-handsome-ra-1831458917",
-    "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--SK8t6HCT--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/fbtcaprpgmyqmyqj7i0e.jpg",
-    "publishedAt": "2019-01-03T16:18:00Z",
-    "content": "Riders of Dublins tram system Luas will have to navigate their commute without the aid of the services website on Thursday. The site is down following a hack by someone who mostly appears to be worried about calling attention to security holes.\r\nThe Independe… [+1462 chars]"
-  },
-  {
-    "source": {
-      "id": "mashable",
-      "name": "Mashable"
-    },
-    "author": "Jack Morse",
-    "title": "'Fortnite' vulnerability put millions of accounts at risk",
-    "description": "It turns out that for the millions of people playing Fortnite, there was more than just a Victory Royale at stake. On Jan. 16, internet security firm Check Point Research disclosed a vulnerability in the popular online video game that could have allowed malic…",
-    "url": "https://mashable.com/article/fortnite-vulnerability-patched-epic-games/",
-    "urlToImage": "https://i.amz.mshcdn.com/-emUHVZGFWPNfmGOkQ9ckE3YjHE=/1200x630/2019%2F01%2F16%2F57%2Fef264ea10ffb4a4bb1736439e88b3130.43dbb.png",
-    "publishedAt": "2019-01-16T19:31:43Z",
-    "content": "It turns out that for the millions of people playing Fortnite, there was more than just a Victory Royale at stake. \r\nOn Jan. 16, internet security firm Check Point Research disclosed a vulnerability in the popular online video game that could have allowed mal… [+1861 chars]"
-  },
-  {
-    "source": {
-      "id": "the-next-web",
-      "name": "The Next Web"
-    },
-    "author": "David Canellis",
-    "title": "Cryptocurrency analysts predict the end of the Bitcoin bear market",
-    "description": "Blockchain investigators have employed a neat method for analyzing Bitcoin activity to determine at what point long-term holders typically yield and sell their Bitcoin. Delphi Digital, an independent research boutique specializing in the digital asset market,…",
-    "url": "https://thenextweb.com/hardfork/2019/01/10/bitcoin-bear-market-prediction/",
-    "urlToImage": "https://img-cdn.tnwcdn.com/image/hardfork?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2018%2F06%2Fbitcoin-hash-cryptocurrency.png&signature=5c9749f50ac36313bd486d3639fce8d8",
-    "publishedAt": "2019-01-10T16:02:46Z",
-    "content": "Blockchain investigators have employed a neat method for analyzing Bitcoin BTC activity to determine at what point long-term holders typically yield and sell their Bitcoin.\r\nDelphi Digital, an independent research boutique specializing in the digital asset ma… [+4595 chars]"
-  },
-  {
-    "source": {
-      "id": "the-next-web",
-      "name": "The Next Web"
-    },
-    "author": "Matthew Beedham",
-    "title": "There’s more to Bitcoin maximalism than meets the eye",
-    "description": "Welcome to Hard Fork Basics, a collection of tips, tricks, guides, and advice to keep you up to date in the cryptocurrency and blockchain world. If you’ve been in the Bitcoin and cryptocurrency game for any longer than a month, you’ve probably come across som…",
-    "url": "https://thenextweb.com/hardfork/2019/01/08/basics-explainer-bitcoin-maximalism/",
-    "urlToImage": "https://img-cdn.tnwcdn.com/image/hardfork?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F01%2Fbitcoin-maximalism-bitcoin-cryptocurrency-blockchain-ethereum-monero-coins-digital-assets-tokens.jpg&signature=665e1852a44b82e15cfa997b9f2af3d3",
-    "publishedAt": "2019-01-08T13:30:09Z",
-    "content": "Welcome to Hard Fork Basics, a collection of tips, tricks, guides, and advice to keep you up to date in the cryptocurrency and blockchain world.\r\nIf youve been in the Bitcoin BTC and cryptocurrency game for any longer than a month, youve probably come across … [+3834 chars]"
-  }
+         "source": {
+            "id": "cnn",
+            "name": "CNN"
+         },
+         "author": null,
+         "title": "Trump seizes on Biden's gaffe",
+         "description": "Democratic presidential candidates are taking their message of President Donald Trump being a white supremacist to the Iowa State Fair.  CNN's Arlette Saenz reports.",
+         "url": "https://www.cnn.com/videos/politics/2019/08/09/democrats-iowa-state-fair-saenz-pkg-lead-vpx.cnn",
+         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190809162358-biden-iowa-state-fair-0809-super-tease.jpg",
+         "publishedAt": "2019-08-09T21:07:00Z",
+         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Choe Sang-Hun",
+         "title": "Kim Jong-un Gave ‘Small Apology’ for Missile Launches, Trump Says",
+         "description": "President Trump said a letter from North Korea’s leader expressed hope for restarting nuclear talks.",
+         "url": "https://www.nytimes.com/2019/08/10/world/asia/kim-jong-un-apologizes-missile-launch-trump-says.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/10/world/10nkorea/10nkorea-facebookJumbo.jpg",
+         "publishedAt": "2019-08-10T15:21:15Z",
+         "content": "In the past week, Mr. Trump has dismissed the Norths recent short-range missile tests with a shrug, saying they involved neither a nuclear weapon nor intercontinental ballistic missile. Instead, he accused South Korea of not paying enough for American help in… [+1807 chars]"
+      },
+      {
+         "source": {
+            "id": null,
+            "name": "Lifehacker.com"
+         },
+         "author": "Elizabeth Yuko",
+         "title": "Talk to Yourself in the Third Person for Improved Clarity",
+         "description": "What do Donald Trump, Flavor Flav and Elmo have in common? There may be multiple acceptable answers to this question, but the one we’re looking for today is that they all have been known to talk about themselves in the third person. Now, that’s not exactly a …",
+         "url": "https://lifehacker.com/talk-to-yourself-in-the-third-person-for-improved-clari-1837084747",
+         "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--xAxatH6Q--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/cme5q7p4jjb49gvxfzra.jpg",
+         "publishedAt": "2019-08-09T16:30:00Z",
+         "content": "What do Donald Trump, Flavor Flav and Elmo have in common? There may be multiple acceptable answers to this question, but the one were looking for today is that they all have been known to talk about themselves in the third person. Now, thats not exactly a re… [+2027 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Frank Bruni",
+         "title": "Hate Is So Much Bigger Than Trump",
+         "description": "Just look at history. Or at my inbox.",
+         "url": "https://www.nytimes.com/2019/08/10/opinion/hate.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/11/opinion/sunday/11Bruni/11Bruni-facebookJumbo.jpg",
+         "publishedAt": "2019-08-10T19:38:25Z",
+         "content": "It was there before him. It will be there after. And while gentler words from the White House and a better president may affect how much grows in it and how tall, the ugliness will always take root and always flower.\r\nIf you live in a certain category black, … [+2303 chars]"
+      },
+      {
+         "source": {
+            "id": "cnn",
+            "name": "CNN"
+         },
+         "author": null,
+         "title": "People dump their gym over Trump",
+         "description": "Anti-Trump boycotters say goodbye Equinox, farewell SoulCycle. CNN's Jeanne Moos reports on breaking up with your gym.",
+         "url": "https://www.cnn.com/videos/politics/2019/08/08/equinox-soulcycle-boycott-moos-pkg-ebof-vpx.cnn",
+         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190808203408-moos-soulcycle-package-super-tease.jpg",
+         "publishedAt": "2019-08-09T00:45:13Z",
+         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Trish Bendix",
+         "title": "Seth Meyers Says El Paso Should Put the Boot on Air Force One",
+         "description": "The late-night hosts were quick to point out that President Trump still owes the city more than half a million dollars for a campaign rally in February.",
+         "url": "https://www.nytimes.com/2019/08/09/arts/television/seth-meyers-trump-el-paso-debt-late-night.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/09/arts/09latenight/09latenight-facebookJumbo.png",
+         "publishedAt": "2019-08-09T06:27:35Z",
+         "content": "Weve spent a lot of time over the last couple of weeks talking about Trumps racist rhetoric. But theres one race Trump dislikes more than all the others, and thats the race for the Democratic nomination. STEPHEN COLBERT\r\nStarting today, all the Democratic pre… [+870 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Eileen Sullivan",
+         "title": "Trump Wants ‘Intelligent Background Checks’ and Says McConnell Is ‘On Board’",
+         "description": "President Trump said there was “tremendous” support to expand background checks, though he has resisted such legislation in the past.",
+         "url": "https://www.nytimes.com/2019/08/09/us/politics/gun-background-checks.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/09/us/politics/09dc-trump1/09dc-trump1-facebookJumbo.jpg",
+         "publishedAt": "2019-08-09T16:23:57Z",
+         "content": "WASHINGTON President Trump said the time was now for lawmakers to come together and pass new laws for meaningful background checks on gun purchasers as he left the White House on Friday for a political fund-raiser in Southampton, N.Y., followed by a vacation … [+938 chars]"
+      },
+      {
+         "source": {
+            "id": "cnn",
+            "name": "CNN"
+         },
+         "author": null,
+         "title": "Trump gives thumbs up in photo with El Paso orphan",
+         "description": "First Lady Melania Trump tweeted out a photo of herself holding a baby who was orphaned after his parents where killed in the El Paso, Texas, mass shooting along with President Donald Trump. The President, who is flanked by the baby's uncle, gives a thumbs up…",
+         "url": "https://www.cnn.com/videos/politics/2019/08/09/donald-melania-trump-el-paso-orphaned-baby-photo-newday-sot.cnn",
+         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190809080558-trump-el-paso-orphan-photo-screengrab-super-tease.jpg",
+         "publishedAt": "2019-08-09T12:38:08Z",
+         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+      },
+      {
+         "source": {
+            "id": "bbc-news",
+            "name": "BBC News"
+         },
+         "author": "https://www.facebook.com/bbcnews",
+         "title": "North Korea fires two missiles into the sea after Trump letter",
+         "description": "The launches came after Donald Trump said he received a \"very beautiful letter\" from Kim Jong Un.",
+         "url": "https://www.bbc.co.uk/news/world-asia-49301767",
+         "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/0678/production/_108265610_mediaitem108265609.jpg",
+         "publishedAt": "2019-08-09T22:56:51Z",
+         "content": "Image copyrightReutersImage caption\r\n A missile is launched during testing at an unidentified location in North Korea\r\nNorth Korea has fired two unidentified missiles into the sea, its fifth such launch in recent weeks.\r\nThe launch, from near the eastern city… [+1679 chars]"
+      },
+      {
+         "source": {
+            "id": null,
+            "name": "Gizmodo.com"
+         },
+         "author": "Alyse Stanley on Earther, shared by Alyse Stanley to Gizmodo",
+         "title": "Trump Administration Authorizes 'Cyanide Bombs' to Kill Feral Hogs. Seriously.",
+         "description": "On Thursday the Trump administration authorized another weapon in America’s war on the hoards of 30 to 50 feral hogs running through yards and terrorizing our nation’s children: “cyanide bombs.” Read more...",
+         "url": "https://earther.gizmodo.com/trump-administration-authorizes-cyanide-bombs-to-kill-f-1837086560",
+         "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--WhZRYrt6--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/hmjgw7lhawgpqwsbywvp.jpg",
+         "publishedAt": "2019-08-09T04:23:00Z",
+         "content": "On Thursday the Trump administration authorized another weapon in Americas war on the hoards of 30 to 50 feral hogs running through yards and terrorizing our nations children: cyanide bombs.\r\n Thats what critics call M-44s, traps used by federal agencies like… [+1726 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Nicholas Kristof",
+         "title": "Trump Finds a Brawler for His War on Workers",
+         "description": "America’s working class is in desperate shape, and its longtime protectors — unions — have lost much of their power.",
+         "url": "https://www.nytimes.com/2019/08/10/opinion/sunday/labor-unions.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/11/opinion/sunday/11Kristof/11Kristof-facebookJumbo.jpg",
+         "publishedAt": "2019-08-10T20:13:21Z",
+         "content": "Greenhouse, who covered labor for 19 years for The Times, acknowledges all the ways in which labor unions were maddening and retrograde. But he notes that corporations run amok when no one is minding them.\r\nUnion featherbedding and rigid work rules have been … [+2538 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Christina Goldbaum",
+         "title": "Trump Administration Moves to Decertify Outspoken Immigration Judges’ Union",
+         "description": "The Justice Department moved to decertify the immigration judges’ union, whose members have criticized the administration’s immigration policies.",
+         "url": "https://www.nytimes.com/2019/08/10/us/immigration-judges-union-justice-department.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/10/us/10IMMIG-JUDGES/merlin_152459349_6e4f92b1-395a-4301-b3f3-a96a02202b5f-facebookJumbo.jpg",
+         "publishedAt": "2019-08-10T19:02:23Z",
+         "content": "The pressure to hear more cases more quickly amounts to psychological warfare, Judge Tabaddor said last year.\r\nAddressing some of the unions concerns, the Justice Department has tried to tackle the backlog, which now totals more than 830,000 cases, by hiring … [+1747 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Katherine Rosman",
+         "title": "They Paid $42 for a SoulCycle Ride, Not for Trump",
+         "description": "A look at what happens when politics enters every spandex-clad corner of life, especially in the Hamptons.",
+         "url": "https://www.nytimes.com/2019/08/08/us/politics/soulcycle-equinox-boycott.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/08/us/politics/08soulcycle-sub/08soulcycle-sub-facebookJumbo.jpg",
+         "publishedAt": "2019-08-09T00:59:42Z",
+         "content": "Management is struggling to control the damage. On Wednesday, SoulCycles chief talent officer sent an email to instructors providing talking points to share with customers. They included, At SoulCycle, we believe in diversity, inclusion, and equality. All sou… [+1788 chars]"
+      },
+      {
+         "source": {
+            "id": "bbc-news",
+            "name": "BBC News"
+         },
+         "author": "https://www.facebook.com/bbcnews",
+         "title": "The Hunt: Universal Pictures cancels film release",
+         "description": "The storyline, which sees liberals hunt Trump supporters, has been criticised by the president.",
+         "url": "https://www.bbc.co.uk/news/world-us-canada-49310259",
+         "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/184E5/production/_108275599_gettyimages-1160650392.jpg",
+         "publishedAt": "2019-08-11T10:17:19Z",
+         "content": "Image copyrightGetty ImagesImage caption\r\n The film, featuring Hillary Swank, was due to be released on 27 September\r\nUniversal Pictures has pulled the release of The Hunt following a series of mass shootings and criticism from US President Donald Trump. \r\nTh… [+1320 chars]"
+      },
+      {
+         "source": {
+            "id": "cnn",
+            "name": "CNN"
+         },
+         "author": null,
+         "title": "Tapper: Trump often uses Twitter to amplify the worst of us",
+         "description": "CNN's Jake Tapper reacts to President Donald Trump retweeting conspiracy theories about jailed multimillionaire and pedophile Jeffrey Epstein's death.",
+         "url": "https://www.cnn.com/videos/politics/2019/08/11/president-trump-epstein-conspiracy-theories-jake-tapper-monologue-sotu-vpx.cnn",
+         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190811092525-jake-tapper-monologue-sotu-081119-super-tease.jpg",
+         "publishedAt": "2019-08-11T13:55:38Z",
+         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+      },
+      {
+         "source": {
+            "id": "cnn",
+            "name": "CNN"
+         },
+         "author": null,
+         "title": "Tapper fact checks Trump claims rhetoric is unifying",
+         "description": "CNN's Jake Tapper, in partnership with FactCheck.org, looks at claims made by Donald Trump that his rhetoric \"brings people together.\"",
+         "url": "https://www.cnn.com/videos/politics/2019/08/09/jake-tapper-fact-check-trump-claims-unite-country-orig.cnn",
+         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190807183919-trump-arrives-el-paso-airport-super-tease.jpg",
+         "publishedAt": "2019-08-09T00:30:38Z",
+         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Katie Benner",
+         "title": "Inside the Government, Addressing Domestic Terrorism Has Been Fraught",
+         "description": "For very different reasons, the Homeland Security Department under both the Obama and Trump administrations has struggled to elevate concerns about white nationalism and extremism.",
+         "url": "https://www.nytimes.com/2019/08/11/us/politics/domestic-terrorism.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/11/us/11dc-supremacy-print3/merlin_158906379_a51d2fbf-5f3b-4bab-a837-0eadf7637e9c-facebookJumbo.jpg",
+         "publishedAt": "2019-08-11T18:15:12Z",
+         "content": "The United States has always been plagued by violence associated with white nationalism. Violence associated with white nationalism has spiked at intervals in recent decades, including the Oklahoma City bombing in 1995. But government data shows that, since t… [+2187 chars]"
+      },
+      {
+         "source": {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+         },
+         "author": "Ana Swanson",
+         "title": "Democrats’ 2020 Problem: How to Be Tougher on Trade Than Trump",
+         "description": "Democrats are highly critical of NAFTA and China, but they will have a hard time taking a tougher line than Mr. Trump has as president.",
+         "url": "https://www.nytimes.com/2019/08/10/us/politics/democrats-trade-trump.html",
+         "urlToImage": "https://static01.nyt.com/images/2019/08/11/business/11DC-DEMTRADE-print1/merlin_158998128_5bace47a-8f1a-4b9d-ab70-16ca9b417605-facebookJumbo.jpg",
+         "publishedAt": "2019-08-10T09:00:06Z",
+         "content": "In Ms. Warrens view, the United States should act as an agent of global change by only entering into trade deals with countries that have strong labor, environmental and other protections.\r\nThe standards in her trade agenda, released in July, are so high that… [+1369 chars]"
+      },
+      {
+         "source": {
+            "id": "mashable",
+            "name": "Mashable"
+         },
+         "author": "Rachel Thompson",
+         "title": "Leslie Jones bans Trump from coming to her Netflix special",
+         "description": "Leslie Jones has announced she's filming a Netflix comedy special. She says she picked Washington D.C. as it \"has one of the best comic crowds\". But, as Jimmy Kimmel pointed out, D.C. also happens to be home to the president and his family. The late night sho…",
+         "url": "https://mashable.com/video/leslie-jones-netflix-special-trump/",
+         "urlToImage": "https://mondrian.mashable.com/2019%252F08%252F09%252F5d%252F2033004973944f84aaaa726f058aa50e.bdc3c.jpg%252F1200x630.jpg?signature=C3z48RuoYjL7uLczpMvPhOIsbXw=",
+         "publishedAt": "2019-08-09T10:18:02Z",
+         "content": "Leslie Jones has announced she's filming a Netflix comedy special. She says she picked Washington D.C. as it \"has one of the best comic crowds\". \r\nBut, as Jimmy Kimmel pointed out, D.C. also happens to be home to the president and his family. \r\nThe late night… [+277 chars]"
+      },
+      {
+         "source": {
+            "id": "mashable",
+            "name": "Mashable"
+         },
+         "author": "Shannon Connellan",
+         "title": "Seth Meyers can't stop giggling during his latest Trump impression",
+         "description": "It looks like this hell of a week has finally broken Seth Meyers. After \"A Closer Look\" at Trump's controversial trip to El Paso following a mass shooting — even when the president still owes the city half a million dollars for public services used during a F…",
+         "url": "https://mashable.com/video/seth-meyers-giggling-trump-impression/",
+         "urlToImage": "https://mondrian.mashable.com/2019%252F08%252F09%252Fe2%252F636d8a684392452c846d9c9200f703aa.cbfdd.png%252F1200x630.png?signature=Y0Ehg36x1YXF0qQi2E8rrKr2bCU=",
+         "publishedAt": "2019-08-09T09:38:51Z",
+         "content": "It looks like this hell of a week has finally broken Seth Meyers. \r\nAfter \"A Closer Look\" at Trump's controversial trip to El Paso following a mass shooting even when the president still owes the city half a million dollars for public services used during a F… [+747 chars]"
+      }
 ];
 
 

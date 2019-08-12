@@ -17,6 +17,8 @@ class Tabs extends React.Component{
     const target = getParentNode( event.target, 'li' );
     const index = +target.getAttribute('data-index');
     if( index === this.state.activeTab ) return;
+
+    this.props.changeActiveTab( index );
     this.setState({ activeTab: index });
   }
 
@@ -41,7 +43,7 @@ class Tabs extends React.Component{
           )}
         </ul>
         <TabContent
-          name={'no name'}
+          name={''}
           content={children[activeTab].props.children} />
       </>
     )

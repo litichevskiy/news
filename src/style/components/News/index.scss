@@ -87,8 +87,12 @@
   }
 
   .newsTitle,
-  .description{
+  .description,
+  .content{
     margin: 0.7rem 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
   }
 
   .description{

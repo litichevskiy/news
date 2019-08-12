@@ -2,21 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { DEFAULT_TRANSITION_TIME } from '../config';
-import { IconCLose, IconNewsPaper, IconLocation, IconSettings } from './icons';
+import { IconCLose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from './icons';
 import PublisherList from './PublisherList';
 import CountriesList from './CountriesList';
 import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
+import SearchByKeywords from './SearchByKeywords';
+
+const ESC = 27;// key code
 
 class Settings extends React.Component{
+
+  state = {activeTab: 0};
+
+  componentDidMount() {
+    window.addEventListener('keyup', this.isClose );
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.isClose );
+  }
+
+  isClose = ( event ) => {
+    if( event.keyCode === ESC ) this.closeSettings();
+  }
 
   closeSettings = () => {
     this.props.setVisibilitySettings( false );
   }
 
+  changeActiveTab = ( index ) => {
+    this.state.activeTab = index
+  }
+
   render() {
     const { visibilitySettings } = this.props;
+    const {activeTab } = this.state;
     return (
       <CSSTransition
         in={visibilitySettings}
@@ -31,7 +53,9 @@ class Settings extends React.Component{
               className='btn close'>
               <IconCLose className='icon-close' />
             </Button>
-            <Tabs activeTab={1}>
+            <Tabs
+              activeTab={activeTab}
+              changeActiveTab={this.changeActiveTab}>
               <Tab
                 className={'tab'}
                 name='settings'
@@ -63,6 +87,17 @@ class Settings extends React.Component{
                 }>
                 <p className='tabDescription'>by Publishers</p>
                 <PublisherList />
+              </Tab>
+              <Tab
+                className={'tab'}
+                name='search by words'
+                title={
+                  <button className='btn' title='news by keywords'>
+                    <IconSearch className='icon-search'/>
+                  </button>
+                }>
+                <p className='tabDescription'>by keywords</p>
+                <SearchByKeywords />
               </Tab>
             </Tabs>
           </section>
