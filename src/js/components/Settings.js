@@ -12,7 +12,6 @@ import Tab from './Tab';
 class Settings extends React.Component{
 
   closeSettings = () => {
-
     this.props.setVisibilitySettings( false );
   }
 
@@ -24,8 +23,7 @@ class Settings extends React.Component{
         timeout={DEFAULT_TRANSITION_TIME}
         unmountOnExit
         mountOnEnter
-        classNames='settings-animation'
-        onExited={this.closeSettings}>
+        classNames='settings-animation'>
           <section className='settings'>
             <Button
               onClick={this.closeSettings}

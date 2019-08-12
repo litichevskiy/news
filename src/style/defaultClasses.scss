@@ -45,4 +45,12 @@
   .btn:focus{
     background-color: #cfe2f0 !important;
   }
+
+  .outline-focus{
+    outline: none;
+
+    &:focus{
+      box-shadow: 0px 0px 0px 2px $blue-color;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 @media ( min-width: 1024px ) {
   .news{
 
-    .containerImg{
+    .readMoreNewsLinkForImage{
 
       &:hover .wrapper{
         opacity: 1;
@@ -24,7 +24,7 @@
 @media ( max-width: 1024px ) {
   .news{
 
-    .containerImg{
+    .readMoreNewsLinkForImage{
 
       .wrapper{
         opacity: 1;

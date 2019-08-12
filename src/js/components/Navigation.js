@@ -18,7 +18,10 @@ class Navigation extends React.Component{
           title='open settings'>
           <IconSettings className='icon-settings' />
         </Button>
-        <a href='/' className='containerLogo' title='daily news'>
+        <a
+          href='/'
+          className='containerLogo outline-focus'
+          title='daily news'>
           <IconLogo className='icon-logo' />
           <span className='logo-text'>news</span>
         </a>

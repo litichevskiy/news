@@ -1,6 +1,12 @@
 body{
   margin: 0;
 
+  main,
+  section,
+  header{
+    display: block;
+  }
+
   *{
     box-sizing: border-box;
   }

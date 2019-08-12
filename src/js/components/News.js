@@ -27,16 +27,17 @@ const News = ({
         dateTime={fullDateISO}>
           published:  {`${hours}:${minutes}  ${day} ${month} ${year}`}
       </time>
-      <div className='containerImg'>
-        <a className='readMoreNewsLinkForImage' target='_blank' href={url}>
-          <Image
-            className='newsImage'
-            src={urlToImage}
-            alt={title}
-            title={title} />
-          <div className='wrapper'></div>
-        </a>
-      </div>
+      <a
+        className='readMoreNewsLinkForImage outline-focus'
+        target='_blank'
+        href={url}>
+        <Image
+          className='newsImage'
+          src={urlToImage}
+          alt={title}
+          title={title} />
+        <div className='wrapper'></div>
+      </a>
       <p className='author'>
         <small>autor:</small>
         {author}
@@ -46,7 +47,7 @@ const News = ({
       <p className='content'>{content}</p>
       <div className='linkReadMoreNewsContainer'>
         <a
-          className='linkReadMoreNews'
+          className='linkReadMoreNews outline-focus'
           target='_blank'
           title='learn more'
           href={url}>
