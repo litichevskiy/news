@@ -14,7 +14,7 @@ class PublisherList extends React.Component{
 
   render() {
     return(
-      <ul className='publisherList'>{
+      <ul className='publisherList wrapperTabContent'>{
         publishers.map(( item, index ) => {
           const { publisher, key } = item
           return (

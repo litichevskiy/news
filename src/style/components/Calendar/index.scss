@@ -1,0 +1,162 @@
+$calendad-border-dadius: 3px;
+
+.calendar{
+  @include border-radius( $calendad-border-dadius );
+  @extend .default-shadow;
+  width: $width-calendar;
+  font-size: 1rem;
+
+  .listWikday{
+    width: 100%;
+  }
+
+  .containerArrow{
+    @include flex-center( flex, center, space-between );
+    width: 100%;
+    padding: 0.8rem 0;
+    color: $white-color;
+    background-color: #2962ff;
+
+    .btn:focus{
+      background-color: transparent !important;
+    }
+  }
+
+  .btn.disable{
+    opacity: 0.25;
+    cursor: initial;
+
+    &:focus{
+      background-color: transparent !important;
+    }
+  }
+
+  .icon-calendar,
+  .icon-close{
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon-close{
+    fill: #2962ff;
+  }
+
+  .header{
+    @include flex-center( flex, center, flex-start );
+    border-top-right-radius: $calendad-border-dadius;
+    border-top-left-radius: $calendad-border-dadius;
+    min-height: 2.8rem;
+    color: $white-color;
+    background-color: #2962ff;
+    position: relative;
+    padding: 0.5rem 0.9rem;
+
+    .btn{
+      position: absolute;
+      right: 0.3rem;
+      top: 0.3rem;
+      background-color: $white-color;
+    }
+  }
+
+  .containerDate{
+    text-align: left;
+  }
+
+  .selectedDate{
+    font-size: 1rem;
+  }
+
+  .date,
+  .selectedDate{
+    white-space: pre;
+  }
+
+  .wikday,
+  .day{
+    @include flex-center( inline-flex, center, center );
+    width: 14.285%;
+    padding: 0.3rem;
+    border-left: 1px solid $light-grey-color;
+    border-bottom: 1px solid $light-grey-color;
+    height: 51px;
+  }
+
+  .wikday{
+    font-size: 0.9rem;
+    border-bottom: 1px solid $light-grey-color;
+    padding: 0.4rem 0.3rem;
+    border-left: none;
+    background-color: $white-color;
+
+    &:first-child{
+      border-left: none;
+    }
+  }
+
+  .listDays{
+    @include flex-center( flex, center, flex-start );
+    flex-wrap: wrap;
+  }
+
+  .day{
+    cursor: pointer;
+
+    &.today{
+      color: #2962ff;
+    }
+
+    &:hover{
+      background-color: #54be35;
+      color: $white-color;
+    }
+
+    &.selected{
+      color: $white-color;
+      background-color: #2962ff;
+    }
+
+    &.notAvailable{
+      color: #cdcdcd;
+      background-color: $white-color;
+      cursor: initial;
+    }
+
+    &.notCerrentMonth{
+      background-color: #e2e1e1;
+      color: #7e7d7d;
+      cursor: initial;
+    }
+
+    &:nth-child(7n + 1) {
+      border-left: none;
+    }
+
+    &:nth-last-child(7) {
+      border-bottom-left-radius: $calendad-border-dadius;
+    }
+
+    &:nth-last-child(1) {
+      border-bottom-right-radius: $calendad-border-dadius;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4),
+    &:nth-last-child(5),
+    &:nth-last-child(6),
+    &:nth-last-child(7) {
+      border-bottom: none;
+    }
+  }
+
+  .btn{
+    padding: 0.13rem;
+    background-color: transparent;
+
+    &:focus{
+      background-color: $white-color !important;
+    }
+  }
+}

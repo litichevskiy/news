@@ -64,7 +64,6 @@ module.exports = [
           exclude: /\/node_modules\//,
           test: /\.scss$/,
           use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
             use: [
               {
                 loader: 'css-loader',
@@ -74,9 +73,13 @@ module.exports = [
                 loader: 'postcss-loader',
                 options: {
                   plugins: [autoprefixer({browsers:['last 5 version']})],
+                  sourceMap: !IS_PRODUCTION
                 }
               },
-              { loader: 'sass-loader' }
+              {
+                loader: 'sass-loader',
+                options: {sourceMap: !IS_PRODUCTION}
+              }
             ]
           })
         }

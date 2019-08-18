@@ -30,7 +30,6 @@ class Tabs extends React.Component{
   render() {
     const { children } = this.props;
     const { activeTab, isActive } = this.state;
-
     return(
       <>
         <ul className='tabsList'>

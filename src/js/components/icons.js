@@ -1,6 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 /////////////////////////////////////////////////////
+export const IconArrowRight = ({ className }) => (
+  <svg
+    className={`icon ${className}`}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="9 0 32 32"
+    fill="#121313">
+    <path d="M31.708,15.286l-9.002-8.999c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L29.563,16   l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999   C32.097,16.325,32.097,15.675,31.708,15.286z"/>
+  </svg>
+);
+
+IconArrowRight.propTypes = {
+  className: PropTypes.string.isRequired,
+};
+
+export const IconArrowLeft = ({ className }) => (
+  <svg
+    className={`icon ${className}`}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="-9 0 32 32"
+    fill="#121313" >
+    <path d="M10.725,6.287c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999c-0.39,0.389-0.39,1.039,0,1.429l9.002,8.999   c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L2.437,16l8.287-8.285C11.12,7.321,11.12,6.681,10.725,6.287z"/>
+  </svg>
+);
+
+IconArrowLeft.propTypes = {
+  className: PropTypes.string.isRequired,
+};
+
 export const IconSearch = ({ className }) => (
   <svg
     className={`icon ${className}`}
@@ -33,18 +61,51 @@ IconSettings.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-export const IconCLose = ({ className }) => (
+export const IconClose = ({ className }) => (
   <svg
     className={`icon ${className}`}
     xmlns="http://www.w3.org/2000/svg"
+    fill="#267CB5"
     viewBox="0 0 48 48">
-    <path fill="#267CB5" d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M35.997,33.877l-2.122,2.12   L24,26.123l-9.874,9.874l-2.123-2.12l9.876-9.876l-9.876-9.876l2.12-2.122L24,21.88l9.878-9.877l2.119,2.122l-9.875,9.876   L35.997,33.877z"/>
+    <path d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M35.997,33.877l-2.122,2.12   L24,26.123l-9.874,9.874l-2.123-2.12l9.876-9.876l-9.876-9.876l2.12-2.122L24,21.88l9.878-9.877l2.119,2.122l-9.875,9.876   L35.997,33.877z"/>
   </svg>
 );
 
-IconCLose.propTypes = {
+IconClose.propTypes = {
   className: PropTypes.string.isRequired,
 };
+
+export const IconCalendar = ({ className }) => (
+  <svg
+    className={`icon ${className}`}
+    xmlns="http://www.w3.org/2000/svg"
+    data-name="Layer 1"
+    id="Layer_1"
+    viewBox="0 0 512 512">
+      <rect fill="#267CB5" height="512" rx="256" ry="256" width="512"/>
+      <path fill="#efecca" d="M98.34,159H413.66a0,0,0,0,1,0,0V350.87a50,50,0,0,1-50,50H148.34a50,50,0,0,1-50-50V159A0,0,0,0,1,98.34,159Z"/>
+      <path fill="#ffb03b" d="M118.34,116.14H393.66a20,20,0,0,1,20,20V169a0,0,0,0,1,0,0H98.34a0,0,0,0,1,0,0V136.14A20,20,0,0,1,118.34,116.14Z"/>
+      <circle fill="#61491c" cx="133.07" cy="136.91" r="15.87"/>
+      <circle fill="#61491c" cx="182.83" cy="136.91" r="15.87"/>
+      <circle fill="#61491c" cx="232.71" cy="136.91" r="15.87"/>
+      <circle fill="#61491c" cx="282.47" cy="136.91" r="15.87"/>
+      <circle fill="#61491c" cx="332.14" cy="136.91" r="15.87"/>
+      <circle fill="#61491c" cx="381.9" cy="136.91" r="15.87"/>
+      <rect fill="#b27417" height="12.01" width="315.32" x="98.34" y="156.99"/>
+      <rect fill="#a7a37e" height="50.6" rx="10.15" ry="10.15" width="22.61" x="121.81" y="97.83"/>
+      <rect fill="#a7a37e" height="50.6" rx="11.3" ry="11.3" width="22.61" x="171.58" y="97.83"/>
+      <rect fill="#a7a37e" height="50.6" rx="11.3" ry="11.3" width="22.61" x="221.33" y="97.83"/>
+      <rect fill="#a7a37e" height="50.6" rx="11.3" ry="11.3" width="22.61" x="271.16" y="97.83"/>
+      <rect fill="#a7a37e" height="50.6" rx="11.3" ry="11.3" width="22.61" x="320.82" y="97.83"/>
+      <rect fill="#a7a37e" height="50.6" rx="10.15" ry="10.15" width="22.61" x="370.59" y="97.83"/>
+      <path fill="#b64926" d="M176.11,303.46l15.78-2.1q2.72,13.41,9.25,19.33A22.84,22.84,0,0,0,217,326.6a25.49,25.49,0,0,0,18.8-7.71,26,26,0,0,0,7.67-19.11q0-10.87-7.1-17.93t-18.06-7.06a45.34,45.34,0,0,0-11.13,1.75L209,262.7a24.05,24.05,0,0,0,2.54.18,32.5,32.5,0,0,0,18.15-5.26q8.06-5.26,8.06-16.22A19.19,19.19,0,0,0,231.86,227q-5.87-5.7-15.16-5.7a21.49,21.49,0,0,0-15.34,5.79q-6.14,5.79-7.89,17.36l-15.78-2.81q2.89-15.86,13.15-24.59t25.51-8.72a42,42,0,0,1,19.37,4.52,32.66,32.66,0,0,1,13.54,12.32A31.65,31.65,0,0,1,254,241.74a27.13,27.13,0,0,1-4.47,15.17,30.52,30.52,0,0,1-13.24,10.87q11.39,2.63,17.71,10.91t6.31,20.73A37.93,37.93,0,0,1,248,328q-12.27,11.7-31,11.7-16.92,0-28.09-10.08T176.11,303.46Z"/>
+      <path fill="#b64926" d="M335.3,337.38H319.52V236.83a81.49,81.49,0,0,1-14.95,10.87A105.83,105.83,0,0,1,288,255.86V240.6a95.22,95.22,0,0,0,23.14-15.08q9.91-8.85,14-17.18H335.3Z"/>
+  </svg>
+);
+
+IconCalendar.propTypes = {
+  className: PropTypes.string.isRequired,
+}
 
 export const IconNewsPaper = ({ className }) => (
   <svg

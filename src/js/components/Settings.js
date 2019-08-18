@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { DEFAULT_TRANSITION_TIME } from '../config';
-import { IconCLose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from './icons';
+import { IconClose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from './icons';
 import PublisherList from './PublisherList';
 import CountriesList from './CountriesList';
 import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import SearchByKeywords from './SearchByKeywords';
+import UserSettings from './UserSettings';
 
 const ESC = 27;// key code
 
@@ -51,7 +52,7 @@ class Settings extends React.Component{
               onClick={this.closeSettings}
               title='close settings'
               className='btn close'>
-              <IconCLose className='icon-close' />
+              <IconClose className='icon-close' />
             </Button>
             <Tabs
               activeTab={activeTab}
@@ -64,7 +65,8 @@ class Settings extends React.Component{
                     <IconSettings className='icon-settings'/>
                   </button>
                 }>
-                <p className='tabDescription'>Settings</p>
+                <h4 className='tabDescription'>settings</h4>
+                <UserSettings />
               </Tab>
               <Tab
                 className={'tab'}
@@ -74,7 +76,7 @@ class Settings extends React.Component{
                     <IconLocation className='icon-location'/>
                   </button>
                 }>
-                <p className='tabDescription'>by Countries</p>
+                <h4 className='tabDescription'>by countries</h4>
                 <CountriesList />
               </Tab>
               <Tab
@@ -85,7 +87,7 @@ class Settings extends React.Component{
                     <IconNewsPaper className='icon-newspaper'/>
                   </button>
                 }>
-                <p className='tabDescription'>by Publishers</p>
+                <h4 className='tabDescription'>by publishers</h4>
                 <PublisherList />
               </Tab>
               <Tab
@@ -96,7 +98,7 @@ class Settings extends React.Component{
                     <IconSearch className='icon-search'/>
                   </button>
                 }>
-                <p className='tabDescription'>by keywords</p>
+                <h4 className='tabDescription'>by keywords</h4>
                 <SearchByKeywords />
               </Tab>
             </Tabs>

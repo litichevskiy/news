@@ -1,41 +1,56 @@
 .searchByKeywords{
+  padding-bottom: 2rem;
 
-  .row{
-    @include flex-center( flex, center, flex-start );
+  .form{
     width: 100%;
-    margin-bottom: 0.5rem;
-    padding: 0.3rem 0;
-    cursor: pointer;
   }
 
-  .wrapperLabels{
-    @include flex-center( inline-flex, flex-start, flex-start );
+  /*.row{
+    @include flex-center( flex, flex-start, center );
+    @include border-radius( 3px );
+    @extend .default-shadow;
+    width: 99%;
+    padding: 0.8rem 0.8rem;
+    margin: 0.3rem auto 1.5rem;
     flex-direction: column;
-  }
+    background-color: $news-bg-color;
+  }*/
 
-  .label{
+  /*.label{
     @include flex-center( inline-flex, center, flex-start );
     @include border-radius(5px);
+    @extend .default-shadow;
     padding: 0.3rem 0;
     margin: 0 0 0.5rem;
     white-space: pre;
     width: 11rem;
-    @extend .default-shadow;
+    background-color: $white-color;
 
     &:last-child{
       margin-bottom: 0;
     }
-  }
+  }*/
 
   .description{
-    margin: 0.5rem 0;
+
+    small{
+      display: block;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      color: #6d6b6b;
+    }
+  }
+
+  .containerInput{
+    width: 100%;
+    margin: auto;
   }
 
   .inputSearch{
     @include border-radius(5px);
     font-size: inherit;
     color: inherit;
-    padding: 0.3rem 0.4rem;
+    padding: 0.4rem 0.4rem;
     border: 1px solid $light-grey-color;
     width: 100%;
     outline: none;
@@ -59,4 +74,22 @@
     margin: 2rem auto 0;
     background-color: $light-green-color;
   }
+
+  .openCalendar{
+    @include flex-center( inline-flex, center, space-between );
+    width: $width-calendar;
+    margin: auto;
+    background-color: $light-green-color;
+    padding: 0.29rem 0.5rem;
+    border: 2px solid transparent;
+
+    &:focus{
+      background-color: #76C2AF !important;
+      border-color: $blue-color;
+    }
+  }
 }
+
+/*
+  FOCUS SMALL DEVICES
+*/
