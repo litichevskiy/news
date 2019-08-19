@@ -7,7 +7,7 @@ $settings-translate-x: -10rem;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  bottom: 0;
   width: 400px;
   z-index: 3;
   background-color: $white-color;
@@ -37,17 +37,11 @@ $settings-translate-x: -10rem;
     transform: translateZ(0) translateX(0);
   }
 
-  .wrapper{
-    /*background-color: pink;
-    display: flex;
-    justify-content: space-between;*/
-  }
-
   .close{
-    float: right;
-    padding: 0.2rem 0.3rem;
-    margin-top: 0.4rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem 0.3rem;
     background-color: transparent;
-    /*border-radius: 50%;*/
   }
 }

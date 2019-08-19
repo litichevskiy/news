@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import publishers from './../publishers';
 import getParentNode from './../utils/getParentNode';
 
@@ -32,5 +32,8 @@ class PublisherList extends React.Component{
     )
   }
 }
+
+PublisherList.defaultProps = {};
+PublisherList.propTypes = {};
 
 export default PublisherList;

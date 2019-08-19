@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import countries from './../countries';
 import getParentNode from './../utils/getParentNode';
+import InputRadio from './InputRadio';
 import { NEWS_CATEGORY as CATEGORY } from './../config';
 
 class CountriesList extends React.Component{
@@ -10,16 +12,16 @@ class CountriesList extends React.Component{
     countryCode: 'ar'
   };
 
-  clickHandler = ( event ) => {
-    const target = getParentNode( event.target, 'li' );
-    const countryCode = target.getAttribute('data-code');
+  clickHandler = ({ target }) => {
+    const item = getParentNode( target, 'li' );
+    const countryCode = item.getAttribute('data-code');
     if( !countryCode ) throw new Error(`country code ${countryCode} can't be undefined`);
     console.log( countryCode );
   }
 
-  setCategory = ( event ) => {
-    console.log( event.target.value );
-    this.setState({category: event.target.value });
+  setCategory = ({target: { value }}) => {
+    console.log( value );
+    this.setState({category: value });
   }
 
   sendRequest = () => {
@@ -29,15 +31,23 @@ class CountriesList extends React.Component{
   render() {
     const {category} = this.state;
     return (
-      <>
-        {/*<div>
-          <p>category</p>
-          {<Inputs list={CATEGORY} active={category} onChange={this.setCategory} name={'cat'} />}
-        </div>
+      <div className='wrapperTabContent'>
         <div>
+          <p>category</p>
+          {CATEGORY.map(( item, index ) => {
+            return(
+              <InputRadio
+                key={index}
+                labelClass={'containerInputRadio'}
+                name={'categories-category'}
+                value={item}
+                onChange={this.setCategory}
+                checked={item === category} />
+            )
+          })}
           <button>get news</button>
-        </div>*/}
-        <ul className='countriesList wrapperTabContent'>{
+        </div>
+        <ul className='countriesList'>{
           countries.map(( item, index ) => {
             const { code, country } = item;
             return (
@@ -52,25 +62,12 @@ class CountriesList extends React.Component{
             )
           })
         }</ul>
-      </>
+      </div>
     )
   }
 };
 
-const Inputs = ({list, active, onChange, name}) => {
-    return list.map(( item, index ) => {
-      return(
-        <label key={index}>
-          <input
-            type='radio'
-            value={item}
-            onChange={onChange}
-            checked={item === active}
-            name={name}/>
-          <span>{item}</span>
-        </label>
-      )
-    })
-};
+CountriesList.defaultProps = {};
+CountriesList.propTypes = {};
 
 export default CountriesList;

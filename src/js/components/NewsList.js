@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import News from './News';
 
 const NewsList = ({newsList}) => (
@@ -11,12 +10,7 @@ const NewsList = ({newsList}) => (
   }</ul>
 );
 
-NewsList.defaultProps = {
-  // children: null,
-};
-
-NewsList.propTypes = {
-  // news: PropTypes.node
-};
+NewsList.defaultProps = {};
+NewsList.propTypes = {};
 
 export default NewsList;

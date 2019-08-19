@@ -15,7 +15,7 @@ $calendad-border-dadius: 3px;
     width: 100%;
     padding: 0.8rem 0;
     color: $white-color;
-    background-color: #2962ff;
+    background-color: $blue-color;
 
     .btn:focus{
       background-color: transparent !important;
@@ -38,7 +38,7 @@ $calendad-border-dadius: 3px;
   }
 
   .icon-close{
-    fill: #2962ff;
+    fill: $blue-color;
   }
 
   .header{
@@ -47,7 +47,7 @@ $calendad-border-dadius: 3px;
     border-top-left-radius: $calendad-border-dadius;
     min-height: 2.8rem;
     color: $white-color;
-    background-color: #2962ff;
+    background-color: $blue-color;
     position: relative;
     padding: 0.5rem 0.9rem;
 
@@ -103,17 +103,17 @@ $calendad-border-dadius: 3px;
     cursor: pointer;
 
     &.today{
-      color: #2962ff;
+      color: $blue-color;
     }
 
     &:hover{
-      background-color: #54be35;
+      background-color: $light-green-color;
       color: $white-color;
     }
 
     &.selected{
       color: $white-color;
-      background-color: #2962ff;
+      background-color: $blue-color;
     }
 
     &.notAvailable{

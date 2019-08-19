@@ -5,32 +5,6 @@
     width: 100%;
   }
 
-  /*.row{
-    @include flex-center( flex, flex-start, center );
-    @include border-radius( 3px );
-    @extend .default-shadow;
-    width: 99%;
-    padding: 0.8rem 0.8rem;
-    margin: 0.3rem auto 1.5rem;
-    flex-direction: column;
-    background-color: $news-bg-color;
-  }*/
-
-  /*.label{
-    @include flex-center( inline-flex, center, flex-start );
-    @include border-radius(5px);
-    @extend .default-shadow;
-    padding: 0.3rem 0;
-    margin: 0 0 0.5rem;
-    white-space: pre;
-    width: 11rem;
-    background-color: $white-color;
-
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }*/
-
   .description{
 
     small{
@@ -62,10 +36,6 @@
     &:focus{
       border-color: $blue-color;
     }
-  }
-
-  .inputCheckbox{
-    margin-right: 0.5rem;
   }
 
   .getNews{

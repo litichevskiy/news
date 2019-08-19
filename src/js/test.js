@@ -15,7 +15,6 @@ SOURCES
   news by all sources
   news by language = language=en
   news by language and country = language=n&country=us
-
 */
 
 import formatDate from './utils/formatDate';
@@ -24,19 +23,11 @@ import { articles, articlesRus, articlesIsraeel } from './fakeData';
 const HEADERS = {Authorization: 'b158c3465f5c44118acfd389f25d7549'};
 let button = document.querySelector('button');
 button.addEventListener('click', (event) => {
-console.log('LOG')
-  // fetch('https://newsapi.org/v2/top-headlines?sources=google-news-ca', { headers:HEADERS })
-  // fetch('https://newsapi.org/v2/top-headlines?sources=google-news-ru', { headers:HEADERS })
-  // fetch('https://newsapi.org/v2/top-headlines?country=ua', { headers:HEADERS })
-  // fetch('https://newsapi.org/v2/top-headlines?sources=bbc-news', { headers:HEADERS })
   fetch('https://newsapi.org/v2/top-headlines?country=fr', { headers:HEADERS })
-  // fetch('https://newsapi.org/v2/top-headlines?country=il', { headers:HEADERS })
   .then(response => {
-    // debugger
     return response.json();
   })
   .then(response => {
-    // debugger
     createListNews( checkItemNews(response.articles) )
     console.log( response )
   })
@@ -102,9 +93,7 @@ function createItemNews( data ) {
       else return `<p class="content">no content</p>`
   }
 }
-// debugger
+
 createListNews( checkItemNews( articles ) );
-// createListNews( checkItemNews( articlesRus ) );
-// createListNews( checkItemNews( articlesIsraeel ));
 
 export default createListNews;

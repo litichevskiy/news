@@ -25,8 +25,8 @@ class Settings extends React.Component{
     window.removeEventListener('keyup', this.isClose );
   }
 
-  isClose = ( event ) => {
-    if( event.keyCode === ESC ) this.closeSettings();
+  isClose = ({ keyCode }) => {
+    if( keyCode === ESC ) this.closeSettings();
   }
 
   closeSettings = () => {

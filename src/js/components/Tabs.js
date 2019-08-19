@@ -22,11 +22,6 @@ class Tabs extends React.Component{
     this.setState({ activeTab: index });
   }
 
-  // test = () => {
-  //   console.log('test')
-  //   this.setState({isActive: false});
-  // }
-
   render() {
     const { children } = this.props;
     const { activeTab, isActive } = this.state;

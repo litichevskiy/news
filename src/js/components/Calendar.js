@@ -62,8 +62,8 @@ class Calendar extends React.Component{
     this.props.closeCalendar();
   }
 
-  setDate = ( event ) => {
-    const target = event.target;
+  setDate = ({ target }) => {
+
     if( target.tagName === 'UL' ) return;
 
     const index = +target.getAttribute('data-index');

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Image from './Image';
 import formatDate from '../utils/formatDate';
 
@@ -58,12 +57,7 @@ const News = ({
   )
 };
 
-News.defaultProps = {
-  // children: null,
-};
-
-News.propTypes = {
-  // news: PropTypes.node
-};
+News.defaultProps = {};
+News.propTypes = {};
 
 export default News;

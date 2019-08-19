@@ -18,6 +18,7 @@
 @import 'components/SearchByKeywords/index';
 @import 'components/Calendar/index';
 @import 'components/UserSettings/index';
+@import 'components/InputRadio/index';
 /*small devices*/
 @import 'components/PublisherList/smallDevices';
 @import 'components/CountriesList/smallDevices';
@@ -25,3 +26,8 @@
 @import 'components/News/smallDevices';
 @import 'components/Settings/smallDevices';
 @import 'components/Tab/smallDevices';
+@import 'components/Tabs/smallDevices';
+@import 'components/TabContent/smallDevices';
+@import 'components/SearchByKeywords/smallDevices';
+@import 'components/Calendar/smallDevices';
+@import 'components/UserSettings/smallDevices';

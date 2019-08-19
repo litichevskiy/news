@@ -1,5 +1,4 @@
 .tabContent{
-  /*border-top: 1px solid #eae7e7;*/
   padding: 0 0 0 0.9rem;
   position: absolute;
   top: 80px;
@@ -7,26 +6,18 @@
   width: 100%;
   bottom: 0;
 
-  &:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 5%;
-    width: 90%;
-    height: 1px;
-    background-color: #eae7e7;
-    display: inline-block;
-  }
-
   .tabDescription{
     @include flex-center( flex, center, flex-start );
+    @include border-radius( 3px );
+    @extend .default-shadow;
     margin: 0;
     font-weight: normal;
     height: $height-tab-header;
+    margin-right: 0.9rem;
+    padding: 0 0.4rem;
+    background-color: $light-green-color;
+    color: $white-color;
+    position: relative;
+    z-index: 1;
   }
-
-  /*ul{
-    overflow: auto;
-    max-height: calc(100% - 45px);
-  }*/
 }

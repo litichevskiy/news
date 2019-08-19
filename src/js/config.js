@@ -1,5 +1,6 @@
 export const DEFAULT_TRANSITION_TIME = 300; //ms
 export const MAX_TIME_SEARCH_ARTICLES = 28; // days
+export const QUANTITY_NEWS = ['30', '60', '100'];
 export const NEWS_CATEGORY = [
   'business',
   'entertainment',

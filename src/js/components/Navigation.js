@@ -30,12 +30,7 @@ class Navigation extends React.Component{
   }
 };
 
-Navigation.defaultProps = {
-  // children: null,
-};
-
-Navigation.propTypes = {
-  // news: PropTypes.node
-};
+Navigation.defaultProps = {};
+Navigation.propTypes = {};
 
 export default Navigation;

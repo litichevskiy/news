@@ -52,8 +52,8 @@ class SearchByKeywords extends React.Component{
     }
   }
 
-  changeKeyWords = ( event ) => {
-    this.setState({ keyWords: event.target.value });
+  changeKeyWords = ({ target: { value } }) => {
+    this.setState({ keyWords: value });
   }
 
   submitRequest = ( event ) => {
@@ -91,8 +91,8 @@ class SearchByKeywords extends React.Component{
     this.isSetDateTo = false;
   }
 
-  setSortSortBy = ( event ) => {
-    this.setState({ sortBy: event.target.value });
+  setSortSortBy = ({target: { value }}) => {
+    this.setState({ sortBy: value });
   }
 
   openCloseCalendarFrom = () => {
@@ -112,7 +112,7 @@ class SearchByKeywords extends React.Component{
             <label className='containerInput'>
               <input
                 className='inputSearch'
-                placeholder='🔍  bitcoin, trump, IBM, etc...'
+                placeholder='🔍  Bitcoin, IBM, etc...'
                 type='text'
                 required
                 value={keyWords}
@@ -121,7 +121,7 @@ class SearchByKeywords extends React.Component{
             <p className='description'>Sort by</p>
             {SORT_BY.map(({ key, name }, index ) => {
               return(
-                <label key={index} className='label containerInputBtn' >
+                <label key={index} className='containerInputRadio' >
                   <input
                     className='inputRadio'
                     type='radio'
@@ -186,12 +186,7 @@ class SearchByKeywords extends React.Component{
   }
 };
 
-SearchByKeywords.defaultProps = {
-
-};
-
-SearchByKeywords.propTypes = {
-
-};
+SearchByKeywords.defaultProps = {};
+SearchByKeywords.propTypes = {};
 
 export default SearchByKeywords;

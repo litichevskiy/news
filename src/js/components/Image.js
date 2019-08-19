@@ -8,6 +8,7 @@ class Image extends React.Component{
     isLoad: false,
     isError: false,
   };
+
   imageRef = React.createRef();
 
   componentDidMount() {
@@ -21,14 +22,12 @@ class Image extends React.Component{
   }
 
   imageNotAvailable = () => {
-    // this.imageRef.current.src = 'images/image-not-available.jpg';
     this.imageRef.current.hidden = true;
     this.setState({ isError: true, isLoad: true });
   }
 
   imageLoaded = () => {
     this.setState({ isLoad: true });
-    // setTimeout(() => {},2000);
   }
 
   render() {
