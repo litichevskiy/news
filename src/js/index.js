@@ -4,10 +4,15 @@ import { render } from 'react-dom';
 import initStore from './store';
 import App from './App';
 
+let isUpload;
+
 initStore()
 .then( store => {
   store.subscribe(() => {
-    console.log( store.getState() );
+    const { userSettings: {isUploadImages} } = store.getState();
+    if( isUpload === undefined ) isUpload = isUploadImages;
+    else
+      if( isUpload !== isUploadImages ) setTimeout(() => window.lazyLoadInstance.update(), 400)
   });
 
   window.lazyLoadOptions = {
@@ -26,4 +31,6 @@ initStore()
     </Provider>,
     document.querySelector('.app')
   );
-})
+});
+
+// window.addEventListener('beforeunload', () => {});

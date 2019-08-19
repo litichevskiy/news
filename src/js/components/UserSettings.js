@@ -7,16 +7,19 @@ const UPLOAD_IMAGES = [{key: 'yes', value: true}, {key: 'no', value: false}];
 
 class UserSettings extends React.Component{
   state = {
-    quantityNews: QUANTITY_NEWS[0],
-    uploadImages: true,
+    quantityNews: this.props.userSettings.quantityNews,
+    uploadImages: this.props.userSettings.isUploadImages,
   }
 
   setQuantityForNews = ( {target: { value }} ) => {
+    this.props.setQuantityNews( value );
     this.setState({ quantityNews: value });
   }
 
   setUploadImages = () => {
-    this.setState({ uploadImages: !this.state.uploadImages });
+    const uploadImages = !this.state.uploadImages;
+    this.props.setIsLoadImages( uploadImages );
+    this.setState({ uploadImages: uploadImages });
   }
 
   render() {

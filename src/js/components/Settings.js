@@ -9,7 +9,9 @@ import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import SearchByKeywords from './SearchByKeywords';
-import UserSettings from './UserSettings';
+// import UserSettings from './UserSettings';
+
+import UserSettings from '../containers/UserSettings';
 
 const ESC = 27;// key code
 

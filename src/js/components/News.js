@@ -4,6 +4,7 @@ import Image from './Image';
 import formatDate from '../utils/formatDate';
 
 const News = ({
+  isUploadImages,
   news: {
     author,
     title,
@@ -26,7 +27,8 @@ const News = ({
         dateTime={fullDateISO}>
           published:  {`${hours}:${minutes}  ${day} ${month} ${year}`}
       </time>
-      <a
+      { isUploadImages &&
+        <a
         className='readMoreNewsLinkForImage outline-focus'
         target='_blank'
         href={url}>
@@ -36,7 +38,8 @@ const News = ({
           alt={title}
           title={title} />
         <div className='wrapper'></div>
-      </a>
+        </a>
+      }
       <p className='author'>
         <small>autor:</small>
         {author}
@@ -58,6 +61,8 @@ const News = ({
 };
 
 News.defaultProps = {};
-News.propTypes = {};
+News.propTypes = {
+  isUploadImages: PropTypes.bool.isRequired,
+};
 
 export default News;

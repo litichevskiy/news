@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { VISIBILITY_SETIINGS } from '../constants/index';
+import { VISIBILITY_SETIINGS, SET_QUANTITY_NEWS, IS_LOAD_IMAGES } from '../constants/index';
 
 const visibilitySettings = ( state = false, action ) => {
   switch( action.type ) {
@@ -10,8 +10,20 @@ const visibilitySettings = ( state = false, action ) => {
   }
 };
 
+const userSettings = ( userSettings = {}, { type, payload }) => {
+  switch( type ) {
+    case SET_QUANTITY_NEWS:
+    return { ...userSettings, quantityNews: payload };
+    case IS_LOAD_IMAGES:
+    return { ...userSettings, isUploadImages: payload };
+  default:
+    return userSettings;
+  }
+};
+
 const rootReducer = combineReducers({
-  visibilitySettings
+  visibilitySettings,
+  userSettings
 });
 
 export default rootReducer;

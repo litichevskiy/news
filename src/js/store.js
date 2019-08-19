@@ -1,8 +1,13 @@
 import { createStore, compose } from 'redux';
 import rootReducer from './reducers/index';
+import { QUANTITY_NEWS } from './config';
 
 const initialState = {
   visibilitySettings: true,
+  userSettings: {
+    isUploadImages: true,
+    quantityNews: QUANTITY_NEWS[0],
+  }
 };
 
 const composeEnhancers =
