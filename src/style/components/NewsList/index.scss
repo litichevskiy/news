@@ -1,9 +1,18 @@
-.newsList{
+.containerListNews{
+
+  .newsList{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /*background-color: tomato;*/
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr 1fr;*/
-    /*grid-gap: 2rem;*/
   }
+
+  .loadMore{
+    @extend .default-shadow;
+    width: 18rem;
+    display: block;
+    margin: 2rem auto;
+    font-size: 1.7rem;
+    padding: 0.7rem 0;
+    background-color: $light-green-color;
+  }
+}

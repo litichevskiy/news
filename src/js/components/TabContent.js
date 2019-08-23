@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TabContent = ({ content, name }) => (
-  <section className={`tabContent ${name}`}>
+  <div className={`tabContent ${name}`}>
     {content}
-  </section>
+  </div>
 );
 
 TabContent.defaultProps = {

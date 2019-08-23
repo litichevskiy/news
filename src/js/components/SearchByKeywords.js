@@ -71,8 +71,9 @@ class SearchByKeywords extends React.Component{
       from = formatDate( new Date ).fullDateISO;
       to = formatDate( new Date ).fullDateISO;
     }
-    console.log({ from, to, keyWords, sortBy });
-
+    // console.log({ from, to, keyWords, sortBy });
+    const query = `?q=${keyWords}&from=${from}&to=${to}&sortBy=${sortBy}`;
+    console.log( query )
     this.reset();
   }
 

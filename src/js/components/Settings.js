@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
-import { DEFAULT_TRANSITION_TIME } from '../config';
+import { DEFAULT_TRANSITION_TIME, NEWS_CATEGORY } from '../config';
 import { IconClose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from './icons';
-import PublisherList from './PublisherList';
-import CountriesList from './CountriesList';
 import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import SearchByKeywords from './SearchByKeywords';
-// import UserSettings from './UserSettings';
-
+import NewsByPublishers from './NewsByPublishers';
+import NewsByCountries from './NewsByCountries';
+import publishers from './../publishers';
+import countries from './../countries';
 import UserSettings from '../containers/UserSettings';
 
 const ESC = 27;// key code
 
 class Settings extends React.Component{
 
-  state = {activeTab: 0};
+  state = {activeTab: this.props.activeTabIndex};
 
   componentDidMount() {
     window.addEventListener('keyup', this.isClose );
@@ -36,7 +36,8 @@ class Settings extends React.Component{
   }
 
   changeActiveTab = ( index ) => {
-    this.state.activeTab = index
+    this.setState({ activeTab: index })
+    this.props.setActiveTabIndex( index );
   }
 
   render() {
@@ -79,7 +80,7 @@ class Settings extends React.Component{
                   </button>
                 }>
                 <h4 className='tabDescription'>by countries</h4>
-                <CountriesList />
+                <NewsByCountries countries={countries} categories={NEWS_CATEGORY}/>
               </Tab>
               <Tab
                 className={'tab'}
@@ -90,7 +91,7 @@ class Settings extends React.Component{
                   </button>
                 }>
                 <h4 className='tabDescription'>by publishers</h4>
-                <PublisherList />
+                <NewsByPublishers publishers={publishers} />
               </Tab>
               <Tab
                 className={'tab'}

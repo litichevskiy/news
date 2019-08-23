@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-/////////////////////////////////////////////////////
+
 export const IconArrowRight = ({ className }) => (
   <svg
     className={`icon ${className}`}

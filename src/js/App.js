@@ -7,9 +7,8 @@ import Calendar from './components/Calendar';
 
 import validateNewsData from './utils/validateNewsData';
 import { articles, articlesIsraeel } from './test-news-data';
-console.log('lazyLoadInstance.update !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-console.log('LazyLoad::Initialized');
 console.log(':focus ???');
+console.log('margin-bottom news small devices');
 
 class App extends React.Component{
 

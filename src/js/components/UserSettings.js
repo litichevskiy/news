@@ -25,7 +25,7 @@ class UserSettings extends React.Component{
   render() {
     const { quantityNews, uploadImages } = this.state;
     return(
-      <section className='userSettings wrapperTabContent'>
+      <div className='userSettings wrapperTabContent'>
         <div className='rowForSettings'>
           <p className='description'>Upload images for news</p>
           <div className='wraperLabels'>
@@ -72,7 +72,7 @@ class UserSettings extends React.Component{
             </li>
           </ul>
         </footer>
-      </section>
+      </div>
     )
   }
 };

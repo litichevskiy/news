@@ -1,0 +1,50 @@
+.newsByPublishers{
+  position: relative;
+
+  .description{
+    margin: 0.6rem 0;
+  }
+
+  .alphabetLetter{
+    @include border-radius( 5px );
+    @include flex-center( inline-flex );
+    text-transform: lowercase;
+    background-color: $blue-color;
+    color: $white-color;
+    margin-right: 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: monospace;
+  }
+
+  .selectedPublihersList{
+    @include flex-center( flex, center, flex-start );
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+
+  .selectedPublihersItem{
+    @extend .default-shadow;
+    @include border-radius( 5px );
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+
+  .delete{
+    cursor: pointer;
+    margin-left: 0.5rem;
+
+    .icon.icon-close{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .getNews{
+    margin: 0 auto 0.5rem;
+  }
+}
+
+/*hover for desctop*/

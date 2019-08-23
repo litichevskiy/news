@@ -1,263 +1,120 @@
 const articles = [
-  {
-         "source": {
-            "id": "cnn",
-            "name": "CNN"
+{
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": null,
-         "title": "Trump seizes on Biden's gaffe",
-         "description": "Democratic presidential candidates are taking their message of President Donald Trump being a white supremacist to the Iowa State Fair.  CNN's Arlette Saenz reports.",
-         "url": "https://www.cnn.com/videos/politics/2019/08/09/democrats-iowa-state-fair-saenz-pkg-lead-vpx.cnn",
-         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190809162358-biden-iowa-state-fair-0809-super-tease.jpg",
-         "publishedAt": "2019-08-09T21:07:00Z",
-         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+         "author":"BBC News",
+         "title":"US moves to abolish child migrant custody limits",
+         "description":"Migrant families crossing the southern border of the US illegally could now be detained indefinitely.",
+         "url":"http://www.bbc.co.uk/news/world-us-canada-49425624",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/7A23/production/_97176213_breaking_news_bigger.png",
+         "publishedAt":"2019-08-21T13:56:26Z",
+         "content":"Migrant families who cross the southern border of the US illegally could be detained indefinitely under a new regulation announced by the Trump administration.\r\nIt replaces an agreement that set a limit on how long the government could hold migrant children i… [+615 chars]"
       },
       {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "Choe Sang-Hun",
-         "title": "Kim Jong-un Gave ‘Small Apology’ for Missile Launches, Trump Says",
-         "description": "President Trump said a letter from North Korea’s leader expressed hope for restarting nuclear talks.",
-         "url": "https://www.nytimes.com/2019/08/10/world/asia/kim-jong-un-apologizes-missile-launch-trump-says.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/10/world/10nkorea/10nkorea-facebookJumbo.jpg",
-         "publishedAt": "2019-08-10T15:21:15Z",
-         "content": "In the past week, Mr. Trump has dismissed the Norths recent short-range missile tests with a shrug, saying they involved neither a nuclear weapon nor intercontinental ballistic missile. Instead, he accused South Korea of not paying enough for American help in… [+1807 chars]"
+         "author":"BBC News",
+         "title":"Denmark defiant on Greenland after Trump snub",
+         "description":"The Danish PM says she is \"annoyed and surprised\" after the US president cancels his state visit.",
+         "url":"http://www.bbc.co.uk/news/world-us-canada-49423968",
+         "urlToImage":"https://ichef.bbci.co.uk/images/ic/1024x576/p07l6p0b.jpg",
+         "publishedAt":"2019-08-21T13:47:57Z",
+         "content":"Media captionWatch: Greenland wouldn't be the first time the US bought territory\r\nDenmark's prime minister, Mette Frederiksen, says she is \"annoyed and surprised\" after Donald Trump cancelled his visit over the future of Greenland. \r\n\"Our preparations were we… [+909 chars]"
       },
       {
-         "source": {
-            "id": null,
-            "name": "Lifehacker.com"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "Elizabeth Yuko",
-         "title": "Talk to Yourself in the Third Person for Improved Clarity",
-         "description": "What do Donald Trump, Flavor Flav and Elmo have in common? There may be multiple acceptable answers to this question, but the one we’re looking for today is that they all have been known to talk about themselves in the third person. Now, that’s not exactly a …",
-         "url": "https://lifehacker.com/talk-to-yourself-in-the-third-person-for-improved-clari-1837084747",
-         "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--xAxatH6Q--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/cme5q7p4jjb49gvxfzra.jpg",
-         "publishedAt": "2019-08-09T16:30:00Z",
-         "content": "What do Donald Trump, Flavor Flav and Elmo have in common? There may be multiple acceptable answers to this question, but the one were looking for today is that they all have been known to talk about themselves in the third person. Now, thats not exactly a re… [+2027 chars]"
+         "author":"BBC News",
+         "title":"Sub dive reveals Titanic decay",
+         "description":"The first people to dive down to the Titanic in nearly 15 years say some parts of the wreck have been lost to the sea.",
+         "url":"http://www.bbc.co.uk/news/science-environment-49420935",
+         "urlToImage":"https://ichef.bbci.co.uk/images/ic/1024x576/p07l6l3q.jpg",
+         "publishedAt":"2019-08-21T13:00:36Z",
+         "content":"Media captionThe wreck sits 3.8km (2.4 miles) down at the bottom of the Atlantic ocean\r\nThe first people to dive down to the Titanic in nearly 15 years say some of the wreck is deteriorating rapidly.\r\nOver the course of five submersible dives, an internationa… [+4089 chars]"
       },
       {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "Frank Bruni",
-         "title": "Hate Is So Much Bigger Than Trump",
-         "description": "Just look at history. Or at my inbox.",
-         "url": "https://www.nytimes.com/2019/08/10/opinion/hate.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/11/opinion/sunday/11Bruni/11Bruni-facebookJumbo.jpg",
-         "publishedAt": "2019-08-10T19:38:25Z",
-         "content": "It was there before him. It will be there after. And while gentler words from the White House and a better president may affect how much grows in it and how tall, the ugliness will always take root and always flower.\r\nIf you live in a certain category black, … [+2303 chars]"
+         "author":"BBC News",
+         "title":"Jay-Z called 'cold-blooded' over NFL deal",
+         "description":"A lawyer for Colin Kaepernick criticises the rapper over a new deal to promote social justice.",
+         "url":"http://www.bbc.co.uk/news/newsbeat-49420465",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/568F/production/_108395122_jayzcolinkcomp.jpg",
+         "publishedAt":"2019-08-21T12:33:16Z",
+         "content":"Image copyrightGetty Images\r\nJay-Z's decision to partner with the NFL has been described as \"cold-blooded\". \r\nMark Geragos - the lawyer of American football player Colin Kaepernick - told ABC News that the deal \"crosses the intellectual picket line\".\r\nLast we… [+3145 chars]"
       },
       {
-         "source": {
-            "id": "cnn",
-            "name": "CNN"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": null,
-         "title": "People dump their gym over Trump",
-         "description": "Anti-Trump boycotters say goodbye Equinox, farewell SoulCycle. CNN's Jeanne Moos reports on breaking up with your gym.",
-         "url": "https://www.cnn.com/videos/politics/2019/08/08/equinox-soulcycle-boycott-moos-pkg-ebof-vpx.cnn",
-         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190808203408-moos-soulcycle-package-super-tease.jpg",
-         "publishedAt": "2019-08-09T00:45:13Z",
-         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+         "author":"BBC News",
+         "title":"Swedish man bitten by Fidel Castro's crocodile",
+         "description":"The man, in his 70s, had been delivering a speech when he was bitten by the animal.",
+         "url":"http://www.bbc.co.uk/news/world-europe-49418726",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/12C4E/production/_108387867_055871894-1.jpg",
+         "publishedAt":"2019-08-21T12:28:11Z",
+         "content":"Image copyrightEPAImage caption\r\n The man was delivering a speech at an aquarium in Stockholm when he was bitten by the crocodile\r\nA man has been hospitalised after he was bitten by a crocodile that once belonged to Cuban leader Fidel Castro. \r\nThe man, in hi… [+1522 chars]"
       },
       {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "Trish Bendix",
-         "title": "Seth Meyers Says El Paso Should Put the Boot on Air Force One",
-         "description": "The late-night hosts were quick to point out that President Trump still owes the city more than half a million dollars for a campaign rally in February.",
-         "url": "https://www.nytimes.com/2019/08/09/arts/television/seth-meyers-trump-el-paso-debt-late-night.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/09/arts/09latenight/09latenight-facebookJumbo.png",
-         "publishedAt": "2019-08-09T06:27:35Z",
-         "content": "Weve spent a lot of time over the last couple of weeks talking about Trumps racist rhetoric. But theres one race Trump dislikes more than all the others, and thats the race for the Democratic nomination. STEPHEN COLBERT\r\nStarting today, all the Democratic pre… [+870 chars]"
+         "author":"BBC News",
+         "title":"'Record number of fires' in Brazilian rainforest",
+         "description":"Fires in the Amazon have risen 84% amid growing deforestation, Brazil's space research agency says.",
+         "url":"http://www.bbc.co.uk/news/world-latin-america-49415973",
+         "urlToImage":"https://ichef.bbci.co.uk/images/ic/1024x576/p07l683y.jpg",
+         "publishedAt":"2019-08-21T11:36:00Z",
+         "content":"Media captionOne campaigner called the forest fires a \"vicious cycle\"\r\nBrazil's Amazon rainforest has seen a record number of fires this year, new space agency data suggests.\r\nThe National Institute for Space Research (Inpe) said its satellite data showed an … [+4769 chars]"
       },
       {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "Eileen Sullivan",
-         "title": "Trump Wants ‘Intelligent Background Checks’ and Says McConnell Is ‘On Board’",
-         "description": "President Trump said there was “tremendous” support to expand background checks, though he has resisted such legislation in the past.",
-         "url": "https://www.nytimes.com/2019/08/09/us/politics/gun-background-checks.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/09/us/politics/09dc-trump1/09dc-trump1-facebookJumbo.jpg",
-         "publishedAt": "2019-08-09T16:23:57Z",
-         "content": "WASHINGTON President Trump said the time was now for lawmakers to come together and pass new laws for meaningful background checks on gun purchasers as he left the White House on Friday for a political fund-raiser in Southampton, N.Y., followed by a vacation … [+938 chars]"
+         "author":"BBC News",
+         "title":"Venezuela admits months of secret talks with US",
+         "description":"President Maduro says he has been talking to US officials even as new sanctions were planned.",
+         "url":"http://www.bbc.co.uk/news/world-latin-america-49418451",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/900E/production/_108387863_055849929-1.jpg",
+         "publishedAt":"2019-08-21T09:17:25Z",
+         "content":"Image copyrightAFPImage caption\r\n The Venezuelan leader has confirmed that he is in talks with the Trump administration\r\nVenezuela's embattled President Nicolás Maduro said he had been in talks with the Trump administration for months, even as the US ramped u… [+2946 chars]"
       },
       {
-         "source": {
-            "id": "cnn",
-            "name": "CNN"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": null,
-         "title": "Trump gives thumbs up in photo with El Paso orphan",
-         "description": "First Lady Melania Trump tweeted out a photo of herself holding a baby who was orphaned after his parents where killed in the El Paso, Texas, mass shooting along with President Donald Trump. The President, who is flanked by the baby's uncle, gives a thumbs up…",
-         "url": "https://www.cnn.com/videos/politics/2019/08/09/donald-melania-trump-el-paso-orphaned-baby-photo-newday-sot.cnn",
-         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190809080558-trump-el-paso-orphan-photo-screengrab-super-tease.jpg",
-         "publishedAt": "2019-08-09T12:38:08Z",
-         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
+         "author":"BBC News",
+         "title":"Spider-Man: Sony 'disappointed' over Disney split",
+         "description":"Sony Pictures has owned the film rights to the Marvel character since 1999.",
+         "url":"http://www.bbc.co.uk/news/newsbeat-49417812",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/977A/production/_108387783_smaller.jpg",
+         "publishedAt":"2019-08-21T06:41:39Z",
+         "content":"Image copyrightAlamy\r\nSony says it's \"disappointed\" not to be working with Disney on future Spider-Man films.\r\nFilm rights for the superhero are owned by Sony - and he was able to appear in movies like Avengers: Endgame because of a deal between Sony and Marv… [+2092 chars]"
       },
       {
-         "source": {
-            "id": "bbc-news",
-            "name": "BBC News"
+         "source":{
+            "id":"bbc-news",
+            "name":"BBC News"
          },
-         "author": "https://www.facebook.com/bbcnews",
-         "title": "North Korea fires two missiles into the sea after Trump letter",
-         "description": "The launches came after Donald Trump said he received a \"very beautiful letter\" from Kim Jong Un.",
-         "url": "https://www.bbc.co.uk/news/world-asia-49301767",
-         "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/0678/production/_108265610_mediaitem108265609.jpg",
-         "publishedAt": "2019-08-09T22:56:51Z",
-         "content": "Image copyrightReutersImage caption\r\n A missile is launched during testing at an unidentified location in North Korea\r\nNorth Korea has fired two unidentified missiles into the sea, its fifth such launch in recent weeks.\r\nThe launch, from near the eastern city… [+1679 chars]"
-      },
-      {
-         "source": {
-            "id": null,
-            "name": "Gizmodo.com"
-         },
-         "author": "Alyse Stanley on Earther, shared by Alyse Stanley to Gizmodo",
-         "title": "Trump Administration Authorizes 'Cyanide Bombs' to Kill Feral Hogs. Seriously.",
-         "description": "On Thursday the Trump administration authorized another weapon in America’s war on the hoards of 30 to 50 feral hogs running through yards and terrorizing our nation’s children: “cyanide bombs.” Read more...",
-         "url": "https://earther.gizmodo.com/trump-administration-authorizes-cyanide-bombs-to-kill-f-1837086560",
-         "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--WhZRYrt6--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/hmjgw7lhawgpqwsbywvp.jpg",
-         "publishedAt": "2019-08-09T04:23:00Z",
-         "content": "On Thursday the Trump administration authorized another weapon in Americas war on the hoards of 30 to 50 feral hogs running through yards and terrorizing our nations children: cyanide bombs.\r\n Thats what critics call M-44s, traps used by federal agencies like… [+1726 chars]"
-      },
-      {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
-         },
-         "author": "Nicholas Kristof",
-         "title": "Trump Finds a Brawler for His War on Workers",
-         "description": "America’s working class is in desperate shape, and its longtime protectors — unions — have lost much of their power.",
-         "url": "https://www.nytimes.com/2019/08/10/opinion/sunday/labor-unions.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/11/opinion/sunday/11Kristof/11Kristof-facebookJumbo.jpg",
-         "publishedAt": "2019-08-10T20:13:21Z",
-         "content": "Greenhouse, who covered labor for 19 years for The Times, acknowledges all the ways in which labor unions were maddening and retrograde. But he notes that corporations run amok when no one is minding them.\r\nUnion featherbedding and rigid work rules have been … [+2538 chars]"
-      },
-      {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
-         },
-         "author": "Christina Goldbaum",
-         "title": "Trump Administration Moves to Decertify Outspoken Immigration Judges’ Union",
-         "description": "The Justice Department moved to decertify the immigration judges’ union, whose members have criticized the administration’s immigration policies.",
-         "url": "https://www.nytimes.com/2019/08/10/us/immigration-judges-union-justice-department.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/10/us/10IMMIG-JUDGES/merlin_152459349_6e4f92b1-395a-4301-b3f3-a96a02202b5f-facebookJumbo.jpg",
-         "publishedAt": "2019-08-10T19:02:23Z",
-         "content": "The pressure to hear more cases more quickly amounts to psychological warfare, Judge Tabaddor said last year.\r\nAddressing some of the unions concerns, the Justice Department has tried to tackle the backlog, which now totals more than 830,000 cases, by hiring … [+1747 chars]"
-      },
-      {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
-         },
-         "author": "Katherine Rosman",
-         "title": "They Paid $42 for a SoulCycle Ride, Not for Trump",
-         "description": "A look at what happens when politics enters every spandex-clad corner of life, especially in the Hamptons.",
-         "url": "https://www.nytimes.com/2019/08/08/us/politics/soulcycle-equinox-boycott.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/08/us/politics/08soulcycle-sub/08soulcycle-sub-facebookJumbo.jpg",
-         "publishedAt": "2019-08-09T00:59:42Z",
-         "content": "Management is struggling to control the damage. On Wednesday, SoulCycles chief talent officer sent an email to instructors providing talking points to share with customers. They included, At SoulCycle, we believe in diversity, inclusion, and equality. All sou… [+1788 chars]"
-      },
-      {
-         "source": {
-            "id": "bbc-news",
-            "name": "BBC News"
-         },
-         "author": "https://www.facebook.com/bbcnews",
-         "title": "The Hunt: Universal Pictures cancels film release",
-         "description": "The storyline, which sees liberals hunt Trump supporters, has been criticised by the president.",
-         "url": "https://www.bbc.co.uk/news/world-us-canada-49310259",
-         "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/184E5/production/_108275599_gettyimages-1160650392.jpg",
-         "publishedAt": "2019-08-11T10:17:19Z",
-         "content": "Image copyrightGetty ImagesImage caption\r\n The film, featuring Hillary Swank, was due to be released on 27 September\r\nUniversal Pictures has pulled the release of The Hunt following a series of mass shootings and criticism from US President Donald Trump. \r\nTh… [+1320 chars]"
-      },
-      {
-         "source": {
-            "id": "cnn",
-            "name": "CNN"
-         },
-         "author": null,
-         "title": "Tapper: Trump often uses Twitter to amplify the worst of us",
-         "description": "CNN's Jake Tapper reacts to President Donald Trump retweeting conspiracy theories about jailed multimillionaire and pedophile Jeffrey Epstein's death.",
-         "url": "https://www.cnn.com/videos/politics/2019/08/11/president-trump-epstein-conspiracy-theories-jake-tapper-monologue-sotu-vpx.cnn",
-         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190811092525-jake-tapper-monologue-sotu-081119-super-tease.jpg",
-         "publishedAt": "2019-08-11T13:55:38Z",
-         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
-      },
-      {
-         "source": {
-            "id": "cnn",
-            "name": "CNN"
-         },
-         "author": null,
-         "title": "Tapper fact checks Trump claims rhetoric is unifying",
-         "description": "CNN's Jake Tapper, in partnership with FactCheck.org, looks at claims made by Donald Trump that his rhetoric \"brings people together.\"",
-         "url": "https://www.cnn.com/videos/politics/2019/08/09/jake-tapper-fact-check-trump-claims-unite-country-orig.cnn",
-         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190807183919-trump-arrives-el-paso-airport-super-tease.jpg",
-         "publishedAt": "2019-08-09T00:30:38Z",
-         "content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
-      },
-      {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
-         },
-         "author": "Katie Benner",
-         "title": "Inside the Government, Addressing Domestic Terrorism Has Been Fraught",
-         "description": "For very different reasons, the Homeland Security Department under both the Obama and Trump administrations has struggled to elevate concerns about white nationalism and extremism.",
-         "url": "https://www.nytimes.com/2019/08/11/us/politics/domestic-terrorism.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/11/us/11dc-supremacy-print3/merlin_158906379_a51d2fbf-5f3b-4bab-a837-0eadf7637e9c-facebookJumbo.jpg",
-         "publishedAt": "2019-08-11T18:15:12Z",
-         "content": "The United States has always been plagued by violence associated with white nationalism. Violence associated with white nationalism has spiked at intervals in recent decades, including the Oklahoma City bombing in 1995. But government data shows that, since t… [+2187 chars]"
-      },
-      {
-         "source": {
-            "id": "the-new-york-times",
-            "name": "The New York Times"
-         },
-         "author": "Ana Swanson",
-         "title": "Democrats’ 2020 Problem: How to Be Tougher on Trade Than Trump",
-         "description": "Democrats are highly critical of NAFTA and China, but they will have a hard time taking a tougher line than Mr. Trump has as president.",
-         "url": "https://www.nytimes.com/2019/08/10/us/politics/democrats-trade-trump.html",
-         "urlToImage": "https://static01.nyt.com/images/2019/08/11/business/11DC-DEMTRADE-print1/merlin_158998128_5bace47a-8f1a-4b9d-ab70-16ca9b417605-facebookJumbo.jpg",
-         "publishedAt": "2019-08-10T09:00:06Z",
-         "content": "In Ms. Warrens view, the United States should act as an agent of global change by only entering into trade deals with countries that have strong labor, environmental and other protections.\r\nThe standards in her trade agenda, released in July, are so high that… [+1369 chars]"
-      },
-      {
-         "source": {
-            "id": "mashable",
-            "name": "Mashable"
-         },
-         "author": "Rachel Thompson",
-         "title": "Leslie Jones bans Trump from coming to her Netflix special",
-         "description": "Leslie Jones has announced she's filming a Netflix comedy special. She says she picked Washington D.C. as it \"has one of the best comic crowds\". But, as Jimmy Kimmel pointed out, D.C. also happens to be home to the president and his family. The late night sho…",
-         "url": "https://mashable.com/video/leslie-jones-netflix-special-trump/",
-         "urlToImage": "https://mondrian.mashable.com/2019%252F08%252F09%252F5d%252F2033004973944f84aaaa726f058aa50e.bdc3c.jpg%252F1200x630.jpg?signature=C3z48RuoYjL7uLczpMvPhOIsbXw=",
-         "publishedAt": "2019-08-09T10:18:02Z",
-         "content": "Leslie Jones has announced she's filming a Netflix comedy special. She says she picked Washington D.C. as it \"has one of the best comic crowds\". \r\nBut, as Jimmy Kimmel pointed out, D.C. also happens to be home to the president and his family. \r\nThe late night… [+277 chars]"
-      },
-      {
-         "source": {
-            "id": "mashable",
-            "name": "Mashable"
-         },
-         "author": "Shannon Connellan",
-         "title": "Seth Meyers can't stop giggling during his latest Trump impression",
-         "description": "It looks like this hell of a week has finally broken Seth Meyers. After \"A Closer Look\" at Trump's controversial trip to El Paso following a mass shooting — even when the president still owes the city half a million dollars for public services used during a F…",
-         "url": "https://mashable.com/video/seth-meyers-giggling-trump-impression/",
-         "urlToImage": "https://mondrian.mashable.com/2019%252F08%252F09%252Fe2%252F636d8a684392452c846d9c9200f703aa.cbfdd.png%252F1200x630.png?signature=Y0Ehg36x1YXF0qQi2E8rrKr2bCU=",
-         "publishedAt": "2019-08-09T09:38:51Z",
-         "content": "It looks like this hell of a week has finally broken Seth Meyers. \r\nAfter \"A Closer Look\" at Trump's controversial trip to El Paso following a mass shooting even when the president still owes the city half a million dollars for public services used during a F… [+747 chars]"
+         "author":"BBC News",
+         "title":"Russian couple may lose son for attending protest",
+         "description":"Dmitry and Olga Prokazov also face a criminal case after they were filmed at an unauthorised opposition protest with their baby.",
+         "url":"http://www.bbc.co.uk/news/world-europe-49411647",
+         "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/6822/production/_108385662_p07l56xf.jpg",
+         "publishedAt":"2019-08-20T23:01:08Z",
+         "content":null
       }
 ];
 

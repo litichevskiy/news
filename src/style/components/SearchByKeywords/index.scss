@@ -15,6 +15,10 @@
     }
   }
 
+  .getNews{
+    margin: 2rem auto 0;
+  }
+
   .containerInput{
     width: 100%;
     margin: auto;
@@ -36,13 +40,6 @@
     &:focus{
       border-color: $blue-color;
     }
-  }
-
-  .getNews{
-    width: 11rem;
-    display: block;
-    margin: 2rem auto 0;
-    background-color: $light-green-color;
   }
 
   .openCalendar{

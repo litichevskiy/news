@@ -1,0 +1,50 @@
+$settings-translate-y: -10rem;
+
+.alert{
+  @extend .default-shadow;
+  @include border-radius( 5px );
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 500px;
+  z-index: 3;
+  line-height: 1.5rem;
+  letter-spacing: 0.012rem;
+  background-color: $news-bg-color;
+  padding: 1.2rem;
+  transition: $default-transition-time ease;
+
+  &.alert-animation-enter {
+    opacity: 0.3;
+    transform: translateZ(0) translateY( $settings-translate-y );
+  }
+
+  &.alert-animation-enter-active {
+    transform: translateZ(0) translateY( 0 );
+    opacity: 1;
+  }
+
+  &.alert-animation-exit {
+    opacity: 1;
+  }
+
+  &.alert-animation-exit-active {
+    opacity: 0;
+    transform: translateZ(0) translateY( $settings-translate-y );
+  }
+
+  &.alert-animation-enter-done{
+    transform: translateZ(0) translateY( 0 );
+  }
+
+  .containerButtotn{
+    margin-top: 0.6rem;
+    text-align: right;
+  }
+
+  .btn.closeMessage{
+    @extend .default-shadow;
+    padding: 0.3rem 0.4rem;
+    background-color: $white-color;
+  }
+}

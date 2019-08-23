@@ -1,12 +1,20 @@
 import { createStore, compose } from 'redux';
 import rootReducer from './reducers/index';
-import { QUANTITY_NEWS } from './config';
+import { QUANTITY_NEWS, NEWS_CATEGORY, NEWS_FROM } from './config';
+import storageAPI from './storageAPI';
 
 const initialState = {
-  visibilitySettings: true,
+  visibilitySettings: false,
+  // isNewsApiError: false,
+  // newsApiErrorMessage: null,
   userSettings: {
     isUploadImages: true,
     quantityNews: QUANTITY_NEWS[0],
+    activeTabIndex: 1,
+
+    newsFrom: NEWS_FROM[0],
+    category: NEWS_CATEGORY[0],
+    selectedIndex: 0,
   }
 };
 
@@ -21,8 +29,8 @@ const configureStore = preloadedState => {
 };
 
 async function initStore() {
-  // const store = await storageApi.init( initialState );
-  return await configureStore( initialState );
+  const store = await storageAPI.init({ userSettings: initialState.userSettings });
+  return await configureStore({...initialState, userSettings: store.userSettings});
 };
 
 export default initStore;
