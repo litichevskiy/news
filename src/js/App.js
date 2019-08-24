@@ -9,6 +9,7 @@ import validateNewsData from './utils/validateNewsData';
 import { articles, articlesIsraeel } from './test-news-data';
 console.log(':focus ???');
 console.log('margin-bottom news small devices');
+console.log(`button clear in Calendar?`);
 
 class App extends React.Component{
 

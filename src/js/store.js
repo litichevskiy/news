@@ -4,7 +4,7 @@ import { QUANTITY_NEWS, NEWS_CATEGORY, NEWS_FROM } from './config';
 import storageAPI from './storageAPI';
 
 const initialState = {
-  visibilitySettings: false,
+  visibilitySettings: true,
   // isNewsApiError: false,
   // newsApiErrorMessage: null,
   userSettings: {

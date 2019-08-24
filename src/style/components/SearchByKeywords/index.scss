@@ -22,6 +22,7 @@
   .containerInput{
     width: 100%;
     margin: auto;
+    position: relative;
   }
 
   .inputSearch{
@@ -40,6 +41,10 @@
     &:focus{
       border-color: $blue-color;
     }
+
+    &.notValid{
+      border-color: $error-color;
+    }
   }
 
   .openCalendar{
@@ -54,6 +59,12 @@
       background-color: #76C2AF !important;
       border-color: $blue-color;
     }
+  }
+
+  .error{
+    position: absolute;
+    left: 0.5rem;
+    bottom: -0.8rem;
   }
 }
 

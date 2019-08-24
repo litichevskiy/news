@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import formatDate from '../utils/formatDate';
 import Button from './Button';
 import Calendar from './Calendar';
+import ErrorMessage from './ErrorMessage';
 import { MAX_TIME_SEARCH_ARTICLES } from '../config';
 import { IconCalendar } from './icons';
 
@@ -25,6 +26,7 @@ class SearchByKeywords extends React.Component{
     _dateTo: new Date, //date memory to,
     isOpenFrom: false,
     isOpenTo: false,
+    isErrorKeyWords: false,
   };
 
   isSetDateFrom = false;
@@ -53,11 +55,13 @@ class SearchByKeywords extends React.Component{
   }
 
   changeKeyWords = ({ target: { value } }) => {
-    this.setState({ keyWords: value });
+    this.setState({ keyWords: value, isErrorKeyWords: false });
   }
 
   submitRequest = ( event ) => {
     event.preventDefault();
+
+    if( !this.validationKeyWords( event ) ) return;
 
     const { keyWords, sortBy, dateFrom, dateTo } = this.state;
     let from;
@@ -77,6 +81,18 @@ class SearchByKeywords extends React.Component{
     this.reset();
   }
 
+  validationKeyWords({ target }) {
+    const { keyWords } = this.state;
+
+    if( !keyWords.trim() ) {
+      (target.querySelector('input[name="key-words"]')).focus();
+      this.setState({ isErrorKeyWords: true });
+      return false;
+    }
+
+    else return true;
+  }
+
   reset() {
     const { _dateFrom, _dateTo } = this.state;
     this.setState({
@@ -86,6 +102,7 @@ class SearchByKeywords extends React.Component{
       dateTo: _dateTo,
       isOpenFrom: false,
       isOpenTo: false,
+      isErrorKeyWords: false,
     });
 
     this.isSetDateFrom = false;
@@ -105,19 +122,20 @@ class SearchByKeywords extends React.Component{
   }
 
   render() {
-    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom } = this.state;
+    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom, isErrorKeyWords } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
         <form className='form' onSubmit={this.submitRequest}>
           <div className='rowForSettings'>
             <label className='containerInput'>
               <input
-                className='inputSearch'
+                className={isErrorKeyWords ? 'inputSearch notValid' : 'inputSearch'}
                 placeholder='🔍  Bitcoin, IBM, etc...'
                 type='text'
-                required
+                name='key-words'
                 value={keyWords}
                 onChange={this.changeKeyWords}/>
+                { isErrorKeyWords && <ErrorMessage message={'This field is required'} /> }
             </label>
             <p className='description'>Sort by</p>
             {SORT_BY.map(({ key, name }, index ) => {
