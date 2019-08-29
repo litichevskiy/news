@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import getParentNode from './../utils/getParentNode';
 import InputRadio from './InputRadio';
 import Button from './Button';
+import { NEWS_API, TOP_HEADLINES } from '../config';
 
 class NewsByCountries extends React.Component{
 
@@ -21,7 +22,6 @@ class NewsByCountries extends React.Component{
     const index = +item.getAttribute('data-index');
     if( selectedIndex === index ) return;
     this.setState({ selectedIndex: index, country: countries[index].code });
-    console.log( countries[index].code );
   }
 
   setCategory = ({target: { value }}) => {
@@ -30,7 +30,9 @@ class NewsByCountries extends React.Component{
 
   getNews = () => {
     const { country, category } = this.state;
-    console.log( 'request :', `?country=${country}&category=${category}`);
+    const { getNews, urlPath, quantityNews } = this.props;
+    const query = `?country=${country}&category=${category}&pageSize=${quantityNews}`;
+    getNews(`${urlPath}${query}`);
     this.clear();
   }
 
@@ -93,11 +95,14 @@ class NewsByCountries extends React.Component{
   }
 };
 
-NewsByCountries.defaultProps = {};
+NewsByCountries.defaultProps = {
+  urlPath: `${NEWS_API}${TOP_HEADLINES}`,
+};
 
 NewsByCountries.propTypes = {
   categories: PropTypes.array.isRequired,
   countries: PropTypes.array.isRequired,
+  urlPath: PropTypes.string,
 };
 
 export default NewsByCountries;

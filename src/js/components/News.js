@@ -62,7 +62,7 @@ const News = ({
 
 News.defaultProps = {};
 News.propTypes = {
-  isUploadImages: PropTypes.bool.isRequired,
+  // isUploadImages: PropTypes.bool.isRequired,
 };
 
 export default News;

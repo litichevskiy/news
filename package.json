@@ -13,6 +13,7 @@
     "express": "*",
     "heroku-ssl-redirect": "0.0.4",
     "localforage": "^1.7.3",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "webpack": "^3.5.5"
   },

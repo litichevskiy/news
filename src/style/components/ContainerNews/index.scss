@@ -6,6 +6,12 @@
     justify-content: space-around;
   }
 
+  .notFound{
+    color: inherit;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
   .loadMore{
     @extend .default-shadow;
     width: 18rem;
@@ -14,5 +20,14 @@
     font-size: 1.7rem;
     padding: 0.7rem 0;
     background-color: $light-green-color;
+  }
+
+  .wrapperPreloader{
+
+    .containerPreloader{
+      position: relative;
+      height: 5rem;
+      background: transparent;
+    }
   }
 }

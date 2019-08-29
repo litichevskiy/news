@@ -58,20 +58,6 @@ class UserSettings extends React.Component{
             })}
           </div>
         </div>
-        <footer className='footer'>
-          <ul>
-            <li>
-              <small>News from:</small>
-              <a href="https://newsapi.org/" target="_blank">newsapi</a>
-            </li>
-            <li>
-              <small>All icons from:</small>
-              <a href="https://www.iconfinder.com/" target="_blank">iconfinder</a>
-              <small>and</small>
-              <a href="https://www.flaticon.com/" target="_blank">flaticon</a>
-            </li>
-          </ul>
-        </footer>
       </div>
     )
   }

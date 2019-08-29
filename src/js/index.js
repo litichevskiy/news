@@ -5,10 +5,18 @@ import initStore from './store';
 import storageAPI from './storageAPI';
 import App from './App';
 
+import { getNews } from './actions/index';
+
 initStore()
 .then( store => {
+  // const userSettings = store.getState().userSettings;
+  // if( !userSettings.lastQueryForNews ) {
+  //   store.dispatch( getNews() );
+  // }
+
   store.subscribe(() => {
     storageAPI.updateStorage({ userSettings: store.getState().userSettings });
+    // console.log( store.getState() )
   });
 
   // import createListNews from './test.js';

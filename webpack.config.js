@@ -16,7 +16,7 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, './dist/js'),
       filename: '[name].js',
-      chunkFilename: '[name].bundle.js',
+      chunkFilename: './dist/js/[name].bundle.js',
     },
     resolve: {
       extensions: [' ', '.js', '.jsx', '.scss', 'css'],

@@ -4,6 +4,7 @@ import getParentNode from './../utils/getParentNode';
 import InputRadio from './InputRadio';
 import Button from './Button';
 import { IconClose } from './icons';
+import { NEWS_API, TOP_HEADLINES } from '../config';
 
 const MAXIMUM_PUBLISHERS = 10;
 
@@ -40,12 +41,17 @@ class NewsByPublishers extends React.Component{
 
   getNews = () => {
     const { selectedPublihers } = this.state;
-    let query = 'sources=';
+    const { getNews, urlPath, quantityNews } = this.props;
+    let query = '?sources=';
     query = selectedPublihers.reduce(( query, publisher ) => {
       return query += `${publisher.key},`;
     }, query);
+    query = query.slice(0, -1);
+    debugger
+    getNews(`${urlPath}${query}&pageSize=${quantityNews}`);
     this.clear();
-    console.log( 'request ', query );
+    // urlPath: `${NEWS_API}${TOP_HEADLINES}`,
+    // console.log( 'request ', query );
   }
 
   clear() {
@@ -107,10 +113,13 @@ class NewsByPublishers extends React.Component{
   }
 };
 
-NewsByPublishers.defaultProps = {};
+NewsByPublishers.defaultProps = {
+  urlPath: `${NEWS_API}${TOP_HEADLINES}`,
+};
 
 NewsByPublishers.propTypes = {
   publishers: PropTypes.array.isRequired,
+  urlPath: PropTypes.string,
 };
 
 export default NewsByPublishers;

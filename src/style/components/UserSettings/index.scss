@@ -1,5 +1,6 @@
 .userSettings{
   position: relative;
+  margin-top: 0.6rem;
 
   .wraperLabels{
     @include flex-center( flex, center, flex-start );
@@ -10,27 +11,5 @@
     width: auto;
     padding: 0.3rem 0.6rem;
     margin: 0 1rem 0 0;
-  }
-
-  .footer{
-    width: 100%;
-    font-size: 0.8rem;
-    color: grey;
-    margin: 1.5rem 0 1rem;
-
-    li{
-      line-height: 1.25rem;
-    }
-
-    a,
-    small{
-      font-size: inherit;
-    }
-
-    a{
-      color: $blue-color;
-      text-decoration: underline;
-      margin: 0 0.5rem;
-    }
   }
 }

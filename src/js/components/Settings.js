@@ -6,9 +6,13 @@ import { IconClose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from
 import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
-import SearchByKeywords from './SearchByKeywords';
-import NewsByPublishers from './NewsByPublishers';
-import NewsByCountries from './NewsByCountries';
+// import SearchByKeywords from './SearchByKeywords';
+import SearchByKeywords from '../containers/SearchByKeywords';
+// import NewsByPublishers from './NewsByPublishers';
+import NewsByPublishers from '../containers/NewsByPublishers';
+
+// import NewsByCountries from './NewsByCountries';
+import NewsByCountries from '../containers/NewsByCountries';
 import publishers from './../publishers';
 import countries from './../countries';
 import UserSettings from '../containers/UserSettings';

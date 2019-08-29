@@ -4,17 +4,10 @@ import userSettings from '../components/UserSettings';
 
 const mapStateToProps = ({ userSettings }) => ({ userSettings });
 
-const mapDispatchToProps = ( dispatch ) => {
-  return {
-    setQuantityNews: ( quantity ) => {
-      dispatch( setQuantityNews( quantity ) );
-    },
-
-    setIsLoadImages: ( isLoad ) => {
-      dispatch( setIsLoadImages( isLoad ) );
-    }
-  }
-};
+const mapDispatchToProps = ( dispatch ) => ({
+    setQuantityNews: quantity => dispatch( setQuantityNews( quantity ) ),
+    setIsLoadImages: isLoad => dispatch( setIsLoadImages( isLoad ) )
+});
 
 const UserSettings = connect(
   mapStateToProps,

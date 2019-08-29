@@ -1,20 +1,26 @@
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers/index';
-import { QUANTITY_NEWS, NEWS_CATEGORY, NEWS_FROM } from './config';
+import { QUANTITY_NEWS } from './config';
 import storageAPI from './storageAPI';
 
 const initialState = {
   visibilitySettings: true,
-  // isNewsApiError: false,
-  // newsApiErrorMessage: null,
+  isLoadingNews: false,
+  listNews: [],
+  newsAPIError: {
+    isShow: false,
+    message: '',
+  },
   userSettings: {
     isUploadImages: true,
     quantityNews: QUANTITY_NEWS[0],
     activeTabIndex: 1,
-
-    newsFrom: NEWS_FROM[0],
-    category: NEWS_CATEGORY[0],
-    selectedIndex: 0,
+    lastQueryForNews: '',
+  },
+  newsSettings: {
+    totalNews: null,
+    currentPage: 1,
   }
 };
 
@@ -25,12 +31,18 @@ const composeEnhancers =
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
 
 const configureStore = preloadedState => {
-  return createStore( rootReducer, preloadedState, composeEnhancers() );
+  return createStore(
+    rootReducer,
+    preloadedState,
+    composeEnhancers(
+      applyMiddleware( thunkMiddleware )
+    )
+  );
 };
 
 async function initStore() {
   const store = await storageAPI.init({ userSettings: initialState.userSettings });
-  return await configureStore({...initialState, userSettings: store.userSettings});
+  return await configureStore({ ...initialState, userSettings: store.userSettings });
 };
 
 export default initStore;

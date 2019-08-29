@@ -4,9 +4,12 @@ import formatDate from '../utils/formatDate';
 import Button from './Button';
 import Calendar from './Calendar';
 import ErrorMessage from './ErrorMessage';
-import { MAX_TIME_SEARCH_ARTICLES } from '../config';
+import { MAX_TIME_SEARCH_ARTICLES, NEWS_API, EVERYTHING } from '../config';
 import { IconCalendar } from './icons';
 
+const REG_EXP_IS_MATCH_SYMBOL = new RegExp('[a-z]|[0-9]', 'ig');
+const NOT_EMPTY = `This field can't be empty`;
+const MUST_CONTAIN = 'This field must contain letters (english) or numbers';
 const DAY = 86400000; // day in ms
 const MAX_QUANTITY_DAYS = DAY * MAX_TIME_SEARCH_ARTICLES;
 const SORT_BY = [
@@ -27,6 +30,7 @@ class SearchByKeywords extends React.Component{
     isOpenFrom: false,
     isOpenTo: false,
     isErrorKeyWords: false,
+    errorMessage: '',
   };
 
   isSetDateFrom = false;
@@ -55,7 +59,7 @@ class SearchByKeywords extends React.Component{
   }
 
   changeKeyWords = ({ target: { value } }) => {
-    this.setState({ keyWords: value, isErrorKeyWords: false });
+    this.setState({ keyWords: value, isErrorKeyWords: false, errorMessage: '' });
   }
 
   submitRequest = ( event ) => {
@@ -64,6 +68,7 @@ class SearchByKeywords extends React.Component{
     if( !this.validationKeyWords( event ) ) return;
 
     const { keyWords, sortBy, dateFrom, dateTo } = this.state;
+    const { urlPath, getNews, quantityNews } = this.props
     let from;
     let to;
 
@@ -75,10 +80,9 @@ class SearchByKeywords extends React.Component{
       from = formatDate( new Date ).fullDateISO;
       to = formatDate( new Date ).fullDateISO;
     }
-    // console.log({ from, to, keyWords, sortBy });
-    const query = `?q=${keyWords}&from=${from}&to=${to}&sortBy=${sortBy}`;
-    console.log( query )
+    const query = `?q=${keyWords.trim()}&from=${from}&to=${to}&sortBy=${sortBy}&language=en&pageSize=${quantityNews}`;
     this.reset();
+    getNews(`${urlPath}${encodeURI(query)}`);
   }
 
   validationKeyWords({ target }) {
@@ -86,7 +90,13 @@ class SearchByKeywords extends React.Component{
 
     if( !keyWords.trim() ) {
       (target.querySelector('input[name="key-words"]')).focus();
-      this.setState({ isErrorKeyWords: true });
+      this.setState({ isErrorKeyWords: true, errorMessage: NOT_EMPTY });
+      return false;
+    }
+
+    if( !keyWords.match( REG_EXP_IS_MATCH_SYMBOL ) ) {
+      (target.querySelector('input[name="key-words"]')).focus();
+      this.setState({ isErrorKeyWords: true, errorMessage: MUST_CONTAIN });
       return false;
     }
 
@@ -122,7 +132,7 @@ class SearchByKeywords extends React.Component{
   }
 
   render() {
-    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom, isErrorKeyWords } = this.state;
+    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom, isErrorKeyWords, errorMessage } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
         <form className='form' onSubmit={this.submitRequest}>
@@ -135,8 +145,9 @@ class SearchByKeywords extends React.Component{
                 name='key-words'
                 value={keyWords}
                 onChange={this.changeKeyWords}/>
-                { isErrorKeyWords && <ErrorMessage message={'This field is required'} /> }
+              { isErrorKeyWords && <ErrorMessage message={errorMessage} /> }
             </label>
+            <small className='smallText'>only english letters</small>
             <p className='description'>Sort by</p>
             {SORT_BY.map(({ key, name }, index ) => {
               return(
@@ -157,7 +168,7 @@ class SearchByKeywords extends React.Component{
           <div className='rowForSettings'>
             <p className='description'>
               Select publish dates
-              <small>
+              <small className='smallText'>
                 {`Default today. Maximum range ${MAX_TIME_SEARCH_ARTICLES} days.`}
               </small>
             </p>
@@ -205,7 +216,11 @@ class SearchByKeywords extends React.Component{
   }
 };
 
-SearchByKeywords.defaultProps = {};
-SearchByKeywords.propTypes = {};
+SearchByKeywords.defaultProps = {
+  urlPath: `${NEWS_API}${EVERYTHING}`,
+};
+SearchByKeywords.propTypes = {
+  urlPath: PropTypes.string,
+};
 
 export default SearchByKeywords;
