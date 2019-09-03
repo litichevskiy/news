@@ -12,11 +12,13 @@ class Image extends React.Component{
   imageRef = React.createRef();
 
   componentDidMount() {
+    if( !this.imageRef.current ) return;
     this.imageRef.current.addEventListener('load', this.imageLoaded );
     this.imageRef.current.addEventListener('error', this.imageNotAvailable);
   }
 
   componentWillUnmount() {
+    if( !this.imageRef.current ) return;
     this.imageRef.current.removeEventListener('load', this.imageLoaded );
     this.imageRef.current.removeEventListener('error', this.imageNotAvailable);
   }
@@ -33,6 +35,8 @@ class Image extends React.Component{
   render() {
     const { className, src, alt, title } = this.props;
     const { isLoad, isError } = this.state;
+
+    if( !src ) return <div className='imgNotAvailable'>image isn't available</div>
 
     return(
       <>
@@ -58,7 +62,7 @@ Image.defaultProps = {
 
 Image.propTypes = {
   className: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   alt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };

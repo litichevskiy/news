@@ -101,6 +101,8 @@ $calendad-border-dadius: 3px;
 
   .day{
     cursor: pointer;
+    background-color: $white-color;
+    color: $black-color;
 
     &.today{
       color: $blue-color;

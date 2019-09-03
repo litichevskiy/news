@@ -65,9 +65,9 @@ export const IconClose = ({ className }) => (
   <svg
     className={`icon ${className}`}
     xmlns="http://www.w3.org/2000/svg"
-    fill="#267CB5"
-    viewBox="0 0 48 48">
-    <path d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M35.997,33.877l-2.122,2.12   L24,26.123l-9.874,9.874l-2.123-2.12l9.876-9.876l-9.876-9.876l2.12-2.122L24,21.88l9.878-9.877l2.119,2.122l-9.875,9.876   L35.997,33.877z"/>
+    viewBox="0 0 32 32">
+    <path fill="#267CB5" d="M26.6,5.4C23.8,2.6,20,1,16,1S8.2,2.6,5.4,5.4C2.6,8.2,1,12,1,16s1.6,7.8,4.4,10.6C8.2,29.4,12,31,16,31   s7.8-1.6,10.6-4.4C29.4,23.8,31,20,31,16S29.4,8.2,26.6,5.4z"/>
+    <path fill="#ffffff" d="M17.4,16l5-5c0.2-0.2,0.3-0.5,0.3-0.7c0-0.3-0.1-0.5-0.3-0.7c-0.4-0.4-1-0.4-1.4,0l-5,4.9l-5-4.9   c-0.4-0.4-1-0.4-1.4,0c-0.2,0.2-0.3,0.4-0.3,0.7c0,0.3,0.1,0.5,0.3,0.7l5,5l-5,5c-0.2,0.2-0.3,0.4-0.3,0.7c0,0.3,0.1,0.5,0.3,0.7   c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3l5-5l5,5c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.7   c0-0.3-0.1-0.5-0.3-0.7L17.4,16z" />
   </svg>
 );
 
@@ -79,8 +79,6 @@ export const IconCalendar = ({ className }) => (
   <svg
     className={`icon ${className}`}
     xmlns="http://www.w3.org/2000/svg"
-    data-name="Layer 1"
-    id="Layer_1"
     viewBox="0 0 512 512">
       <rect fill="#267CB5" height="512" rx="256" ry="256" width="512"/>
       <path fill="#efecca" d="M98.34,159H413.66a0,0,0,0,1,0,0V350.87a50,50,0,0,1-50,50H148.34a50,50,0,0,1-50-50V159A0,0,0,0,1,98.34,159Z"/>
@@ -198,67 +196,45 @@ export const IconLogo = ({ className }) => (
     </filter>
     <rect height="12" id="path-11" width="96" x="125" y="164"/>
     <filter filterUnits="objectBoundingBox" height="200%" id="filter-12" width="200%" x="-50%" y="-50%"><feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+      <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+    <rect height="12" id="path-13" width="96" x="125" y="212"/>
+    <filter filterUnits="objectBoundingBox" height="200%" id="filter-14" width="200%" x="-50%" y="-50%"><feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
     <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
     <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
   </filter>
-  <rect height="12" id="path-13" width="96" x="125" y="212"/>
-  <filter filterUnits="objectBoundingBox" height="200%" id="filter-14" width="200%" x="-50%" y="-50%"><feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-  <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
-  <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
-</filter>
-<rect height="12" id="path-15" width="96" x="125" y="236"/>
-<filter filterUnits="objectBoundingBox" height="200%" id="filter-16" width="200%" x="-50%" y="-50%">
-  <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-  <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
-  <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
-</filter>
-<rect height="12" id="path-17" width="96" x="125" y="260"/>
-<filter filterUnits="objectBoundingBox" height="200%" id="filter-18" width="200%" x="-50%" y="-50%">
-  <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-  <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
-  <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
-</filter>
-</defs>
-<g fill="none" fillRule="evenodd" id="Page-1" stroke="none" strokeWidth="1">
-  <g id="newspaper">
-    <ellipse cx="200" cy="200" fill="#82A3A1" id="background" rx="200" ry="200"/>
-    <g id="Combined-Shape">
-      <use fill="black" fillOpacity="1" filter="url(#filter-2)" xlinkHref="#path-1"/>
-      <use fill="#F2ECD2" fillRule="evenodd" xlinkHref="#path-1"/>
-    </g>
-    <g id="Rectangle-29"><use fill="black" fillOpacity="1" filter="url(#filter-4)" xlinkHref="#path-3"/>
-    <use fill="#F2ECD2" fillRule="evenodd" xlinkHref="#path-3"/>
-  </g>
-  <g id="Rectangle-31">
-    <use fill="black" fillOpacity="1" filter="url(#filter-6)" xlinkHref="#path-5"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-5"/>
-  </g>
-  <g id="Rectangle-31-Copy">
-    <use fill="black" fillOpacity="1" filter="url(#filter-8)" xlinkHref="#path-7"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-7"/>
-  </g>
-  <g id="Rectangle-31-Copy-2">
-    <use fill="black" fillOpacity="1" filter="url(#filter-10)" xlinkHref="#path-9"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-9"/>
-  </g>
-  <g id="Rectangle-31-Copy-6">
-    <use fill="black" fillOpacity="1" filter="url(#filter-12)" xlinkHref="#path-11"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-11"/>
-  </g>
-  <g id="Rectangle-31-Copy-3">
-    <use fill="black" fillOpacity="1" filter="url(#filter-14)" xlinkHref="#path-13"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-13"/>
-  </g>
-  <g id="Rectangle-31-Copy-4">
-    <use fill="black" fillOpacity="1" filter="url(#filter-16)" xlinkHref="#path-15"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-15"/>
-  </g>
-  <g id="Rectangle-31-Copy-5">
-    <use fill="black" fillOpacity="1" filter="url(#filter-18)" xlinkHref="#path-17"/>
-    <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-17"/>
-  </g>
-  </g>
-  </g>
+  <rect height="12" id="path-15" width="96" x="125" y="236"/>
+  <filter filterUnits="objectBoundingBox" height="200%" id="filter-16" width="200%" x="-50%" y="-50%">
+    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+    <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+  </filter>
+  <rect height="12" id="path-17" width="96" x="125" y="260"/>
+  <filter filterUnits="objectBoundingBox" height="200%" id="filter-18" width="200%" x="-50%" y="-50%">
+    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+    <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+  </filter>
+  </defs>
+  <ellipse cx="200" cy="200" fill="#82A3A1" id="background" rx="200" ry="200"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-2)" xlinkHref="#path-1"/>
+  <use fill="#F2ECD2" fillRule="evenodd" xlinkHref="#path-1"/>
+  <use fill="#F2ECD2" fillRule="evenodd" xlinkHref="#path-3"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-6)" xlinkHref="#path-5"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-5"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-8)" xlinkHref="#path-7"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-7"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-10)" xlinkHref="#path-9"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-9"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-12)" xlinkHref="#path-11"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-11"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-14)" xlinkHref="#path-13"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-13"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-16)" xlinkHref="#path-15"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-15"/>
+  <use fill="black" fillOpacity="1" filter="url(#filter-18)" xlinkHref="#path-17"/>
+  <use fill="#545E75" fillRule="evenodd" xlinkHref="#path-17"/>
 </svg>
 );
 

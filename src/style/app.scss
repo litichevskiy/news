@@ -1,13 +1,4 @@
 .app{
-  margin-top: $navigation-height;
-  padding: 0.5em 0.6rem;
   font-family: 'Poppins Web', sans-serif;
   font-size: 1.15rem;
-  color: $black-color;
-}
-
-@media ( max-width: 768px ) {
-  .app{
-    padding: 0.5em 0.3rem;
-  }
 }

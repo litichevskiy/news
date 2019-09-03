@@ -1,11 +1,11 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers/index';
-import { QUANTITY_NEWS } from './config';
+import { QUANTITY_NEWS, THEMES } from './config';
 import storageAPI from './storageAPI';
 
 const initialState = {
-  visibilitySettings: true,
+  visibilitySettings: false,
   isLoadingNews: false,
   listNews: [],
   newsAPIError: {
@@ -14,9 +14,10 @@ const initialState = {
   },
   userSettings: {
     isUploadImages: true,
-    quantityNews: QUANTITY_NEWS[0],
-    activeTabIndex: 1,
+    quantityNews: QUANTITY_NEWS[1],
+    activeTabIndex: 2,
     lastQueryForNews: '',
+    theme: THEMES[0],
   },
   newsSettings: {
     totalNews: null,

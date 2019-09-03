@@ -4,6 +4,7 @@
 @import 'defaultClasses';
 @import 'app';
 @import 'utils/sprites_countries';
+@import 'themes';
 /*desctop*/
 @import 'components/ContainerNews/index';
 @import 'components/News/index';
@@ -26,9 +27,9 @@
 @import 'components/News/smallDevices';
 @import 'components/Settings/smallDevices';
 @import 'components/Tab/smallDevices';
-@import 'components/Tabs/smallDevices';
 @import 'components/TabContent/smallDevices';
 @import 'components/SearchByKeywords/smallDevices';
 @import 'components/Calendar/smallDevices';
 @import 'components/UserSettings/smallDevices';
 @import 'components/Alert/smallDevices';
+@import 'components/InputRadio/smallDevices';

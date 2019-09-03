@@ -31,6 +31,7 @@ const News = ({
         <a
         className='readMoreNewsLinkForImage outline-focus'
         target='_blank'
+        rel='noopener'
         href={url}>
         <Image
           className='newsImage'
@@ -51,6 +52,7 @@ const News = ({
         <a
           className='linkReadMoreNews outline-focus'
           target='_blank'
+          rel='noopener'
           title='learn more'
           href={url}>
             learn more
@@ -60,9 +62,33 @@ const News = ({
   )
 };
 
-News.defaultProps = {};
+News.defaultProps = {
+  author: '',
+  title: '',
+  description: '',
+  url: '',
+  urlToImage: '',
+  publishedAt: '',
+  content: '',
+  id: '',
+  name: '',
+  isUploadImages: '',
+};
+
 News.propTypes = {
-  // isUploadImages: PropTypes.bool.isRequired,
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  urlToImage: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf([null])
+  ]).isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isUploadImages: PropTypes.bool.isRequired,
 };
 
 export default News;

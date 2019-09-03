@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Tab = ({ title, isActive, onClick, index, className, name }) => {
+const Tab = ({ title, isActive, onClick, index, className }) => {
   return(
     <li
       className={`${className} ${!isActive ? '' : 'active'}`}
       data-index={index}
-      data-name={name}
       onClick={onClick}>
         {title}
     </li>
@@ -18,7 +17,6 @@ Tab.defaultProps = {
   isActive: false,
   onClick: () => {},
   index: 0,
-  name: '',
 };
 
 Tab.propTypes = {
@@ -27,7 +25,6 @@ Tab.propTypes = {
   onClick: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,
   className: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 };
 
 export default Tab;

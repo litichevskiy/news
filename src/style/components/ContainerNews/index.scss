@@ -1,4 +1,6 @@
 .containerListNews{
+  margin-top: $navigation-height;
+  background-color: transparent;
 
   .newsList{
     display: flex;
@@ -23,11 +25,11 @@
   }
 
   .wrapperPreloader{
+    position: relative;
+    height: 4rem;
 
     .containerPreloader{
-      position: relative;
-      height: 5rem;
-      background: transparent;
+      background: inherit;
     }
   }
 }

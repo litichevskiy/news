@@ -24,13 +24,9 @@ class ContainerNews extends React.Component{
   componentDidUpdate( prevProps ) {
     const { isUploadImages, listNews } = this.props;
     if( listNews.length > 0 && isUploadImages ) this.lazyLoadInstance.update();
-    // if( isUploadImages !== prevProps.isUploadImages ){
-    //   if( isUploadImages ) this.lazyLoadInstance.update();
-    // }
   }
 
   loadMoreNews = () => {
-    // console.log('load more');
     const { lastQueryForNews, getMoreNews } = this.props;
     getMoreNews( lastQueryForNews );
   }
@@ -39,7 +35,7 @@ class ContainerNews extends React.Component{
     const { listNews, isUploadImages, isLoadingNews, isLoadMoreNews, totalNews } = this.props;
 
     return(
-      <div className='containerListNews'>
+      <main className='containerListNews'>
         <ul className='newsList'>{
           listNews.map(( newsItem, index ) => {
             return <News key={index} news={newsItem} isUploadImages={isUploadImages}/>
@@ -59,7 +55,7 @@ class ContainerNews extends React.Component{
               Load More
           </Button>
         }
-      </div>
+      </main>
     )
   }
 };
@@ -67,6 +63,13 @@ class ContainerNews extends React.Component{
 ContainerNews.defaultProps = {
   listNews: [],
 };
-ContainerNews.propTypes = {};
+
+ContainerNews.propTypes = {
+  listNews: PropTypes.array.isRequired,
+  isUploadImages: PropTypes.bool.isRequired,
+  isLoadingNews: PropTypes.bool.isRequired,
+  isLoadMoreNews: PropTypes.bool.isRequired,
+  totalNews: PropTypes.number,
+};
 
 export default ContainerNews;

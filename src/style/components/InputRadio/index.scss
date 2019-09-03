@@ -1,16 +1,14 @@
 .containerInputRadio{
   @include flex-center( inline-flex, center, flex-start );
-  @include border-radius(5px);
+  @include border-radius( 3px );
   @extend .default-shadow;
-  padding: 0.3rem 0;
+  transition: $default-transition-time background-color;
+  padding: 0.3rem 0.4rem;
   margin: 0 0 0.5rem;
   white-space: pre;
   width: 11rem;
   background-color: $white-color;
-
-  &:last-child{
-    margin-bottom: 0;
-  }
+  cursor: pointer;
 
   .inputRadio{
     position: absolute;
@@ -22,22 +20,24 @@
 
   .inputCheckbox{
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: $check-box-width;
+    height: $check-box-height;
     background-repeat: no-repeat;
     background-position: center center;
     margin-right: 0.5rem;
+    outline: none;
+    position: relative;
 
     &.radio{
       @include border-radius(5px);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 507.2 507.2' width='25px' height='25px'%3E%3Ccircle style='fill:%2376C2AF' cx='253.6' cy='253.6' r='253.6'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 507.2 507.2' width='22px' height='22px'%3E%3Ccircle style='fill:%2376C2AF' cx='253.6' cy='253.6' r='253.6'/%3E%3C/svg%3E");
     }
   }
 
   .inputRadio:checked ~ .inputCheckbox {
 
     &.radio{
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 507.2 507.2' width='25px' height='25px'%3E%3Ccircle style='fill:%2376C2AF' cx='253.6' cy='253.6' r='253.6'/%3E%3Cpath style='fill: %235b9c8c;' d='M188.8,368l130.4,130.4c108-28.8,188-127.2,188-244.8c0-2.4,0-4.8,0-7.2L404.8,152L188.8,368z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M260,310.4c11.2,11.2,11.2,30.4,0,41.6l-23.2,23.2c-11.2,11.2-30.4,11.2-41.6,0L93.6,272.8 c-11.2-11.2-11.2-30.4,0-41.6l23.2-23.2c11.2-11.2,30.4-11.2,41.6,0L260,310.4z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M348.8,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6l-176,175.2 c-11.2,11.2-30.4,11.2-41.6,0l-23.2-23.2c-11.2-11.2-11.2-30.4,0-41.6L348.8,133.6z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 507.2 507.2' width='22px' height='22px'%3E%3Ccircle style='fill:%2376C2AF' cx='253.6' cy='253.6' r='253.6'/%3E%3Cpath style='fill: %235b9c8c;' d='M188.8,368l130.4,130.4c108-28.8,188-127.2,188-244.8c0-2.4,0-4.8,0-7.2L404.8,152L188.8,368z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M260,310.4c11.2,11.2,11.2,30.4,0,41.6l-23.2,23.2c-11.2,11.2-30.4,11.2-41.6,0L93.6,272.8 c-11.2-11.2-11.2-30.4,0-41.6l23.2-23.2c11.2-11.2,30.4-11.2,41.6,0L260,310.4z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M348.8,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6l-176,175.2 c-11.2,11.2-30.4,11.2-41.6,0l-23.2-23.2c-11.2-11.2-11.2-30.4,0-41.6L348.8,133.6z'/%3E%3C/svg%3E");
     }
   }
 }

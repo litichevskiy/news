@@ -1,5 +1,7 @@
 .newsByPublishers{
   position: relative;
+  padding-right: 0;
+  overflow: hidden;
 
   .description{
     margin: 0.6rem 0;
@@ -45,6 +47,17 @@
   .getNews{
     margin: 0 auto 0.5rem;
   }
-}
 
-/*hover for desctop*/
+  .selected{
+    background: #b5c0f2;
+  }
+
+  .listWrapper{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    height: calc( 100% - 5.4rem);
+    padding-right: 0.9rem;
+    outline: none;
+  }
+}

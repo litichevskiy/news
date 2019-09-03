@@ -6,12 +6,9 @@ import { IconClose, IconNewsPaper, IconLocation, IconSettings, IconSearch } from
 import Button from './Button';
 import Tabs from './Tabs';
 import Tab from './Tab';
-// import SearchByKeywords from './SearchByKeywords';
 import SearchByKeywords from '../containers/SearchByKeywords';
-// import NewsByPublishers from './NewsByPublishers';
 import NewsByPublishers from '../containers/NewsByPublishers';
-
-// import NewsByCountries from './NewsByCountries';
+import Preloader from './Preloader';
 import NewsByCountries from '../containers/NewsByCountries';
 import publishers from './../publishers';
 import countries from './../countries';
@@ -21,7 +18,9 @@ const ESC = 27;// key code
 
 class Settings extends React.Component{
 
-  state = {activeTab: this.props.activeTabIndex};
+  state = {
+    activeTab: this.props.activeTabIndex
+  };
 
   componentDidMount() {
     window.addEventListener('keyup', this.isClose );
@@ -45,7 +44,7 @@ class Settings extends React.Component{
   }
 
   render() {
-    const { visibilitySettings } = this.props;
+    const { visibilitySettings, isLoadingNews } = this.props;
     const {activeTab } = this.state;
     return (
       <CSSTransition
@@ -55,18 +54,19 @@ class Settings extends React.Component{
         mountOnEnter
         classNames='settings-animation'>
           <section className='settings'>
-            <Button
-              onClick={this.closeSettings}
-              title='close settings'
-              className='btn close'>
-              <IconClose className='icon-close' />
-            </Button>
             <Tabs
               activeTab={activeTab}
-              changeActiveTab={this.changeActiveTab}>
+              changeActiveTab={this.changeActiveTab}
+              btnClose={
+                <Button
+                  onClick={this.closeSettings}
+                  title='close settings'
+                  className='btn close'>
+                    <IconClose className='icon-close' />
+                </Button>
+              }>
               <Tab
                 className={'tab'}
-                name='settings'
                 title={
                   <button className='btn' title='user settings'>
                     <IconSettings className='icon-settings'/>
@@ -77,35 +77,41 @@ class Settings extends React.Component{
               </Tab>
               <Tab
                 className={'tab'}
-                name='countries'
                 title={
                   <button className='btn' title='news by countries'>
                     <IconLocation className='icon-location'/>
                   </button>
                 }>
-                <h4 className='tabDescription'>by countries</h4>
+                <h4 className='tabDescription'>
+                  by countries
+                  { isLoadingNews && <Preloader /> }
+                </h4>
                 <NewsByCountries countries={countries} categories={NEWS_CATEGORY}/>
               </Tab>
               <Tab
                 className={'tab'}
-                name='publishers'
                 title={
                   <button className='btn' title='news by publishers'>
                     <IconNewsPaper className='icon-newspaper'/>
                   </button>
                 }>
-                <h4 className='tabDescription'>by publishers</h4>
+                <h4 className='tabDescription'>
+                  by publishers
+                  { isLoadingNews && <Preloader /> }
+                </h4>
                 <NewsByPublishers publishers={publishers} />
               </Tab>
               <Tab
                 className={'tab'}
-                name='search by words'
                 title={
                   <button className='btn' title='news by keywords'>
                     <IconSearch className='icon-search'/>
                   </button>
                 }>
-                <h4 className='tabDescription'>by keywords</h4>
+                <h4 className='tabDescription'>
+                  by keywords
+                  { isLoadingNews && <Preloader /> }
+                </h4>
                 <SearchByKeywords />
               </Tab>
             </Tabs>
@@ -115,7 +121,9 @@ class Settings extends React.Component{
   }
 };
 
-export default Settings;
+Settings.propTypes = {
+  visibilitySettings: PropTypes.bool.isRequired,
+  isLoadingNews: PropTypes.bool.isRequired,
+};
 
-Settings.defaultProps = {};
-Settings.propTypes = {};
+export default Settings;

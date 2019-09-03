@@ -5,10 +5,11 @@ import InputRadio from './InputRadio';
 import Button from './Button';
 import { NEWS_API, TOP_HEADLINES } from '../config';
 
+const PATH_TO_IMG = './images/svg-icons/';
+
 class NewsByCountries extends React.Component{
 
   state = {
-    // tabName: this.props.tabName,
     category: this.props.categories[0],
     selectedIndex: null,
     country: ''
@@ -54,42 +55,50 @@ class NewsByCountries extends React.Component{
           {categories.map(( item, index ) => {
             return(
               <InputRadio
+                title={item}
                 key={index}
                 labelClass={'containerInputRadio'}
                 name={'categories-category'}
                 value={item}
                 onChange={this.setCategory}
-                checked={item === category} />
+                checked={item === category}
+                content={
+                  <img
+                    className='iconCategories'
+                    src={`${PATH_TO_IMG}${item}.svg`}
+                    alt={item}/>
+                }
+              />
             )
           })}
         </div>
-        {
-          country &&
-          <Button
-            className='btn getNews'
-            title='Get news'
-            onClick={this.getNews}>
-            Get news
-          </Button>
-        }
-        <ul className='countriesList'>{
-          countries.map(( { code, country }, index ) => {
-            return (
-              <li
-                key={index}
-                data-index={index}
-                onClick={this.setSelectedCountry}
-                className='country'>
-                  <a
-                    href=''
-                    className={(index === selectedIndex) ? 'linkItemList active': 'linkItemList'}>
-                    <span className={`flag bg-${code}`}></span>
-                    {country}
-                  </a>
-                </li>
-            )
-          })
-        }</ul>
+        <Button
+          disabled={country ? false : true}
+          className='btn getNews'
+          title='Get news'
+          onClick={this.getNews}>
+          Get news
+        </Button>
+        <div className='listWrapper'>
+          <ul className='countriesList'>{
+            countries.map(( { code, country }, index ) => {
+              return (
+                <li
+                  key={index}
+                  data-index={index}
+                  onClick={this.setSelectedCountry}
+                  className='country'>
+                    <a
+                      href=''
+                      className={(index === selectedIndex) ? 'linkItemList active': 'linkItemList'}>
+                      <span className={`flag bg-${code}`}></span>
+                      {country}
+                    </a>
+                  </li>
+              )
+            })
+          }</ul>
+        </div>
       </div>
     )
   }

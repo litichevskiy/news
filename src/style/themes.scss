@@ -1,0 +1,59 @@
+.theme{
+  padding: 0.5em 0.6rem;
+  min-height: 100vh;
+  transition: $default-transition-time background-color;
+
+  &.theme-light{
+    color: $black-color;
+    background-color: $white-color;
+  }
+
+  &.theme-dark{
+    color: $white-color;
+    background-color: $dark-theme-light-black;
+
+    .navigation,
+    .news,
+    .settingsHeader,
+    .rowForSettings,
+    .btn.closeMessage{
+      background-color: $dark-theme-dark-black;
+    }
+
+    .settings,
+    .containerInputRadio,
+    .alert{
+      background-color: $dark-theme-light-black;
+    }
+
+    .selectCategories{
+
+      .containerInputRadio{
+        background-color: $dark-theme-dark-black;
+      }
+    }
+
+    .linkItemList{
+
+      &:hover,
+      &:focus,
+      &.selected{
+        background-color: #7581b8;
+      }
+    }
+
+    .circlePreloader{
+      fill: $white-color;
+    }
+    .inputSearch{
+      color: $black-color;
+    }
+
+  }
+}
+
+@media ( max-width: 768px ) {
+  .theme{
+    padding: 0.5em 0.3rem;
+  }
+}

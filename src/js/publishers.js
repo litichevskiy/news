@@ -287,4 +287,4 @@ export default [
     "publisher": "Wirtschafts Woche",
     "key": "wirtschafts-woche"
   }
-]
+];

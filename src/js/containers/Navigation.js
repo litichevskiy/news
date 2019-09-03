@@ -1,16 +1,10 @@
 import { connect } from 'react-redux';
-import { setVisibilitySettings } from '../actions';
+import { setVisibilitySettings } from '../actions/index';
 import navigation from '../components/Navigation';
 
-// const mapStateToProps = ({ visibilitySettings }) => ( visibilitySettings );
-
-const mapDispatchToProps = ( dispatch ) => {
-  return {
-    setVisibilitySettings: ( visibility ) => {
-      dispatch( setVisibilitySettings( visibility ) );
-    }
-  }
-};
+const mapDispatchToProps = ( dispatch ) => ({
+  setVisibilitySettings: visibility => dispatch( setVisibilitySettings( visibility ) )
+});
 
 const Navigation = connect(
   null,

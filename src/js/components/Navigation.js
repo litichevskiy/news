@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { IconSettings, IconLogo } from './icons';
 import Button from './Button';
 
@@ -29,8 +28,5 @@ class Navigation extends React.Component{
     )
   }
 };
-
-Navigation.defaultProps = {};
-Navigation.propTypes = {};
 
 export default Navigation;

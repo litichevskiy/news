@@ -5,7 +5,6 @@ import { DEFAULT_TRANSITION_TIME } from '../config';
 import { IconClose } from './icons';
 import Button from './Button';
 
-
 const Alert = ({ message, closeMessage, isShow }) => (
   <CSSTransition
     in={isShow}
@@ -26,9 +25,8 @@ const Alert = ({ message, closeMessage, isShow }) => (
   </CSSTransition>
 );
 
-Alert.DefaultProps = {};
-Alert.propType = {
-  // message: PropTypes
+Alert.propTypes = {
+  message: PropTypes.string.isRequired,
   closeMessage: PropTypes.func.isRequired,
   isShow: PropTypes.bool.isRequired,
 };

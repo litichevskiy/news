@@ -6,6 +6,7 @@ import Calendar from './Calendar';
 import ErrorMessage from './ErrorMessage';
 import { MAX_TIME_SEARCH_ARTICLES, NEWS_API, EVERYTHING } from '../config';
 import { IconCalendar } from './icons';
+import InputRadio from './InputRadio';
 
 const REG_EXP_IS_MATCH_SYMBOL = new RegExp('[a-z]|[0-9]', 'ig');
 const NOT_EMPTY = `This field can't be empty`;
@@ -151,17 +152,15 @@ class SearchByKeywords extends React.Component{
             <p className='description'>Sort by</p>
             {SORT_BY.map(({ key, name }, index ) => {
               return(
-                <label key={index} className='containerInputRadio' >
-                  <input
-                    className='inputRadio'
-                    type='radio'
-                    name='sortBy'
-                    onChange={this.setSortSortBy}
-                    value={key}
-                    checked={ sortBy === key } />
-                  <span className='inputCheckbox radio'></span>
-                  <span>{name}</span>
-                </label>
+                <InputRadio
+                  key={index}
+                  labelClass='containerInputRadio'
+                  inputClass='inputRadio'
+                  name={'sortBy'}
+                  value={key}
+                  onChange={this.setSortSortBy}
+                  checked={sortBy === key}
+                  content={<span>{name}</span>}/>
               )
             })}
           </div>
@@ -204,12 +203,13 @@ class SearchByKeywords extends React.Component{
                 closeCalendar={this.openCloseCalendarTo}
                 selectDate={this.selectDateTo} />
             }
+            <Button
+              type='submit'
+              className='btn getNews'
+              title='Get News'>
+                Get News
+            </Button>
           </div>
-          <Button
-            type='submit'
-            className='btn getNews'>
-              Get News
-          </Button>
         </form>
       </div>
     )

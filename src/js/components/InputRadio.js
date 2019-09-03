@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputRadio = ({ labelClass, inputClass, name, value, onChange, checked }) => (
-  <label className={labelClass} >
+const InputRadio = ({ labelClass, inputClass, name, value, onChange, checked, content, title }) => (
+  <label
+    className={labelClass}
+    title={title ? title : null}>
     <input
       className={inputClass}
       type='radio'
@@ -11,7 +13,7 @@ const InputRadio = ({ labelClass, inputClass, name, value, onChange, checked }) 
       checked={checked}
       onChange={onChange}/>
     <span className='inputCheckbox radio'></span>
-    <span>{value}</span>
+    {content}
   </label>
 );
 
@@ -20,6 +22,7 @@ InputRadio.defaultProps = {
   labelClass: 'containerInputRadio',
   name: '',
   value: '',
+  title: null,
 };
 
 InputRadio.propTypes = {
@@ -30,6 +33,8 @@ InputRadio.propTypes = {
   ]).isRequired,
   onChange: PropTypes.func.isRequired,
   checked: PropTypes.bool.isRequired,
+  content: PropTypes.node.isRequired,
+  title: PropTypes.string,
 };
 
 export default InputRadio;

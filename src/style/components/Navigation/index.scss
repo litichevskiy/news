@@ -7,9 +7,9 @@
   width: 100%;
   z-index: 1;
   height: $navigation-height;
-
   background: white;
   padding: 0.5rem;
+  transition: $default-transition-time background-color;
 
   .containerLogo{
     @include flex-center( inline-flex, center, center );
@@ -19,11 +19,7 @@
 
   .btn{
     padding: 0.2rem 0.3rem;
-    background-color: $white-color;
-  }
-
-  .logo{
-    /*width: 50px;*/
+    background-color: transparent;
   }
 
   .logo-text{

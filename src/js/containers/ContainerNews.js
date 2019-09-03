@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getMoreNews } from '../actions';
+import { getMoreNews } from '../actions/newsFetch';
 import { MAX_QUANTITY_NEWS } from '../config';
 import containerNews from '../components/ContainerNews';
 
@@ -17,13 +17,9 @@ const mapStateToProps = ({
     lastQueryForNews
 });
 
-const mapDispatchToProps = ( dispatch ) => {
-  return {
-    getMoreNews: ( url ) => {
-      dispatch( getMoreNews( url ) );
-    }
-  }
-};
+const mapDispatchToProps = ( dispatch ) => ({
+  getMoreNews: url => dispatch( getMoreNews( url ) )
+});
 
 const ContainerNews = connect(
   mapStateToProps,

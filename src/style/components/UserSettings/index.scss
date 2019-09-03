@@ -1,6 +1,7 @@
 .userSettings{
   position: relative;
   margin-top: 0.6rem;
+  outline: none;
 
   .wraperLabels{
     @include flex-center( flex, center, flex-start );
@@ -9,7 +10,6 @@
 
   .containerInputRadio{
     width: auto;
-    padding: 0.3rem 0.6rem;
     margin: 0 1rem 0 0;
   }
 }

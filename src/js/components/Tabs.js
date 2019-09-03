@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransition } from 'react-transition-group';
-import { DEFAULT_TRANSITION_TIME } from '../config';
 import getParentNode from '../utils/getParentNode';
 import TabContent from './TabContent';
 
@@ -9,36 +7,37 @@ class Tabs extends React.Component{
 
   state = {
     activeTab: this.props.activeTab,
-    // name: this.props.children[this.props.activeTab]
-    isActive:true,
   }
 
-  changeActiveTab = ( event ) => {
-    const target = getParentNode( event.target, 'li' );
-    const index = +target.getAttribute('data-index');
+  changeActiveTab = ({ target }) => {
+    const tab = getParentNode( target, 'li' );
+    const index = +tab.getAttribute('data-index');
+
     if( index === this.state.activeTab ) return;
 
     this.props.changeActiveTab( index );
-    this.setState({ activeTab: index });
+    this.setState({ activeTab: index});
   }
 
   render() {
-    const { children } = this.props;
-    const { activeTab, isActive } = this.state;
+    const { children, btnClose } = this.props;
+    const { activeTab } = this.state;
+
     return(
       <>
-        <ul className='tabsList'>
-          {React.Children.map(children, ( child, index ) =>
-            React.cloneElement (child, {
-              onClick: this.changeActiveTab,
-              isActive: index === activeTab,
-              index: index
-            })
-          )}
-        </ul>
-        <TabContent
-          name={''}
-          content={children[activeTab].props.children} />
+        <header className='settingsHeader'>
+          <ul className='tabsList'>
+            {React.Children.map(children, ( child, index ) =>
+              React.cloneElement (child, {
+                onClick: this.changeActiveTab,
+                isActive: index === activeTab,
+                index: index
+              })
+            )}
+          </ul>
+          {btnClose}
+        </header>
+        <TabContent content={children[activeTab].props.children} />
       </>
     )
   }

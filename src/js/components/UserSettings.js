@@ -1,29 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InputRadio from './InputRadio';
-import { QUANTITY_NEWS } from '../config';
+import { QUANTITY_NEWS, THEMES } from '../config';
 
 const UPLOAD_IMAGES = [{key: 'yes', value: true}, {key: 'no', value: false}];
 
 class UserSettings extends React.Component{
   state = {
-    quantityNews: this.props.userSettings.quantityNews,
-    uploadImages: this.props.userSettings.isUploadImages,
+    quantityNews: this.props.quantityNews,
+    isUploadImages: this.props.isUploadImages,
+    theme: this.props.theme,
   }
 
-  setQuantityForNews = ( {target: { value }} ) => {
+  setQuantityForNews = ( { target: { value }} ) => {
     this.props.setQuantityNews( value );
     this.setState({ quantityNews: value });
   }
 
   setUploadImages = () => {
-    const uploadImages = !this.state.uploadImages;
-    this.props.setIsLoadImages( uploadImages );
-    this.setState({ uploadImages: uploadImages });
+    const isUploadImages = !this.state.isUploadImages;
+    this.props.setIsLoadImages( isUploadImages );
+    this.setState({ isUploadImages: isUploadImages });
+  }
+
+  setTheme = ( { target: { value }} ) => {
+    this.setState({ theme: value });
+    this.props.setTheme( value );
   }
 
   render() {
-    const { quantityNews, uploadImages } = this.state;
+    const { quantityNews, isUploadImages, theme } = this.state;
+
     return(
       <div className='userSettings wrapperTabContent'>
         <div className='rowForSettings'>
@@ -37,7 +44,8 @@ class UserSettings extends React.Component{
                   name={'upload-images-for-news'}
                   value={key}
                   onChange={this.setUploadImages}
-                  checked={uploadImages === value} />
+                  checked={isUploadImages === value}
+                  content={<span>{key}</span>} />
               )
             })}
           </div>
@@ -53,7 +61,26 @@ class UserSettings extends React.Component{
                   name={'quantity-news'}
                   value={item}
                   onChange={this.setQuantityForNews}
-                  checked={quantityNews === item} />
+                  checked={quantityNews === item}
+                  content={<span>{item}</span>}/>
+              )
+            })}
+          </div>
+        </div>
+      {/*theme*/}
+        <div className='rowForSettings'>
+          <p className='description'>Theme</p>
+          <div className='wraperLabels containerQuantity'>
+            {THEMES.map(( item, index ) => {
+              return(
+                <InputRadio
+                  key={index}
+                  labelClass={'containerInputRadio'}
+                  name={'theme'}
+                  value={item}
+                  onChange={this.setTheme}
+                  checked={theme === item}
+                  content={<span>{item}</span>}/>
               )
             })}
           </div>
@@ -63,7 +90,13 @@ class UserSettings extends React.Component{
   }
 };
 
-UserSettings.defaultProps = {};
-UserSettings.propTypes = {};
+UserSettings.propTypes = {
+  quantityNews: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
+  isUploadImages: PropTypes.bool.isRequired,
+  theme: PropTypes.string.isRequired,
+};
 
 export default UserSettings;

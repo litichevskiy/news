@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getNews } from '../actions';
+import { getNews } from '../actions/newsFetch';
 import newsByCountries from '../components/NewsByCountries';
 
 const mapStateToProps = ( { userSettings: { quantityNews }} ) => (
@@ -7,7 +7,7 @@ const mapStateToProps = ( { userSettings: { quantityNews }} ) => (
 );
 
 const mapDispatchToProps = ( dispatch ) => ({
-    getNews: url => dispatch( getNews( url ) )
+  getNews: url => dispatch( getNews( url ) )
 });
 
 const NewsByCountries = connect(

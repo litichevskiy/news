@@ -20,4 +20,18 @@
     position: relative;
     z-index: 1;
   }
+
+  .containerPreloader{
+    width: 3rem;
+    background-color: transparent;
+    left: initial;
+    right: 1.5rem;
+    display: none;
+
+    .circlePreloader{
+      width: 25px;
+      height: 25px;
+      fill: $white-color;
+    }
+  }
 }

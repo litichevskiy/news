@@ -9,14 +9,14 @@ const IS_PRODUCTION = NODE_ENV === "production";
 module.exports = [
   {
     entry: {
-      bundle: ['./src/js/index.js'],
+      bundle: ['./src/js/index.js', './src/js/utils/polyfills.js'],
       vendors: ['react', 'react-dom'],
       css: ['./src/style/index.scss']
     },
     output: {
       path: path.resolve(__dirname, './dist/js'),
       filename: '[name].js',
-      chunkFilename: './dist/js/[name].bundle.js',
+      chunkFilename: '[name].bundle.js',
     },
     resolve: {
       extensions: [' ', '.js', '.jsx', '.scss', 'css'],

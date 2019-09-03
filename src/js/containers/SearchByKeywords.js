@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getNews } from '../actions';
+import { getNews } from '../actions/newsFetch';
 import searchByKeywords from '../components/SearchByKeywords';
 
 const mapStateToProps = ( { userSettings: { quantityNews }} ) => (

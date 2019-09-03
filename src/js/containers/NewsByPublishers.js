@@ -1,23 +1,14 @@
 import { connect } from 'react-redux';
-import { getNews } from '../actions';
+import { getNews } from '../actions/newsFetch';
 import newsByPublishers from '../components/NewsByPublishers';
 
 const mapStateToProps = ({ userSettings: { isUploadImages, quantityNews }, listNews}) => (
   { isUploadImages, listNews, quantityNews }
 );
 
-// const mapStateToProps = ({ userSettings: { isUploadImages }, listNews}) => {
-//   debugger
-//   return { isUploadImages, listNews }
-// };
-
-const mapDispatchToProps = ( dispatch ) => {
-  return {
-    getNews: ( url ) => {
-      dispatch( getNews( url ) );
-    }
-  }
-};
+const mapDispatchToProps = ( dispatch ) => ({
+  getNews: url => dispatch( getNews( url ) )
+});
 
 const NewsByPublishers = connect(
   mapStateToProps,

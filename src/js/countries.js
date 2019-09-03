@@ -20,16 +20,8 @@ export default [
     "code": "br"
   },
   {
-    "country": "Bulgaria",
-    "code": "bg"
-  },
-  {
     "country": "Canada",
     "code": "ca"
-  },
-  {
-    "country": "China",
-    "code": "cn"
   },
   {
     "country": "Colombia",
@@ -44,24 +36,12 @@ export default [
     "code": "cz"
   },
   {
-    "country": "Egypt",
-    "code": "eg"
-  },
-  {
     "country": "France",
     "code": "fr"
   },
   {
     "country": "Germany",
     "code": "de"
-  },
-  {
-    "country": "Greece",
-    "code": "gr"
-  },
-  {
-    "country": "Hong Kong",
-    "code": "hk"
   },
   {
     "country": "Hungary",
@@ -76,16 +56,8 @@ export default [
     "code": "ie"
   },
   {
-    "country": "Israel",
-    "code": "il"
-  },
-  {
     "country": "Italy",
     "code": "it"
-  },
-  {
-    "country": "Japan",
-    "code": "jp"
   },
   {
     "country": "Latvia",
@@ -164,10 +136,6 @@ export default [
     "code": "za"
   },
   {
-    "country": "South Korea",
-    "code": "kr"
-  },
-  {
     "country": "Sweden",
     "code": "se"
   },
@@ -176,20 +144,8 @@ export default [
     "code": "ch"
   },
   {
-    "country": "Taiwan",
-    "code": "tw"
-  },
-  {
-    "country": "Thailand",
-    "code": "th"
-  },
-  {
     "country": "Turkey",
     "code": "tr"
-  },
-  {
-    "country": "UAE",
-    "code": "ae"
   },
   {
     "country": "United Kingdom",
