@@ -1,11 +1,11 @@
-@media( min-width: 1024px ) {
+@media( max-width: 1024px ) {
   .calendar{
 
     .day{
 
       &:hover{
-        background-color: $light-green-color;
-        color: $white-color;
+        background-color: $white-color;
+        color: $black-color;
       }
     }
   }
