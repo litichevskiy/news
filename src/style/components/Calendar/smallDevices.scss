@@ -1,11 +1,32 @@
-@media( max-width: 1024px ) {
+@media( min-width: 1024px ) {
   .calendar{
 
     .day{
 
+      &.today{
+        color: $blue-color;
+      }
+
       &:hover{
+        background-color: $light-green-color;
+        color: $white-color;
+      }
+
+      &.selected{
+        color: $white-color;
+        background-color: $blue-color;
+      }
+
+      &.notAvailable{
+        color: #cdcdcd;
         background-color: $white-color;
-        color: $black-color;
+        cursor: initial;
+      }
+
+      &.notCerrentMonth{
+        background-color: #e2e1e1;
+        color: #7e7d7d;
+        cursor: initial;
       }
     }
   }

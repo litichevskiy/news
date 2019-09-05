@@ -2,5 +2,6 @@
 /dist
 /src/js/test-news-data.js
 .tern-project
+.Procfile
 *.map
 package-lock.json
