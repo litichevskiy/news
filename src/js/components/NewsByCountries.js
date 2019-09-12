@@ -21,8 +21,11 @@ class NewsByCountries extends React.Component{
     const { selectedIndex } = this.state;
     const item = getParentNode( event.target, 'li' );
     const index = +item.getAttribute('data-index');
-    if( selectedIndex === index ) return;
-    this.setState({ selectedIndex: index, country: countries[index].code });
+    if( selectedIndex === index ) {
+      this.setState({ selectedIndex: null, country: '' });
+    }
+
+    else this.setState({ selectedIndex: index, country: countries[index].code });
   }
 
   setCategory = ({target: { value }}) => {
@@ -90,7 +93,7 @@ class NewsByCountries extends React.Component{
                   className='country'>
                     <a
                       href=''
-                      className={(index === selectedIndex) ? 'linkItemList active': 'linkItemList'}>
+                      className={(index === selectedIndex) ? 'linkItemList selected': 'linkItemList'}>
                       <span className={`flag bg-${code}`}></span>
                       {country}
                     </a>

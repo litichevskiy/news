@@ -41,10 +41,7 @@ const News = ({
         <div className='wrapper'></div>
         </a>
       }
-      <p className='author'>
-        <small>autor:</small>
-        {author}
-      </p>
+      { author && <p className='author'><small>author:</small>{author}</p> }
       <h4 className='newsTitle'>{title}</h4>
       <h5 className='description'>{description}</h5>
       <p className='content'>{content}</p>
