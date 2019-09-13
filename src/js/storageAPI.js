@@ -1,6 +1,6 @@
 import localforage from 'localforage';
 
-const STORAGE_NAME = 'store';
+const STORAGE_NAME = 'news-app-store';
 
 const storage = {
 
