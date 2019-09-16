@@ -5,7 +5,7 @@
   width: 24%;
   background-color: $news-bg-color;
   padding: 1em 1em 1.5em 1em;
-  margin-top: 2.3%;
+  margin-top: 1.3rem;
   border-radius: 6px;
 
   .publishDate{
@@ -123,7 +123,8 @@
   .imgNotAvailable{
     @include flex-center;
     height: 100%;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
     background-color: $light-grey-color;
     text-transform: uppercase;
     color: $white-color;

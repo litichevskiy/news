@@ -1,0 +1,20 @@
+@media ( min-width: 1024px ) {
+  .newsByCountries{
+
+    .selectCategofies{
+
+      &:focus{
+        border-color: $blue-color;
+      }
+    }
+  }
+}
+
+@media ( max-width: 450px ) {
+  .newsByCountries{
+
+    .selectWrapper{
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getParentNode from './../utils/getParentNode';
-import InputRadio from './InputRadio';
 import Button from './Button';
 import { NEWS_API, TOP_HEADLINES } from '../config';
-
-const PATH_TO_IMG = './images/svg-icons/';
 
 class NewsByCountries extends React.Component{
 
@@ -44,7 +41,6 @@ class NewsByCountries extends React.Component{
     this.setState({
       selectedIndex: null,
       country: '',
-      category: this.props.categories[0]
     });
   }
 
@@ -54,26 +50,22 @@ class NewsByCountries extends React.Component{
 
     return (
       <div className='newsByCountries wrapperTabContent'>
-        <div className='selectCategories'>
-          {categories.map(( item, index ) => {
-            return(
-              <InputRadio
-                title={item}
-                key={index}
-                labelClass={'containerInputRadio'}
-                name={'categories-category'}
-                value={item}
-                onChange={this.setCategory}
-                checked={item === category}
-                content={
-                  <img
-                    className='iconCategories'
-                    src={`${PATH_TO_IMG}${item}.svg`}
-                    alt={item}/>
-                }
-              />
-            )
-          })}
+        <div className='selectWrapper'>
+          <select
+            value={category}
+            onChange={this.setCategory}
+            className='selectCategofies'>
+            {categories.map(( item, index ) => {
+              return (
+                <option
+                  className='optionCategofies'
+                  key={index}
+                  value={item}>
+                  {item}
+                </option>
+              )
+            })}
+          </select>
         </div>
         <Button
           disabled={country ? false : true}
