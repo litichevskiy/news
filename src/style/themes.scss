@@ -16,11 +16,13 @@
     .news,
     .settingsHeader,
     .rowForSettings,
+    .tab,
     .btn.closeMessage{
       background-color: $dark-theme-dark-black;
     }
 
     .settings,
+    .tab.active,
     .containerInputRadio,
     .alert{
       background-color: $dark-theme-light-black;

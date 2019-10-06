@@ -24,6 +24,10 @@
   .selectWrapper{
     margin: 0.7rem 0.9rem 0.7rem 0;
     position: relative;
+    @extend .default-shadow;
+    @include border-radius( 3px );
+    background-color: $light-green-color;
+    z-index: 1;
 
     &:before{
       content: '';
@@ -39,8 +43,8 @@
   }
 
   .selectCategofies{
-    @extend .default-shadow;
-    @include border-radius( 3px );
+    position: relative;
+    z-index: 2;
     display: block;
     font-size: inherit;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
@@ -48,7 +52,7 @@
     width: 100%;
     border: 2px solid transparent;
     appearance: none;
-    background-color: $light-green-color;
+    background-color: transparent;
     cursor: pointer;
     outline: none;
 
