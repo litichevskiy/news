@@ -39,6 +39,7 @@ $settings-translate-x: -10rem;
     @extend .default-shadow;
     height: $navigation-height;
     padding: 0.3rem 0.4rem;
+    background-color: $white-color;
   }
 
   .close{
