@@ -12,7 +12,7 @@ class Calendar extends React.Component{
     date: this.props.date,
     month: '',
     year: '',
-    currentDay: this.props.selectedDate.getDate() || this.props.date.getDate(),
+    currentDay: this.props.date.getDate(),
     selectedDay:'',
     selectedDateISO: '',
     selectedDateForRead: '',
@@ -27,16 +27,21 @@ class Calendar extends React.Component{
 
   componentDidMount() {
     const { date, from, to, config, selectedDate } = this.props;
-    this.calendar = new CalendarCore({ date: date, from: from, to: to, config: config });
+    this.calendar = new CalendarCore({ date, from, to, config, selectedDay: selectedDate });
 
-    const { year, monthIndex, day, fullDateISO} = formatDate( new Date( selectedDate || from || date ) );
+    if( selectedDate ) {
 
-    this.setState({
-      selectedDateForRead: `${day} ${MONTHS[monthIndex]}   ${year} `,
-      selectedDateISO: fullDateISO
-    });
+      const { year, monthIndex, day, fullDateISO} = formatDate( new Date( selectedDate ) );
 
-    this.calendar.setSelectedDay( new Date( selectedDate || from || date ) );
+      this.setState({
+        selectedDateForRead: `${day} ${MONTHS[monthIndex]}   ${year} `,
+        selectedDateISO: fullDateISO,
+        selectedDay: String( selectedDate )
+      });
+
+      this.calendar.setSelectedDay( selectedDate );
+    }
+
     this.updateCalendar();
   }
 
@@ -51,8 +56,8 @@ class Calendar extends React.Component{
 
     if( from.getTime() !== prevFrom.getTime() || to.getTime() !== prevTo.getTime() ) {
       this.calendar.setFromTo({from, to});
-      const selectedDay = this.state.selectedDay ||  from || date;
-      this.calendar.setSelectedDay( new Date( selectedDay ) );
+      const selectedDay = this.state.selectedDay;
+      if( selectedDay ) this.calendar.setSelectedDay( new Date( selectedDay ) );
 
       this.updateCalendar();
     }
@@ -74,7 +79,7 @@ class Calendar extends React.Component{
 
       const { from, date } = this.state;
       this.calendar.deleteSelectedDay();
-      this.calendar.setSelectedDay( new Date( from || date ) );
+      this.calendar.deleteSelectedDay();
       this.setState({ selectedDay: '', selectedDateForRead: '', selectedDateISO: '' });
       this.props.selectDate();
       return
@@ -86,7 +91,7 @@ class Calendar extends React.Component{
 
       const selectedDate = days[index].date;
       const { year, monthIndex, day, fullDateISO } = formatDate( new Date( selectedDate ) );
-      const selectedDateForRead = `${year} ${day} ${MONTHS[monthIndex]}`;
+      const selectedDateForRead = `${day} ${MONTHS[monthIndex]}   ${year}`;
 
       this.calendar.setSelectedDay( new Date( selectedDate ) );
       this.setState({
@@ -131,6 +136,7 @@ class Calendar extends React.Component{
   }
 
   render() {
+    console.log( 'render' )
     const { days, month, year, isPrevMonth, isNextMonth, selectedDateForRead, selectedDateISO } = this.state;
     return(
       <div className='calendar'>
@@ -192,7 +198,7 @@ Calendar.defaultProps = {
   from: null,
   to: null,
   config: null,
-  selectedDate: new Date,
+  selectedDate: null,
   closeCalendar: null,
 };
 

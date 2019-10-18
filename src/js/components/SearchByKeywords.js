@@ -29,6 +29,8 @@ class SearchByKeywords extends React.Component{
     _dateFrom: new Date( Date.now() - ( MAX_QUANTITY_DAYS ) ), //date memory from
     _dateTo: new Date, //date memory to,
     isOpenFrom: false,
+    selectedFrom: null,
+    selectedTo: null,
     isOpenTo: false,
     isErrorKeyWords: false,
     errorMessage: '',
@@ -39,22 +41,22 @@ class SearchByKeywords extends React.Component{
 
   selectDateFrom = ( date ) => {
     if( date ) {
-      this.setState({ dateFrom: date });
+      this.setState({ dateFrom: date, selectedFrom: date });
       this.isSetDateFrom = true;
     }
     else {
-     this.setState({ dateFrom: this.state._dateFrom });
+     this.setState({ dateFrom: this.state._dateFrom, selectedFrom: null });
      this.isSetDateFrom = false;
     }
   }
 
   selectDateTo = ( date ) => {
     if( date ) {
-      this.setState({ dateTo: date });
+      this.setState({ dateTo: date, selectedTo: date });
       this.isSetDateTo = true;
     }
     else{
-      this.setState({ dateTo: this.state._dateTo });
+      this.setState({ dateTo: this.state._dateTo, selectedTo: null });
       this.isSetDateTo = false;
     }
   }
@@ -114,6 +116,8 @@ class SearchByKeywords extends React.Component{
       isOpenFrom: false,
       isOpenTo: false,
       isErrorKeyWords: false,
+      selectedFrom: null,
+      selectedTo: null
     });
 
     this.isSetDateFrom = false;
@@ -133,7 +137,8 @@ class SearchByKeywords extends React.Component{
   }
 
   render() {
-    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom, isErrorKeyWords, errorMessage } = this.state;
+    const { keyWords, sortBy, dateFrom, dateTo, isOpenTo, isOpenFrom, isErrorKeyWords, errorMessage,
+    selectedFrom, selectedTo } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
         <form className='form' onSubmit={this.submitRequest}>
@@ -176,7 +181,7 @@ class SearchByKeywords extends React.Component{
               <Button
                 className='btn openCalendar'
                 onClick={this.openCloseCalendarFrom}>
-                  <span>today</span>
+                {createDateForRead( selectedFrom )}
                   <IconCalendar className='icon-calendar' />
               </Button>
             }
@@ -185,14 +190,15 @@ class SearchByKeywords extends React.Component{
                 from={dateFrom}
                 to={dateTo}
                 closeCalendar={this.openCloseCalendarFrom}
-                selectDate={this.selectDateFrom}/>
+                selectDate={this.selectDateFrom}
+                selectedDate={selectedFrom}/>
             }
             <p className='description'>To</p>
             { !isOpenTo &&
               <Button
                 className='btn openCalendar'
                 onClick={this.openCloseCalendarTo}>
-                  <span>today</span>
+                {createDateForRead( selectedTo )}
                   <IconCalendar className='icon-calendar' />
               </Button>
             }
@@ -201,7 +207,8 @@ class SearchByKeywords extends React.Component{
                 from={dateFrom}
                 to={dateTo}
                 closeCalendar={this.openCloseCalendarTo}
-                selectDate={this.selectDateTo} />
+                selectDate={this.selectDateTo}
+                selectedDate={selectedTo} />
             }
             <Button
               type='submit'
@@ -221,6 +228,12 @@ SearchByKeywords.defaultProps = {
 };
 SearchByKeywords.propTypes = {
   urlPath: PropTypes.string,
+};
+
+const createDateForRead = ( date ) => {
+  if( !date ) return <span className='selectedDate'>today</span>;
+  const { year, month, day, fullDateISO } = formatDate( date );
+  return <time className='selectedDate' datetime={fullDateISO}>{day} {month} {year}</time>
 };
 
 export default SearchByKeywords;

@@ -5,7 +5,7 @@ import { QUANTITY_NEWS, THEMES } from './config';
 import storageAPI from './storageAPI';
 
 const initialState = {
-  visibilitySettings: false,
+  visibilitySettings: true,
   isLoadingNews: false,
   listNews: [],
   newsAPIError: {

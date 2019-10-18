@@ -6,7 +6,7 @@ const INDEX_LAST_MONTH = 11;
 const SEPARATOR_DATE = '-';
 
 class CalendarCore {
-  constructor({ date, config, from, to, separator }) {
+  constructor({ date, config, from, to, separator, selectedDay }) {
     if( !date instanceof Date ) throw new Error('This module required Date');
     if( config ) {
       if( !config.days || config.days.length !== 7 )
@@ -17,7 +17,7 @@ class CalendarCore {
 
     this.config = config || CONFIG;
     this.separator = separator || SEPARATOR_DATE;
-    this.date = (from) ? getDateWithoutHours( from ) : getDateWithoutHours( date );
+    this.date = ( selectedDay ) ? getDateWithoutHours( selectedDay ) : getDateWithoutHours( date );
     this.currentYear = this.date.getFullYear();
     this.currentMonth = this.date.getMonth();
     this._currentYear = this.currentYear;
@@ -25,7 +25,7 @@ class CalendarCore {
     this.listDays = [];
     this.from = ( from ) ? getDateWithoutHours( from ).getTime() : false;
     this.to = ( to ) ? getDateWithoutHours( to ).getTime() : false;
-    this.selectedDay;
+    this.selectedDay = ( selectedDay ) ? this.setSelectedDay( selectedDay ) : null;
 
     if( this.from && this.to ) {
       if( !this.from instanceof Date || !this.to instanceof Date )
