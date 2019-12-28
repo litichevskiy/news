@@ -55,14 +55,18 @@
 
     &:before{
       content: '';
-      width: 75%;
-      height: 0.15rem;
+      width: 73%;
+      height: 0.1rem;
       display: inline-block;
       position: absolute;
-      bottom: 0;
+      bottom: 0.2rem;
       left: -100%;
       background-color: $blue-color;
       transition: $default-transition-time ease left, right;
+    }
+
+    &:visited:before{
+      background-color: $purple-color;
     }
   }
 

@@ -120,6 +120,10 @@
   }
 }
 
+a.link:visited{
+  color: $purple-color;
+}
+
 @media ( min-width: 1024px ) {
   .linkItemList{
 

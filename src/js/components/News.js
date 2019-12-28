@@ -47,7 +47,7 @@ const News = ({
       <p className='content'>{content}</p>
       <div className='linkReadMoreNewsContainer'>
         <a
-          className='linkReadMoreNews outline-focus'
+          className='linkReadMoreNews outline-focus link'
           target='_blank'
           rel='noopener'
           title='learn more'
