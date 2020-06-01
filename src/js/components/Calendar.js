@@ -136,7 +136,7 @@ class Calendar extends React.Component{
   }
 
   render() {
-    console.log( 'render' )
+
     const { days, month, year, isPrevMonth, isNextMonth, selectedDateForRead, selectedDateISO } = this.state;
     return(
       <div className='calendar'>

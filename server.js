@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const compression = require('compression');
 const sslRedirect = require('heroku-ssl-redirect');
-
+const getNews = require('./getNews');
 
 app.use(sslRedirect(['other','development','production']));
 app.use(compression({filter: shouldCompress}));
@@ -14,6 +14,12 @@ app.use('/dist', express.static(__dirname + '/dist'));
 app.use('/images', express.static(__dirname + '/src/images'));
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname+'/index.html'));
+});
+
+app.get('/get-news', ( req, res ) => {
+  getNews( req.query.url )
+  .then( response => res.send( response ))
+  .catch( error => res.status( error.code ).send({ message: error.message }));
 });
 
 app.listen( PORT, () => console.log(`server listening on port ${PORT}`));

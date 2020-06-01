@@ -233,7 +233,7 @@ SearchByKeywords.propTypes = {
 const createDateForRead = ( date ) => {
   if( !date ) return <span className='selectedDate'>today</span>;
   const { year, month, day, fullDateISO } = formatDate( date );
-  return <time className='selectedDate' datetime={fullDateISO}>{day} {month} {year}</time>
+  return <time className='selectedDate' dateTime={fullDateISO}>{day} {month} {year}</time>
 };
 
 export default SearchByKeywords;
