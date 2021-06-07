@@ -14,8 +14,8 @@ const initialState = {
   },
   userSettings: {
     isUploadImages: true,
-    quantityNews: QUANTITY_NEWS[1],
-    activeTabIndex: 1,
+    quantityNews: QUANTITY_NEWS[0],
+    activeTabIndex: 2,
     lastQueryForNews: '',
     theme: THEMES[0],
   },

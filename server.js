@@ -2,6 +2,7 @@ const PORT = process.env.PORT || 3000;
 const express = require('express');
 const path = require('path');
 const app = express();
+
 const compression = require('compression');
 const sslRedirect = require('heroku-ssl-redirect');
 const getNews = require('./getNews');
@@ -17,7 +18,7 @@ app.get('/', (req,res) => {
 });
 
 app.get('/get-news', ( req, res ) => {
-  getNews( req.query.url )
+  getNews( req.query )
   .then( response => res.send( response ))
   .catch( error => res.status( error.code ).send({ message: error.message }));
 });

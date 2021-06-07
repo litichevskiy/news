@@ -1,7 +1,7 @@
 export const NEWS_API = 'https://newsapi.org';
 export const TOP_HEADLINES = '/v2/top-headlines';
 export const EVERYTHING = '/v2/everything';
-export const DEFAULT_NEWS_REQUEST = `${NEWS_API}${TOP_HEADLINES}?sources=the-washington-post&pageSize=12`;
+export const DEFAULT_NEWS_REQUEST = `${NEWS_API}${TOP_HEADLINES}?sources=bbc-news,the-washington-post&pageSize=12`;
 export const DEFAULT_TRANSITION_TIME = 300; //ms
 export const MAX_TIME_SEARCH_ARTICLES = 28; // days
 export const QUANTITY_NEWS = ['30', '60', '100'];
