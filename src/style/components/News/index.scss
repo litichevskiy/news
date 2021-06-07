@@ -73,10 +73,16 @@
   .author{
     margin: 0;
     word-break: break-word;
+    margin-top: 0.35rem;
 
     small{
        margin-right: 0.45rem;
      }
+  }
+
+  .source{
+    display: block;
+    font-size: 0.9rem;
   }
 
   .newsTitle,

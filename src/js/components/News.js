@@ -41,6 +41,7 @@ const News = ({
         <div className='wrapper'></div>
         </a>
       }
+      { name && <span className="source">{name}</span> }
       { author && <p className='author'><small>author:</small>{author}</p> }
       <h4 className='newsTitle'>{title}</h4>
       <h5 className='description'>{description}</h5>
