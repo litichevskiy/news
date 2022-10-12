@@ -5,6 +5,7 @@ import Navigation from './containers/Navigation';
 import Settings from './containers/Settings';
 import ErrorNewsAPI from './containers/ErrorNewsAPI';
 
+
 class App extends React.Component{
 
   render() {
