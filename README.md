@@ -14,5 +14,3 @@ npm install
 npm run build
 ```
 and open: [localhost:3000](http://localhost:3000)
-
-or see [news-app](https://ls-news-app.herokuapp.com)
