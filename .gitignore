@@ -6,3 +6,5 @@
 .Procfile
 *.map
 package-lock.json
+.space
+old-package.json

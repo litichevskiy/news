@@ -4,10 +4,8 @@ const path = require('path');
 const app = express();
 
 const compression = require('compression');
-const sslRedirect = require('heroku-ssl-redirect');
 const getNews = require('./getNews');
 
-app.use(sslRedirect(['other','development','production']));
 app.use(compression({filter: shouldCompress}));
 
 app.use('/manifest.json', express.static(__dirname + '/manifest.json'));
@@ -29,3 +27,5 @@ function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) return false;
   else return compression.filter(req, res);
 };
+
+module.exports = app;

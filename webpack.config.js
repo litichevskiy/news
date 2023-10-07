@@ -1,10 +1,19 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+
+/*
+///////////////////////////////////////////////////////////
+UglifyJsPlugin => terser-webpack-plugin
+*/
+
 const autoprefixer = require('autoprefixer');
 const NODE_ENV = process.env.NODE_ENV || "development";
 const IS_PRODUCTION = NODE_ENV === "production";
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = [
   {
@@ -18,19 +27,26 @@ module.exports = [
       filename: '[name].js',
       chunkFilename: '[name].bundle.js',
     },
+    mode: NODE_ENV,
+    devtool: IS_PRODUCTION ? false : 'source-map',
     resolve: {
       extensions: [' ', '.js', '.jsx', '.scss', 'css'],
     },
     plugins: [
-      new ExtractTextPlugin('../css/bundle.css'),
+      new MiniCssExtractPlugin({
+        // filename: "../styles/[name].css",
+        filename: "../css/bundle.css",
+        chunkFilename: "[id].css",
+      }),
+      // new ExtractTextPlugin('../css/bundle.css'),
       new webpack.DefinePlugin ({
         'process.env.NODE_ENV': JSON.stringify ( NODE_ENV )
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendors',
-      }),
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: 'vendors',
+      // }),
     ],
-    devtool: IS_PRODUCTION ? 'none' : 'source-map',
+    devtool: IS_PRODUCTION ? false : 'source-map',
     watch: !IS_PRODUCTION,
     module: {
       rules: [
@@ -52,7 +68,7 @@ module.exports = [
           test: /\.(png|jp(e*)g|svg)$/,
           exclude: /\/node_modules\//,
           use: [{
-            loader: 'url-loader',
+            loader: 'file-loader',
             options:{
               limit:15.000,
               name: '[name].[ext]',
@@ -63,33 +79,36 @@ module.exports = [
         {
           exclude: /\/node_modules\//,
           test: /\.scss$/,
-          use: ExtractTextPlugin.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: {sourceMap: !IS_PRODUCTION, minimize:  IS_PRODUCTION}
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  plugins: [autoprefixer({browsers:['last 5 version']})],
-                  sourceMap: !IS_PRODUCTION
-                }
-              },
-              {
-                loader: 'sass-loader',
-                options: {sourceMap: !IS_PRODUCTION}
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader
+            },
+            {
+              loader: 'css-loader',
+              // options: {sourceMap: !IS_PRODUCTION, minimize:  IS_PRODUCTION}
+              options: {sourceMap: !IS_PRODUCTION}
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                // plugins: [autoprefixer({browsers:['last 5 version']})],
+                sourceMap: !IS_PRODUCTION
               }
-            ]
-          })
+            },
+            {
+              loader: 'sass-loader',
+              options: {sourceMap: !IS_PRODUCTION}
+            }
+          ]
+
         }
       ]
     }
   }
 ];
 
-if( IS_PRODUCTION ) {
-  module.exports.forEach( item => {
-    item.plugins.push( new UglifyJsPlugin({ uglifyOptions:{ minimize: true }}) );
-  });
-};
+// if( IS_PRODUCTION ) {
+//   module.exports.forEach( item => {
+//     item.plugins.push( new UglifyJsPlugin({ uglifyOptions:{ minimize: true }}) );
+//   });
+// };
