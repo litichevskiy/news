@@ -11,6 +11,7 @@ app.use(compression({filter: shouldCompress}));
 app.use('/manifest.json', express.static(__dirname + '/manifest.json'));
 app.use('/dist', express.static(__dirname + '/dist'));
 app.use('/images', express.static(__dirname + '/src/images'));
+
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname+'/index.html'));
 });

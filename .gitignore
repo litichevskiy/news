@@ -1,10 +1,8 @@
 /node_modules
-/dist
 /src/js/test-news-data.js
 /src/images/icon-for-news
 .tern-project
 .Procfile
 *.map
 package-lock.json
-.space
 old-package.json

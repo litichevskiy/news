@@ -1,9 +1,0 @@
-# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
-v: 0
-micros:
-  - name: news
-    src: ./
-    engine: nodejs16
-    primary: true
-    dev: node --watch index.js
-    run: node index.js

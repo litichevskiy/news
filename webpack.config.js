@@ -1,25 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
-/*
-///////////////////////////////////////////////////////////
-UglifyJsPlugin => terser-webpack-plugin
-*/
-
-const autoprefixer = require('autoprefixer');
 const NODE_ENV = process.env.NODE_ENV || "development";
 const IS_PRODUCTION = NODE_ENV === "production";
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = [
   {
     entry: {
       bundle: ['./src/js/index.js', './src/js/utils/polyfills.js'],
-      vendors: ['react', 'react-dom'],
       css: ['./src/style/index.scss']
     },
     output: {
@@ -32,37 +22,27 @@ module.exports = [
     resolve: {
       extensions: [' ', '.js', '.jsx', '.scss', 'css'],
     },
+    watchOptions: {
+      ignored: /node_modules/,
+    },
     plugins: [
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        // filename: "../styles/[name].css",
         filename: "../css/bundle.css",
         chunkFilename: "[id].css",
       }),
-      // new ExtractTextPlugin('../css/bundle.css'),
       new webpack.DefinePlugin ({
         'process.env.NODE_ENV': JSON.stringify ( NODE_ENV )
       }),
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: 'vendors',
-      // }),
     ],
     devtool: IS_PRODUCTION ? false : 'source-map',
     watch: !IS_PRODUCTION,
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
-          exclude: /\/node_modules\//,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env','@babel/preset-react'],
-              plugins: [
-                '@babel/plugin-proposal-class-properties',
-                '@babel/plugin-transform-runtime'
-              ]
-            },
-          }
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
         },
         {
           test: /\.(png|jp(e*)g|svg)$/,
@@ -85,13 +65,11 @@ module.exports = [
             },
             {
               loader: 'css-loader',
-              // options: {sourceMap: !IS_PRODUCTION, minimize:  IS_PRODUCTION}
               options: {sourceMap: !IS_PRODUCTION}
             },
             {
               loader: 'postcss-loader',
               options: {
-                // plugins: [autoprefixer({browsers:['last 5 version']})],
                 sourceMap: !IS_PRODUCTION
               }
             },
@@ -100,15 +78,8 @@ module.exports = [
               options: {sourceMap: !IS_PRODUCTION}
             }
           ]
-
         }
       ]
     }
   }
 ];
-
-// if( IS_PRODUCTION ) {
-//   module.exports.forEach( item => {
-//     item.plugins.push( new UglifyJsPlugin({ uglifyOptions:{ minimize: true }}) );
-//   });
-// };
