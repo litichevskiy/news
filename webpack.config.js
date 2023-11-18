@@ -16,6 +16,8 @@ module.exports = [
       path: path.resolve(__dirname, './dist/js'),
       filename: '[name].js',
       chunkFilename: '[name].bundle.js',
+      // assetModuleFilename: path.join('images', '[name][ext]'),
+      assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
     },
     mode: NODE_ENV,
     devtool: IS_PRODUCTION ? false : 'source-map',
@@ -45,16 +47,20 @@ module.exports = [
           use: ['babel-loader']
         },
         {
-          test: /\.(png|jp(e*)g|svg)$/,
-          exclude: /\/node_modules\//,
-          use: [{
-            loader: 'file-loader',
-            options:{
-              limit:15.000,
-              name: '[name].[ext]',
-              outputPath: '../images'
-            }
-          }],
+          test: /\.(png|jpg|jpeg|gif)$/i,
+          test: /\.(png)$/,
+          // type: 'asset/resource',
+          // type: 'asset/resource',
+          // exclude: /\/node_modules\//,
+          // use: [{
+          //   loader: 'file-loader',
+          //   options:{
+          //     limit:15.000,
+          //     // name: '[name].[ext]',
+          //     outputPath: '../images',
+          //     // publicPath: '/'
+          //   }
+          // }],
         },
         {
           exclude: /\/node_modules\//,
