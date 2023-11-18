@@ -16,7 +16,6 @@ module.exports = [
       path: path.resolve(__dirname, './dist/js'),
       filename: '[name].js',
       chunkFilename: '[name].bundle.js',
-      // assetModuleFilename: path.join('images', '[name][ext]'),
       assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
     },
     mode: NODE_ENV,
@@ -48,8 +47,7 @@ module.exports = [
         },
         {
           test: /\.(png|jpg|jpeg|gif)$/i,
-          test: /\.(png)$/,
-          // type: 'asset/resource',
+          type: 'asset/resource',
           // type: 'asset/resource',
           // exclude: /\/node_modules\//,
           // use: [{
