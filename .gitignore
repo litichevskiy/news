@@ -3,6 +3,7 @@
 /src/images/icon-for-news
 .tern-project
 .Procfile
+.vercel
 *.map
 package-lock.json
 old-package.json

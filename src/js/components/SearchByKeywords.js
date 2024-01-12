@@ -66,9 +66,10 @@ class SearchByKeywords extends React.Component{
   }
 
   submitRequest = ( event ) => {
-    event.preventDefault();
 
     if( !this.validationKeyWords( event ) ) return;
+
+    event.preventDefault();
 
     const { keyWords, sortBy, dateFrom, dateTo } = this.state;
     const { urlPath, getNews, quantityNews } = this.props
