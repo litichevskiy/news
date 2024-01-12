@@ -142,7 +142,7 @@ class SearchByKeywords extends React.Component{
     selectedFrom, selectedTo } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
-        <form className='form' onSubmit={this.submitRequest}>
+        <form className='form'>
           <div className='rowForSettings'>
             <label className='containerInput'>
               <input
@@ -212,7 +212,8 @@ class SearchByKeywords extends React.Component{
                 selectedDate={selectedTo} />
             }
             <Button
-              type='submit'
+              type='button'
+              onClick={this.submitRequest}
               className='btn getNews'
               title='Get News'>
                 Get News
