@@ -66,10 +66,9 @@ class SearchByKeywords extends React.Component{
   }
 
   submitRequest = ( event ) => {
+    event.preventDefault();
 
     if( !this.validationKeyWords( event ) ) return;
-
-    event.preventDefault();
 
     const { keyWords, sortBy, dateFrom, dateTo } = this.state;
     const { urlPath, getNews, quantityNews } = this.props
@@ -87,7 +86,6 @@ class SearchByKeywords extends React.Component{
     const query = `?q=${keyWords.trim()}&from=${from}&to=${to}&sortBy=${sortBy}&language=en&pageSize=${quantityNews}`;
     this.reset();
     getNews(`${urlPath}${encodeURI(query)}`);
-    return false
   }
 
   validationKeyWords({ target }) {
@@ -143,7 +141,7 @@ class SearchByKeywords extends React.Component{
     selectedFrom, selectedTo } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
-        <form className='form'>
+        <div className='form'>
           <div className='rowForSettings'>
             <label className='containerInput'>
               <input
@@ -220,7 +218,7 @@ class SearchByKeywords extends React.Component{
                 Get News
             </Button>
           </div>
-        </form>
+        </div>
       </div>
     )
   }
