@@ -67,7 +67,6 @@ class SearchByKeywords extends React.Component{
 
   submitRequest = ( event ) => {
     event.preventDefault();
-
     if( !this.validationKeyWords( event ) ) return;
 
     const { keyWords, sortBy, dateFrom, dateTo } = this.state;
@@ -141,7 +140,7 @@ class SearchByKeywords extends React.Component{
     selectedFrom, selectedTo } = this.state;
     return(
       <div className='searchByKeywords wrapperTabContent'>
-        <div className='form'>
+        <form className='form'>
           <div className='rowForSettings'>
             <label className='containerInput'>
               <input
@@ -218,7 +217,7 @@ class SearchByKeywords extends React.Component{
                 Get News
             </Button>
           </div>
-        </div>
+        </form>
       </div>
     )
   }

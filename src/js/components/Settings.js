@@ -102,9 +102,9 @@ class Settings extends React.Component{
                 <NewsByPublishers publishers={publishers} />
               </Tab>
               <Tab
-                className={'tab'}
+                className={'tab tab-disabled'}
                 title={
-                  <button className='btn' title='news by keywords'>
+                  <button className='btn' title='news by keywords' disabled>
                     <IconSearch className='icon-search'/>
                   </button>
                 }>

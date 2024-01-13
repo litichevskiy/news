@@ -120,6 +120,20 @@
   }
 }
 
+:disabled{
+  opacity: 0.75;
+  cursor: default;
+  animation: none;
+  transition: none;
+}
+
+.tab-disabled,
+.tab-disabled:before,
+.tab-disabled:before:hover{
+  animation: none;
+  transition: none;
+}
+
 a.link:visited{
   color: $purple-color;
 }
