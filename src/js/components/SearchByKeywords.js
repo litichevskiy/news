@@ -87,6 +87,7 @@ class SearchByKeywords extends React.Component{
     const query = `?q=${keyWords.trim()}&from=${from}&to=${to}&sortBy=${sortBy}&language=en&pageSize=${quantityNews}`;
     this.reset();
     getNews(`${urlPath}${encodeURI(query)}`);
+    return false
   }
 
   validationKeyWords({ target }) {
